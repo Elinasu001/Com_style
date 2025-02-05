@@ -28,7 +28,7 @@ button::-moz-focus-inner { padding:0px; border:0px; }
 
 :root {
 	--main-clr : #1d94d4;
-	--sub-clr : #9c399b;
+	--sub-clr : #284272;
 }
 
 body { counter-reset:mName; }
