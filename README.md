@@ -7,8 +7,8 @@
 
 ---
 
-🔗 **[모바일 경로 바로가기기](https://elinasu001.github.io/Com_style/root/worklist.html)**
-🔗 **[PC 경로 바로가기기](https://elinasu001.github.io/Com_style/root/worklist.html)**
+🔗 **[모바일 경로 바로가기기](https://elinasu001.github.io/Com_style/root/mobile/worklist.html)**
+🔗 **[PC 경로 바로가기기](https://elinasu001.github.io/Com_style/root/pc/worklist.html)**
 
 ---
 
