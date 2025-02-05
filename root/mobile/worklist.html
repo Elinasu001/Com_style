@@ -57,7 +57,7 @@
 				</ul>
 				<ul class="stateCnt">
 					<li>총 <span id="totCnt"></span>개</li>
-					<li>작업중 <span id="wipCnt"></span>개</li>
+					<li>작업중 <span id="progressCnt"></span>개</li>
 					<li>완료 <span id="compCnt"></span>개</li>
 				</ul>
 			</div>
@@ -95,7 +95,7 @@
 			</div> -->
 
 			<div class="cont page">
-				<h3 class="tit"></h3>
+				<h3 class="tit on"></h3>
 				<table>
 					<summary></summary>
 					<caption></caption>
@@ -120,16 +120,16 @@
 					</thead>
 					<tbody>
 						<tr class="confirm">
+							<td>Layout</td>
 							<td></td>
 							<td></td>
 							<td></td>
 							<td></td>
-							<td></td>
-							<td class="fileName"><a href="html" target="_blank">.html</a></td>
+							<td class="fileName"><a href="html" target="_blank">layout.html</a></td>
 							<td></td>
 							<td></td>
 							<td class="state">완</td>
-							<td></td>
+							<td>[사용 소스] :: layout.css</td>
 						</tr>
 						<tr class="">
 							<td></td>
@@ -137,11 +137,11 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td class="fileName"><a href="html" target="_blank">.html</a></td>
+							<td class="fileName"><a href="html" target="_blank">input.html</a></td>
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[사용 소스] :: layout.css, input.css</td>
 						</tr>
 						<tr>
 							<td></td>
@@ -149,11 +149,23 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td class="fileName"><a href="html" target="_blank">.html</a></td>
+							<td class="fileName"><a href="html" target="_blank"></a></td>
 							<td></td>
 							<td></td>
 							<td class="state">완</td>
+							<td>[사용 소스] :: table.css</td>
+						</tr>
+						<tr>
 							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="html" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="state">완</td>
+							<td>[사용 소스] :: table.css</td>
 						</tr>
 						<tr class="comp">
 							<td></td>
@@ -200,52 +212,159 @@
 	<script>
 		$(document).ready(function () {
 		
-			var fromDate = [],
-				toDate = [],
-				dateGap = [];
-			var wipCnt = 0, // 진행 중 개수
-				compCnt = 0, // 완료 개수
-				delCnt = 0;  // 삭제 개수
+			// var fromDate = [],
+			// 	toDate = [],
+			// 	dateGap = [];
+			// var progressCnt = 0, // 진행 중 개수
+			// 	compCnt = 0, // 완료 개수
+			// 	delCnt = 0;  // 삭제 개수
 		
-			pjState();
+			// pjState();
 		
-			var headerH = $(".container .header").outerHeight();
-			$(".container .cont").css("margin-top", headerH + "px");
+			// var headerH = $(".container .header").outerHeight();
+			// $(".container .cont").css("margin-top", headerH + "px");
 		
-			function pjState() {
-				$(".page table tbody tr").each(function (i, e) {
-					const $row = $(this); // 현재 행
-					const $stateCell = $row.find(".state"); // 상태 셀
+			// function pjState() {
+			// 	$(".page table tbody tr").each(function (i, e) {
+			// 		const $row = $(this); // 현재 행
+			// 		const $stateCell = $row.find(".state"); // 상태 셀
 					
-					// 상태 업데이트
-					if ($row.hasClass("non")) {
-						$stateCell.html("<span>삭제</span>"); // 삭제
-						delCnt++;
-					} else if ($row.hasClass("ing")) {
-						$stateCell.html("<span>진행 중</span>"); // 작업 중
-						wipCnt++;
-					} else if ($row.hasClass("comp")) {
-						$stateCell.html("<span>완료</span>"); // 완료
-						compCnt++; 
-					} else {
-						$stateCell.text("");
+			// 		// 상태 업데이트
+			// 		if ($row.hasClass("non")) {
+			// 			$stateCell.html("<span>삭제</span>"); // 삭제
+			// 			delCnt++;
+			// 		} else if ($row.hasClass("ing")) {
+			// 			$stateCell.html("<span>진행 중</span>"); // 작업 중
+			// 			progressCnt++;
+			// 		} else if ($row.hasClass("comp")) {
+			// 			$stateCell.html("<span>완료</span>"); // 완료
+			// 			compCnt++; 
+			// 		} else {
+			// 			$stateCell.text("");
+			// 		}
+			// 	});
+		
+			// 	var totCnt = $(".page table tbody tr").length; // 전체 개수
+			// 	var sumCnt = compCnt + delCnt; // 완료 + 삭제 (공통 포함 X)
+		
+			// 	// 카운트 업데이트
+			// 	$("#compCnt").text(compCnt); // 완료 개수
+			// 	$("#totCnt").text(totCnt); // 전체 개수
+			// 	$("#progressCnt").text(progressCnt); // 진행 중 개수
+			// }
+
+
+			var tableStateManager = function() {
+				
+				// 날짜 관련 배열 (필요시 활용)
+				var fromDate = [],
+					toDate = [],
+					dateGap = [];
+
+				// 상태별 개수 변수
+				var progressCnt  = 0,   // 진행 중 개수
+					compCnt = 0,   // 완료 개수
+					delCnt  = 0;   // 삭제 개수
+
+				// 테이블 각 행의 상태를 업데이트하는 함수
+				var updateStates = function() {
+
+					// 호출 시마다 카운트 초기화
+					progressCnt  = 0;
+					compCnt = 0;
+					delCnt  = 0;
+					
+					$(".page table tbody tr").each(function() {
+
+						var $row = $(this);
+						var $stateCell = $row.find(".state");
+						
+						if ($row.hasClass("non")) {
+							$stateCell.html("<span>삭제</span>");
+							delCnt++;
+						} else if ($row.hasClass("ing")) {
+							$stateCell.html("<span>진행 중</span>");
+							progressCnt++;
+						} else if ($row.hasClass("comp")) {
+							$stateCell.html("<span>완료</span>");
+							compCnt++;
+						} else {
+							$stateCell.text("");
+						}
+					});
+				};
+
+				// 카운트를 업데이트하는 함수
+				var updateCounts = function() {
+					var totCnt = $(".page table tbody tr").length; // 전체 행 개수
+					$("#compCnt").text(compCnt);
+					$("#totCnt").text(totCnt);
+					$("#progressCnt").text(progressCnt);
+				};
+
+				// 레이아웃(마진) 조정 함수
+				var adjustLayout = function() {
+					var headerH = $(".container .header").outerHeight();
+					$(".container .cont").css("margin-top", headerH + "px");
+				};
+
+				return {
+					// 초기화 메서드: 상태 업데이트, 카운트 갱신, 레이아웃 조정 실행
+					init: function() {
+						updateStates();
+						updateCounts();
+						adjustLayout();
+					},
+					// 상태와 카운트만 갱신하고 싶을 때 사용
+					update: function() {
+						updateStates();
+						updateCounts();
 					}
-				});
-		
-				var totCnt = $(".page table tbody tr").length; // 전체 개수
-				var sumCnt = compCnt + delCnt; // 완료 + 삭제 (공통 포함 X)
-		
-				// 카운트 업데이트
-				$("#compCnt").text(compCnt); // 완료 개수
-				$("#totCnt").text(totCnt); // 전체 개수
-				$("#wipCnt").text(wipCnt); // 진행 중 개수
-			}
-		
-			/* list toggle */
-			$('.cont .tit').addClass('on');
-			$('.cont .tit').on('click', function () {
-				$(this).toggleClass('on');
+				};
+
+				return {
+					init: function(){
+						
+					}
+				}
+			};
+
+			// 문서 로드 시 모듈 초기화 실행
+			$(document).ready(function() {
+				tableStateManager().init();
 			});
+
+
+		
+			/**
+			 * #테이블 토글
+			 **/
+			var tableListToggle = function(el) {
+				var $el = $(el);
+				return {
+					open: function() {
+						$el.addClass('on').text('내용닫기');
+					},
+					close: function() {
+						$el.removeClass('on').text('내용열기');
+					},
+					toggle: function() {
+						if ($el.hasClass('on')) {
+							this.close();
+						} else {
+							this.open();
+						}
+					}
+				};
+			};
+
+			//event
+			$(document).on('click', '.cont .tit', function() {
+				
+				tableListToggle(this).toggle();
+			});
+			
+
 		});
 		</script>
 		
