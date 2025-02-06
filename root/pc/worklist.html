@@ -47,55 +47,88 @@
 		<section class="container">
 
 			<div class="header">
-				<h1>Mobile UX/UI</h1>
+				<h1>PC UX/UI</h1>
 				<ul class="stateArea">
 					<li><strong>진행상테 :</strong></li>
-					<!-- <li class="typeCommon"><span>공</span>공통</li> -->
+					<li class="typeCommon"><span>공통</span></li>
 					<li class="typeIng"><span>진행 중</span></li>
 					<li class="typeComp"><span>완료</span></li>
 					<li class="typeNon"><span>삭제</span></li>
 				</ul>
 				<ul class="stateCnt">
 					<li>총 <span id="totCnt"></span>개</li>
-					<li>작업중 <span id="wipCnt"></span>개</li>
+					<li>작업중 <span id="progressCnt"></span>개</li>
 					<li>완료 <span id="compCnt"></span>개</li>
 				</ul>
 			</div>
 
-			<!-- <div class="cont guide">
-				<div class="guide">
-                    <h3 class=""></h3>
-                    <summary></summary>
-                    <table>
-                        <caption></caption>
-                        <colgroup>
-                            <col width="8%">
-                            <col width="22%">
-                            <col width="15%">
-                            <col width="10%">
-                            <col width="*">
-                            <col width="10%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">분류</th>
-                                <th scope="col">설명</th>
-                                <th scope="col" class="fileName">화면ID</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">사용법</th>
-                                <th scope="col">비고</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-						
-    
-                        </tbody>
-                    </table>
-                </div>
-			</div> -->
+			<div class="cont guide">
+				<h3 class="tit on">example</h3>
+				<table>
+					<summary></summary>
+					<caption></caption>
+					<colgroup>
+						<col width="8%"><col width="8%"><col width="8%"><col width="6%">
+						<col width="6%"><col width="10%"><col width="8%"><col width="4%">
+						<col width="6%"><col width="*">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">depth1</th>
+							<th scope="col">depth2</th>
+							<th scope="col">depth3</th>
+							<th scope="col">depth4</th>
+							<th scope="col">depth5</th>
+							<th scope="col" class="fileName">화면ID</th>
+							<th scope="col">형태</th>
+							<th scope="col">담당</th>
+							<th scope="col">상태</th>
+							<th scope="col">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="comp">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="state">완료</td>
+							<td></td>
+						</tr>
+						<tr class="non">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="state">비활성화</td>
+							<td></td>
+						</tr>
+						<tr class="ing">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="state">ing</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 
 			<div class="cont page">
-				<h3 class="tit"></h3>
+				<h3 class="tit on">common</h3>
 				<table>
 					<summary></summary>
 					<caption></caption>
@@ -120,77 +153,174 @@
 					</thead>
 					<tbody>
 						<tr class="confirm">
+							<td>[전체] 레이아웃</td>
 							<td></td>
 							<td></td>
 							<td></td>
 							<td></td>
+							<td class="fileName"><a href="html" target="_blank">layout.html</a></td>
 							<td></td>
-							<td class="fileName"><a href="html" target="_blank">.html</a></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: layout.css</td>
+						</tr>
+						<tr class="confirm">
+							<td>전체메뉴</td>
+							<td>type.1</td>
 							<td></td>
 							<td></td>
-							<td class="state">완</td>
 							<td></td>
+							<td class="fileName"><a href="html" target="_blank">allMenu-1.html</a></td>
+							<td></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: allMneu.css</td>
+						</tr>
+						<tr class="confirm">
+							<td>전체메뉴</td>
+							<td>type.2</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="html" target="_blank">allMenu-2.html</a></td>
+							<td></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: allMneu.css</td>
+						</tr>
+						<tr class="confirm">
+							<td>헤더</td>
+							<td>type.1</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="html" target="_blank">header-1.html</a></td>
+							<td></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: header.css</td>
+						</tr>
+						<tr class="confirm">
+							<td>헤더</td>
+							<td>type.2</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="html" target="_blank">header-2.html</a></td>
+							<td></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: header.css</td>
 						</tr>
 						<tr class="">
+							<td>인풋</td>
 							<td></td>
 							<td></td>
 							<td></td>
 							<td></td>
-							<td></td>
-							<td class="fileName"><a href="html" target="_blank">.html</a></td>
+							<td class="fileName"><a href="html" target="_blank">input.html</a></td>
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[사용 소스] :: input.css</td>
 						</tr>
 						<tr>
+							<td>버튼</td>
 							<td></td>
 							<td></td>
 							<td></td>
 							<td></td>
-							<td></td>
-							<td class="fileName"><a href="html" target="_blank">.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state">완</td>
-							<td></td>
-						</tr>
-						<tr class="comp">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="html" target="_blank">.html</a></td>
+							<td class="fileName"><a href="html" target="_blank">button.html</a></td>
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[사용 소스] :: button.css</td>
 						</tr>
-						<tr class="non">
+						<tr>
+							<td>팝업</td>
 							<td></td>
 							<td></td>
 							<td></td>
 							<td></td>
-							<td></td>
-							<td class="fileName"><a href="html" target="_blank">html</a></td>
+							<td class="fileName"><a href="html" target="_blank">popup.html</a></td>
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[사용 소스] :: popup.css</td>
 						</tr>
-						<tr class="ing">
+						<tr>
+							<td>약관</td>
+							<td>Type.1</td>
 							<td></td>
 							<td></td>
 							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="html" target="_blank">html</a></td>
+							<td class="fileName"><a href="html" target="_blank">terms-1.html</a></td>
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[사용 소스] :: terms.css</td>
 						</tr>
+						<tr>
+							<td>약관</td>
+							<td>Type.2</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="html" target="_blank">terms-2.html</a></td>
+							<td></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: terms.css</td>
+						</tr>
+						<tr>
+							<td>테이블</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="html" target="_blank">table.html</a></td>
+							<td></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: table.css</td>
+						</tr>
+						<tr>
+							<td>아코디언</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="html" target="_blank">accordion.html</a></td>
+							<td></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: accordion.css</td>
+						</tr>
+						<tr class="confirm">
+							<td>스와이퍼</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="html" target="_blank">swiper.html</a></td>
+							<td></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: swiper.css</td>
+						</tr>
+						<tr class="confirm">
+							<td>탭</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="html" target="_blank">tab.html</a></td>
+							<td></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: tab.css</td>
+						</tr>
+						
 					</tbody>
 				</table>
 			</div>
@@ -199,53 +329,121 @@
 
 	<script>
 		$(document).ready(function () {
-		
-			var fromDate = [],
-				toDate = [],
-				dateGap = [];
-			var wipCnt = 0, // 진행 중 개수
-				compCnt = 0, // 완료 개수
-				delCnt = 0;  // 삭제 개수
-		
-			pjState();
-		
-			var headerH = $(".container .header").outerHeight();
-			$(".container .cont").css("margin-top", headerH + "px");
-		
-			function pjState() {
-				$(".page table tbody tr").each(function (i, e) {
-					const $row = $(this); // 현재 행
-					const $stateCell = $row.find(".state"); // 상태 셀
-					
-					// 상태 업데이트
-					if ($row.hasClass("non")) {
-						$stateCell.html("<span>삭제</span>"); // 삭제
-						delCnt++;
-					} else if ($row.hasClass("ing")) {
-						$stateCell.html("<span>진행 중</span>"); // 작업 중
-						wipCnt++;
-					} else if ($row.hasClass("comp")) {
-						$stateCell.html("<span>완료</span>"); // 완료
-						compCnt++; 
-					} else {
-						$stateCell.text("");
-					}
-				});
-		
-				var totCnt = $(".page table tbody tr").length; // 전체 개수
-				var sumCnt = compCnt + delCnt; // 완료 + 삭제 (공통 포함 X)
-		
-				// 카운트 업데이트
-				$("#compCnt").text(compCnt); // 완료 개수
-				$("#totCnt").text(totCnt); // 전체 개수
-				$("#wipCnt").text(wipCnt); // 진행 중 개수
-			}
-		
-			/* list toggle */
-			$('.cont .tit').addClass('on');
-			$('.cont .tit').on('click', function () {
-				$(this).toggleClass('on');
+			/*---------------------------------------------
+				ready, load
+			---------------------------------------------*/
+			// 모든 리소스(이미지 등)가 로드된 후 fnPreload()를 호출하여 초기화
+			$(window).on('load', function(){
+				fnPreload();
 			});
+			
+			/*---------------------------------------------
+				preload, init
+			---------------------------------------------*/
+			/* preload */
+			function fnPreload(){
+				tableStateManager.init();
+			}
+
+			/*---------------------------------------------
+				tableStateManager 모듈 정의
+			---------------------------------------------*/
+			var tableStateManager = (function() {
+				// 날짜 관련 배열 (필요시 활용)
+				var fromDate = [],
+					toDate   = [],
+					dateGap  = [];
+
+				// 상태별 개수 변수
+				var progressCnt = 0,   // 진행 중 개수
+					compCnt     = 0,   // 완료 개수
+					delCnt      = 0;   // 삭제 개수
+
+				return {
+					// 테이블 각 행의 상태를 업데이트하는 함수
+					updateStates: function(){
+
+						// 호출 시마다 카운트 초기화
+						progressCnt = 0;
+						compCnt = 0;
+						delCnt = 0;
+						
+						$(".cont table tbody tr").each(function() {
+							var $row = $(this);
+							var $stateCell = $row.find(".state");
+							
+							if ($row.hasClass("non")) {
+								$stateCell.html("<span>삭제</span>");
+								delCnt++;
+							} else if ($row.hasClass("ing")) {
+								$stateCell.html("<span>진행 중</span>");
+								progressCnt++;
+							} else if ($row.hasClass("comp")) {
+								$stateCell.html("<span>완료</span>");
+								compCnt++;
+							} else {
+								$stateCell.text("");
+							}
+						});
+
+					},
+
+					// 상태별 카운트를 업데이트
+					updateCounts: function(){
+						var totCnt = $(".page table tbody tr").length; // 전체 행 개수
+						$("#compCnt").text(compCnt);
+						$("#totCnt").text(totCnt);
+						$("#progressCnt").text(progressCnt);
+					},
+					// 레이아웃(마진) 조정
+					adjustLayout: function(){
+						var headerH = $(".container .header").outerHeight();
+						$(".container .guide").css("margin-top", headerH + "px");
+					},
+				
+					// 전체 초기화: 상태 업데이트, 카운트 갱신, 레이아웃 조정 실행
+					init: function() {
+						// 반환된 객체의 메서드를 호출
+						this.updateStates();
+						this.updateCounts();
+						this.adjustLayout();
+					},
+					// 상태와 카운트만 갱신
+					update: function() {
+						this.updateStates();
+						this.updateCounts();
+					}
+				};
+			})();
+
+			/**
+			 * #테이블 토글
+			 **/
+			var tableListToggle = function(el) {
+				var $el = $(el);
+				return {
+					open: function() {
+						$el.addClass('on')
+					},
+					close: function() {
+						$el.removeClass('on')
+					},
+					toggle: function() {
+						if ($el.hasClass('on')) {
+							this.close();
+						} else {
+							this.open();
+						}
+					}
+				};
+			};
+
+			//event
+			$(document).on('click', '.cont .tit', function() {
+				tableListToggle(this).toggle();
+			});
+			
+
 		});
 		</script>
 		
