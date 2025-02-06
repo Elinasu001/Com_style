@@ -26,6 +26,7 @@
     <script src="./guide/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="./guide/js/jquery.form.min.js"></script>
 	<style>
+	.header .etc { color:yellowgreen; }
 	.cont table {
 		display: none;
 	}
@@ -60,6 +61,9 @@
 					<li>작업중 <span id="progressCnt"></span>개</li>
 					<li>완료 <span id="compCnt"></span>개</li>
 				</ul>
+				<ul class="etc">
+					<li>테이블 열 진행 클래스(tr에 적용) : 완료 [comp], 비활성화 [non], 완료 [ing]</li>
+				</ul>
 			</div>
 
 			<div class="cont guide">
@@ -87,7 +91,19 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="comp">
+						<tr class="">
+							<td>폰트</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="" target="_blank">font.html</a></td>
+							<td></td>
+							<td></td>
+							<td class="state"></td>
+							<td>[사용 소스] :: font.css</td>
+						</tr>
+						<tr class="">
 							<td></td>
 							<td></td>
 							<td></td>
@@ -96,10 +112,10 @@
 							<td class="fileName"><a href="" target="_blank"></a></td>
 							<td></td>
 							<td></td>
-							<td class="state">완료</td>
+							<td class="state"></td>
 							<td></td>
 						</tr>
-						<tr class="non">
+						<tr class="">
 							<td></td>
 							<td></td>
 							<td></td>
@@ -108,19 +124,7 @@
 							<td class="fileName"><a href="" target="_blank"></a></td>
 							<td></td>
 							<td></td>
-							<td class="state">비활성화</td>
-							<td></td>
-						</tr>
-						<tr class="ing">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="" target="_blank"></a></td>
-							<td></td>
-							<td></td>
-							<td class="state">ing</td>
+							<td class="state"></td>
 							<td></td>
 						</tr>
 					</tbody>
@@ -152,7 +156,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="confirm">
+						<tr class="">
 							<td>[전체] 레이아웃</td>
 							<td></td>
 							<td></td>
@@ -164,31 +168,19 @@
 							<td class="state"></td>
 							<td>[사용 소스] :: layout.css</td>
 						</tr>
-						<tr class="confirm">
+						<tr class="">
 							<td>전체메뉴</td>
-							<td>type.1</td>
 							<td></td>
 							<td></td>
 							<td></td>
-							<td class="fileName"><a href="html" target="_blank">allMenu-1.html</a></td>
+							<td></td>
+							<td class="fileName"><a href="html" target="_blank">allMenu.html</a></td>
 							<td></td>
 							<td></td>
 							<td class="state"></td>
 							<td>[사용 소스] :: allMneu.css</td>
 						</tr>
-						<tr class="confirm">
-							<td>전체메뉴</td>
-							<td>type.2</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="html" target="_blank">allMenu-2.html</a></td>
-							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[사용 소스] :: allMneu.css</td>
-						</tr>
-						<tr class="confirm">
+						<tr class="">
 							<td>헤더</td>
 							<td>type.1</td>
 							<td></td>
@@ -200,7 +192,7 @@
 							<td class="state"></td>
 							<td>[사용 소스] :: header.css</td>
 						</tr>
-						<tr class="confirm">
+						<tr class="">
 							<td>헤더</td>
 							<td>type.2</td>
 							<td></td>
@@ -250,23 +242,11 @@
 						</tr>
 						<tr>
 							<td>약관</td>
-							<td>Type.1</td>
 							<td></td>
 							<td></td>
 							<td></td>
-							<td class="fileName"><a href="html" target="_blank">terms-1.html</a></td>
 							<td></td>
-							<td></td>
-							<td class="state"></td>
-							<td>[사용 소스] :: terms.css</td>
-						</tr>
-						<tr>
-							<td>약관</td>
-							<td>Type.2</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td class="fileName"><a href="html" target="_blank">terms-2.html</a></td>
+							<td class="fileName"><a href="html" target="_blank">terms.html</a></td>
 							<td></td>
 							<td></td>
 							<td class="state"></td>
@@ -296,7 +276,7 @@
 							<td class="state"></td>
 							<td>[사용 소스] :: accordion.css</td>
 						</tr>
-						<tr class="confirm">
+						<tr class="">
 							<td>스와이퍼</td>
 							<td></td>
 							<td></td>
@@ -308,7 +288,7 @@
 							<td class="state"></td>
 							<td>[사용 소스] :: swiper.css</td>
 						</tr>
-						<tr class="confirm">
+						<tr class="">
 							<td>탭</td>
 							<td></td>
 							<td></td>
