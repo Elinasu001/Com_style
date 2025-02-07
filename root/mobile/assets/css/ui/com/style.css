@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* 모바일 폰트 사이즈 기준 [html::16px], 짝수 단위입니다.[짝수 단위로 할 경우 소수점 최대 3자리로 떨어집니다.] */
+body{
+    /* 폰트 size */
+    --font-s-12: 0.75rem;
+    --font-s-14: 0.875rem;
+    --font-s-16: 1rem;
+    --font-s-18: 1.125rem;
+    --font-s-20: 1.25rem;
+    --font-s-22: 1.375rem;
+    --font-s-24: 1.5rem;
+    --font-s-26: 1.625rem;
+    --font-s-28: 1.75rem;
+    --font-s-30: 1.875rem;
+    --font-s-32: 2rem;
+    --font-s-34: 2.125rem;
+    --font-s-36: 2.25rem;
+    --font-s-38: 2.375rem;
+    --font-s-40: 2.5rem;
+
+     /* 폰트 weight */
+    --font-w-b: 600;
+    --font-w-m: 500;
+    --font-w-r: 400;
+    --font-w-l: 300;
+}
+
+body {
+
+    /** 기본 색상 **/
+    --color-primary: #1447A2;
+    --color-secondary: #1447A2;
+
+    --color-semantic-1: #FF0000;
+    --color-semantic-2: #086CFD;
+    --color-semantic-3: #FD9B22;
+    --color-semantic-4: #00A2C4;
+
+    /** 배경 기본 색상 **/
+    --bg-color-a: #AAAAAA;
+    --bg-color-b: #BBBBBB;
+    --bg-color-c: #CCCCCC;
+    --bg-color-d: #DDDDDD;
+    --bg-color-e: #EEEEEE;
+    --bg-color-e-4: #E4E4E4;
+    --bg-color-f: #FFFFFF;
+    --bg-color-f-7: #F7F7FA;
+    --bg-color-f-8: #F8F8F8;
+    /* 배경 강조 색상 */
+    --bg-color-emp-1: #1447A2;
+    --bg-color-emp-2: #2E5AF4;
+    /* 배경 기타 색상상 */
+    --bg-color-3: #EFF2F7;
+    --bg-color-4: #EEF2F9;
+    
+    /** 텍스트 기본 색상 **/
+    --txt-color-1: #111111;
+    --txt-color-2-4: #242424;
+    --txt-color-3: #333333;
+    --txt-color-4-5: #454545;
+    --txt-color-5: #555555;
+    --txt-color-6: #666666;
+    --txt-color-7-5: #757575;
+    --txt-color-8: #888888;
+    --txt-color-9: #999999;
+    --txt-color-C: #CCCCCC;
+    --txt-color-f: #FFFFFF;
+
+    /* 텍스트 강조 색상 */
+    --txt-color-emp-1: #F1108E;
+
+    /* 보더 기본 색상 */
+    --border-color-a:#AAAAAA;
+    --border-color-b:#BBBBBB;
+    --border-color-c:#CCCCCC;
+    --border-color-d:#DDDDDD;
+    --border-color-e:#EEEEEE;
+    --border-color-f:#FFFFFF;
+
+    /* 보더 강조 색상 */
+    --border-color-emp-1: #1447A2;
+    --border-color-emp-2: #386CF5;
+
+    /* 보더 기타 색상 */
+    --border-color-etc-1:#F0F0F0;
+}

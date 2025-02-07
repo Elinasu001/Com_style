@@ -1,0 +1,30 @@
+@charset "utf-8";
+:root{
+    --default-color: #111111;
+    --defalt-color-tr: transparent;
+}
+
+/* * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none; word-break:keep-all;  word-wrap:break-word; } */
+/* 디폴트 폰트 사이즈 16px */
+html { font-size:16px; }
+body { font-size:1rem;; font-weight:500; line-height: normal; font-family:'Pretendard', 'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; color: var(--default-color); -webkit-overflow-scrolling:touch; }
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, li, ol, li, table, caption, th, td, form, fieldset, legend, address, div, p, span, a { margin:0; padding:0; }
+ul,ol,li,dl,dt,dd { list-style: none; }
+form, fieldset, legend, input, button, textarea, label { color: var(--default-color); }
+div, img, form, fieldset, button, blockquote, p, hr { border:0; padding:0; margin:0; }
+img, table { width:100%; }
+/* 스크린리더 전용 클래스 :: .sr-only */
+legend, caption, .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow: hidden;  border:0; clip:rect(0, 0, 0, 0); white-space: nowrap; }
+input, textarea, select, address { font-family: 'Pretendard', 'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; }
+input, button, select, textarea { font-family: inherit; }
+input, textarea, select { display:inline-block; vertical-align: middle; color:var(--default-color); }
+
+img { line-height:0; font-size:0; vertical-align:top; }
+table{ border-spacing:0; border-collapse: collapse; }
+address, em { font-style: normal; }
+button { background-color:var(--defalt-color-tr); }
+a { display:block; color:var(--default-color);  }
+a, a:hover, a:focus, a:active { text-decoration: none !important; cursor: pointer !important; }
+.tal{ text-align: left !important; }
+.tac{ text-align: center !important; }
+.tar{ text-align: right !important; }
