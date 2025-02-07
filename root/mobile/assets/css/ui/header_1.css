@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+body {
+    --ico-prev:  url(../../images/com/svg/ico_back.svg);
+    --ico-menu:  url(../../images/com/svg/ico_menu.svg);
+}
+
+/* 로고 */
+header > h1.logo > a > img { width:109px; height:auto; object-fit: contain; }
+
+/* 타이틀 */
+header > h1.tit { font-size:var(--font-s-16); font-weight: var(--font-w-m); }
+
+/* util */
+header > .menu-util .btn { width:40; height:40; }
+header > .menu-util .btn.btn-menu { background: var(--ico-menu) no-repeat 100%/40px auto; }
+
+/* on 스크립트 */
+#headerWrap.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
