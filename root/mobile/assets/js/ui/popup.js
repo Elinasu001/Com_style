@@ -9,7 +9,7 @@ $(document).ready(function(){
             openPopup : function(id) {
                 var _target = $('#' + id);
                 _target.fadeIn(200, function(){
-                    $('html, body').css({'overflow': 'hidden'});
+                    $('body').css({'overflow': 'hidden'});
                     _target.addClass('on');
                 });
             },
@@ -19,7 +19,7 @@ $(document).ready(function(){
                 _target.fadeOut(200, function() {
                     _target.removeClass('on');
                     if ($('.layerPopup.on').length === 0) {//마지막 팝업
-                        $('html, body').css({ 'overflow': '' });
+                        $('body').css({ 'overflow': '' });
                     }
                 });
             },
