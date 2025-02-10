@@ -11,6 +11,7 @@ $(document).ready(function(){
                 _target.fadeIn(200, function(){
                     $('body').css({'overflow': 'hidden'});
                     _target.addClass('on');
+                    $('.pop-con-wrap').scrollTop(0);
                 });
             },
 
