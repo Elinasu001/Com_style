@@ -1,14 +1,14 @@
 /* tit 삭제 */
-div > .tit { display: flex; align-items: center; padding: 20px 0 40px; text-align: center; color: #999; font-size: 14px; font-weight: 500;}
-div > .tit::before { content: ""; flex: 1; border: 1px solid #ddd; margin-right: 30px;}
-div > .tit::after { content: ""; flex: 1; border: 1px solid #ddd; margin-left: 30px;}
+div > .tit { display: flex; align-items: center; padding: 20px 0 40px; text-align: center; color: var( --txt-color-9); font-size: var(--font-s-14); font-weight: var(--font-w-m);}
+div > .tit::before { content: ""; flex: 1; border: 1px solid var(--border-color-d); margin-right: 30px;}
+div > .tit::after { content: ""; flex: 1; border: 1px solid var(--border-color-d); margin-left: 30px;}
 
 
 /* 테이블 공통 */
 table colgroup { display: table-column-group; unicode-bidi: isolate; }
-thead tr th { padding: 15px 20px; background-color: #F8F8F8; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-left: 1px solid #eee; font-size: 16px; color: #333; font-weight: 500; }
+thead tr th { padding: 15px 20px; background-color: var( --bg-color-f-8); border-top: 1px solid var(--border-color-e); border-bottom: 1px solid var(--border-color-e); border-left: 1px solid var(--border-color-e); font-size: var(--font-s-16); color: var(--txt-color-3); font-weight: 500; }
 thead tr th:first-child { border-left: none;}
-tbody tr td { padding: 15px 20px; background-color: #Fff; border-bottom: 1px solid #eee; border-left: 1px solid #eee; font-size: 16px; color: #666; font-weight: 400;}
+tbody tr td { padding: 15px 20px; background-color:  var( --bg-color-f); border-bottom: 1px solid var(--border-color-e); border-left: 1px solid var(--border-color-e); font-size: var(--font-s-16); color: var( --txt-color-6); font-weight: 400;}
 tbody tr td:first-child { border-left: none; border-top: none;}
 
 /* table-type 1*/
@@ -24,15 +24,15 @@ tbody tr td:first-child { border-left: none; border-top: none;}
 /* table-type 4 */
 .table-type4 { margin-bottom: 40px;}
 .table-type4 .col { width: 100%;}
-.table-type4 > div.col dl { display: flex; width: 100%; table-layout: fixed; border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; }
+.table-type4 > div.col dl { display: flex; width: 100%; table-layout: fixed; border-top: 1px solid var(--border-color-e); border-bottom: 1px solid var(--border-color-e); }
 .table-type4 > div.col dl:first-child { border-bottom: none;}
 .table-type4 > div.col dl:last-child { border-top: none; }
-.table-type4> div.col dt { display: table-cell; width: 50%; background-color: #F8F8F8; padding: 15px; font-size: 16px; color: #333; font-weight: 500;}
-.table-type4> div.col dd { width: 50%; display: table-cell; padding: 15px; font-size: 16px; color: #666; font-weight: 400;}
+.table-type4> div.col dt { display: table-cell; width: 50%; background-color: var( --bg-color-f-8); padding: 15px; font-size: var(--font-s-16); color: var( --txt-color-3); font-weight: var(--font-w-m);}
+.table-type4> div.col dd { width: 50%; display: table-cell; padding: 15px; font-size: var(--font-s-16); color: var( --txt-color-6); font-weight: var(--font-w-r);}
 
 /* table-tit */
 .table-tit { padding: 0 0 20px 0 ;}
-.table-tit h4 { font-size: 18px; font-weight: 500; text-align: left; color: #333; }
+.table-tit h4 { font-size: var(--font-s-18); font-weight: var(--font-w-m); text-align: left; color: var( --txt-color-3); }
 /* table-caption */
 .table-caption { padding-top: 12px;}
-.table-caption p { text-align: right; font-size: 12px; font-weight: 400; color: #999;}
+.table-caption p { text-align: right; font-size: var(--font-s-12); font-weight: var(--font-w-r); color: var( --txt-color-9);}
