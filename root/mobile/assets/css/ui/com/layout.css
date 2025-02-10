@@ -52,7 +52,7 @@ body {
 /** 팝업 **/
 .layerPopup { z-index:10; display:none; flex-direction: column; position: fixed; top:0; left:0; overflow: hidden;  background-color: var(--bg-color-f); width:100%;  }
 /* 팝업_헤더 */
-.layerPopup .pop-header {  width:100%; height:60px; position: sticky; top:0; left:0; display:flex; justify-content:center; align-items:center; background-color: var(--bg-color-f);}
+.layerPopup .pop-header {  width:100%; height:60px; position: fixed; top:0; left:0; display:flex; justify-content:center; align-items:center; background-color: var(--bg-color-f);}
 .layerPopup .pop-header .left,
 .layerPopup .pop-header .right { position: absolute; }
 .layerPopup .pop-header .left { left:10px; }
@@ -67,7 +67,7 @@ body {
 .layerPopup .pop-header.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }/*스크립트 :: 스크롤*/
 /* 팝업_full */
 .layerPopup.full { height:100dvh; }
-.layerPopup.full .pop-con-wrap { height:calc(100dvh - 60px); }
+.layerPopup.full .pop-con-wrap { height:calc(100dvh - 120px); }
 /* 팝업_bottom */
 .layerPopup.btmSheet { z-index:10; top:initial; bottom:0; min-height:auto;  border-radius: 30px 30px 0 0; }
 .layerPopup.btmSheet .pop-header .left { left:20px; }
