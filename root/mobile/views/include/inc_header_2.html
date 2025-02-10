@@ -1,5 +1,36 @@
 <header>
-    <button type="button" onclick="location.href='keypadSet.html'" class="btn back-btn">
-        <span>뒤로가기</span>
-    </button>
+    <div class="left">
+
+        <h1 class="logo">
+            <a href="#none">
+                <img src="../../assets/images/com/img_dark_logo.png" alt="더케이 한국교직원공제회 The-K 저축은행 로고">
+            </a>
+        </h1>
+
+        <!-- <button type="button" class="btn btn-back">
+            <span>뒤로가기</span>
+        </button> -->
+
+    </div>
+
+    <!-- <h1 class="tit">TITLE</h1> -->
+
+    <div class="right">
+        <div class="menu-util">
+            <button type="button" class="btn btn-menu" title-="전체메뉴 열기" onclick="openPopup('menuPopup')"><span class="sr-only">메뉴 열기</span></button>
+        </div>
+    </div>
+    
 </header>
+
+
+<!-- 헤더 메뉴 팝업 -->
+<div id="menuPopup" class="layerPopup full">
+    <div class="pop-header popHeader">
+        <h2 class="pop-tit">전체메뉴</h2>
+        <button type="button" name="button" class="btn btn-close right" onclick="closePopup('menuPopup')"><span class="sr-only">닫기</span></button>
+    </div>
+    <div class="pop-con-wrap">
+        전체메뉴 컨텐츠
+    </div>
+</div>
