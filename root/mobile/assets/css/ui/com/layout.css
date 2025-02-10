@@ -50,7 +50,7 @@ body {
 
 
 /** 팝업 **/
-.layerPopup { z-index:10; display:none; flex-direction: column; position: fixed; top:0; left:0; background-color: var(--bg-color-f); overflow: hidden; width:100%; min-height:100vh; }
+.layerPopup { z-index:10; display:none; flex-direction: column; position: fixed; bottom:0; left:0; background-color: var(--bg-color-f); overflow: hidden; width:100%; min-height:100vh; }
 /* 팝업_헤더 */
 .layerPopup .pop-header { width:100%; height:auto; display:flex; width:100%; position: fixed; top:0; left:0; overflow: hidden; background-color: var(--bg-color-f); display:flex; justify-content:center; align-items:center; width:100%; height:60px;}
 .layerPopup .pop-header  .left,
