@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     /**
-     * header white change
+     * header on클래스 추가
     **/
     var headerL = (function() {
 
@@ -26,7 +26,7 @@ $(document).ready(function(){
                 if (documentH > windowH) {
                     this.headerAni();
                 }
-            },
+            }
         };
     })();
 
