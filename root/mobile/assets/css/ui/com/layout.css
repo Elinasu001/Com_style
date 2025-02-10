@@ -66,8 +66,8 @@ body {
 .layerPopup.on { display:flex !important; }/*스크립트 :: display:block; 방지*/
 .layerPopup .pop-header.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }/*스크립트 :: 스크롤*/
 /* 팝업_full */
-.layerPopup.full { height:100vh; }
-.layerPopup.full .pop-con-wrap { height:calc(100vh - 60px); }
+.layerPopup.full { height:100dvh; }
+.layerPopup.full .pop-con-wrap { height:calc(100dvh - 60px); }
 /* 팝업_bottom */
 .layerPopup.btmSheet { z-index:10; top:initial; bottom:0; min-height:auto;  border-radius: 30px 30px 0 0; }
 .layerPopup.btmSheet .pop-header .left { left:20px; }
