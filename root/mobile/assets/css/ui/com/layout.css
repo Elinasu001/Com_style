@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 /** basic layout **/
-body { overflow-y: auto;}
-.wrap { display:flex; flex-direction: column; width:100%; height:auto; margin:0 auto; min-height:100vh; min-width: 320px; }
+/* body { overflow-y: auto;} */
+.wrap { display:flex; flex-direction: column; flex:1 1 auto; width:100%; height:auto; margin:0 auto; min-height:100dvh; min-width: 320px; overflow: hidden; }
 /* 컨텐츠 */
 .contentWrap { display:flex; flex-direction: column; flex:1 1 auto; height:100%; }
 .contentWrap { height:auto; }
