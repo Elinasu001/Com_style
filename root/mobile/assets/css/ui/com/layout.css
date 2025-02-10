@@ -80,3 +80,6 @@ body {
 .layerPopup.modal .modal-wrap { position:absolute; height:auto; width:85%; top:50%; left:50%; transform: translate(-50%, -50%); border-radius: 10px; overflow: hidden; }
 .layerPopup.modal .pop-tit { font-size:var(--font-s-16); font-weight: var(--font-w-b); padding-bottom:10px; }
 .layerPopup.modal .pop-con-wrap { padding:50px 30px 40px 30px; }
+/* 전체메뉴 */
+.layerPopup.full.allMenu { display:initial; left:initial; right:-100%;; transition:right 0.3s ease-in-out;  }
+.layerPopup.full.allMenu.on { right:0;  }
