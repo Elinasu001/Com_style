@@ -1,21 +1,62 @@
 <header>
-    
-    <!-- <h1 class="logo">
-        <a href="#none">
-            <img src="../../assets/images/com/img_dark_logo.png" alt="더케이 한국교직원공제회 The-K 저축은행 로고">
-        </a>
-    </h1> -->
-
-    <button type="button" class="btn btn-back">
-        <span class="sr-only">뒤로가기</span>
-    </button>
+    <div class="left">
+        <!-- <h1 class="logo">
+            <a href="#none">
+                <img src="../../assets/images/com/img_dark_logo.png" alt="더케이 한국교직원공제회 The-K 저축은행 로고">
+            </a>
+        </h1> -->
+        <button type="button" class="btn btn-back">
+            <span class="sr-only">뒤로가기</span>
+        </button>
+    </div>
 
     <h1 class="tit">TITLE</h1>
 
-
-    <div class="menu-util">
-        <button type="button" class="btn btn-menu" title-="전체메뉴 열기"><span class="sr-only">메뉴 열기</span></button>
+    <div class="right">
+        <div class="menu-util">
+            <button type="button" class="btn btn-menu" title-="전체메뉴 열기" onclick="openPopup('menuPopup')"><span class="sr-only">메뉴 열기</span></button>
+        </div>
     </div>
 
 </header>
 
+
+<!-- 헤더 메뉴 팝업 -->
+<div id="menuPopup" class="layerPopup full">
+    <div class="pop-header popHeader">
+        <header>
+            <button type="button" name="button" class="btn btn-back left"><span class="sr-only">뒤로가기</span></button>
+            <h2 class="pop-tit">전체메뉴</h2>
+            <button type="button" name="button" class="btn btn-close right" onclick="closePopup('menuPopup')"><span class="sr-only">닫기</span></button>
+        </header>
+    </div>
+    <div class="pop-con-wrap">
+        가나다라
+    </div>
+    <div class="pop-btm-wrap">
+        <div class="btm-btn-area">
+            <button type="button" class="btm-btn app"  onclick="openPopup('menuPopupH')">지갑 만들기 </button>
+            <button type="button" class="btm-btn app">지갑 만들기 </button>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="menuPopupH" class="layerPopup btmSheet">
+    <div class="pop-header popHeader">
+        <header>
+            <h2 class="pop-tit left">전체메뉴</h2>
+            <button type="button" name="button" class="btn btn-close right" onclick="closePopup('menuPopupH')"><span class="sr-only">닫기</span></button>
+        </header>
+    </div>
+    <div class="pop-con-wrap">
+        하프하프
+    </div>
+    <div class="pop-btm-wrap">
+        <div class="btm-btn-area">
+            <button type="button" class="btm-btn app">지갑 만들기 </button>
+            <button type="button" class="btm-btn app">지갑 만들기 </button>
+        </div>
+    </div>
+</div>
