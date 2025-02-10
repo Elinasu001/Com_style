@@ -28,7 +28,7 @@ body {
     --ico-close: url(../../../images/com/svg/ico_close.svg);
 }
 #headerWrap { display:flex; width:100%; position: fixed; top:0; left:0; z-index:10; height:60px; background-color: var(--bg-color-f); }
-#headerWrap > header { position: relative; display:flex; justify-content: center; align-items: center; }
+#headerWrap > header { position: relative; display:flex; justify-content: center; align-items: center;  width:100%; }
 #headerWrap > header > .left,
 #headerWrap > header > .right{ position: absolute;}
 #headerWrap > header > .left { left:10px; }
