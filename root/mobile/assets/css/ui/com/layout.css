@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /** basic layout **/
-body { overflow-y: auto; width:100%; height:100%; }
+body { overflow-y: auto;}
 .wrap { display:flex; flex-direction: column; width:100%; height:auto; margin:0 auto; min-height:100vh; min-width: 320px; }
 /* 컨텐츠 */
 .contentWrap { display:flex; flex-direction: column; flex:1 1 auto; height:100%; }
