@@ -1,206 +1,267 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>table</title>
-    <link rel="stylesheet" href="/root/mobile/assets/css/ui/table.css">
-    <link rel="stylesheet" href="/root/mobile/assets/css/ui/ui-basic.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>공통>레이아웃</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="공통keywords">
+    <meta name="description" content="공통description">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0, viewport-fit=cover"> -->
+    <meta name="viewport" content="user-scalable=no,width=375">
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <!-- 일반 Favicon 설정 -->
+    <link rel="icon" type="image/png" href="../../assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="../../assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="../../assets/icons/site.webmanifest" />
+
+    <link href="../../assets/css/lib/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../../assets/css/ui/ui-basic.css" rel="stylesheet">
+    <link href="../../assets/css/ui/header_1.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/ui/table.css">
+
+    <script src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script src="../../assets/js/lib/swiper-bundle.min.js"></script>
 </head>
 <body>
+    <!-- S:wrap -->
     <div class="wrap">
-        <form>
-            <div class="contents-wrap">
 
-                <!-- //table-type 1 -->
-                <section class="tit">
-                    table-type 1 test
-                </section>
+        <!-- S:headerWrap -->
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#headerWrap").load("../include/inc_header.html");
+                });
+            </script>
+        </div>
+        <!-- E:headerWrap -->
 
-                <div class="table-type1">
-                    <table>
-                        <caption></caption>
-                        <colgroup>
-                            <col width="50%">
-                            <col width="50%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="row">항목</th>
-                                <th scope="row">항목</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>내용</td>
-                                <td>내용</td>
-                            </tr>
-                            <tr>
-                                <td>내용</td>
-                                <td>내용</td>
-                            </tr>
-                            <tr>
-                                <td>내용</td>
-                                <td>내용</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <!-- S:contentWrap -->
+        <div class="contentWrap sub">
 
-                <!-- //table-type 2 -->
-                <section class="tit">
-                    table-type 2
-                </section>
+            <!-- //table-type 1 -->
+            <section class="tit">
+                table-type 1 test
+            </section>
 
-                <div class="table-type2">
-                    <div class="col">
-                        <dl>
-                            <dt>항목</dt>
-                            <dd>
-                                <span>내용</span>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>항목</dt>
-                            <dd>
-                                <span>내용</span>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>항목</dt>
-                            <dd>
-                                <span>내용</span>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-
-                <!-- //table-type 3 -->
-                <section class="tit">
-                    table-type 3
-                </section>
-
-                <div class="table-type3">
-                    <table>
-                        <caption></caption>
-                        <colgroup>
+            <div class="table-type1">
+                <table>
+                    <caption></caption>
+                    <colgroup>
                         <col width="50%">
-                        <col width="25%">
-                        <col width="25%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th rowspan="2" scope="row" style="border-left: none;">항목</th>
-                                <th colspan="2" scope="row">항목</th>
-                            </tr>
-                            <tr>
-                                <th scope="row">항목</th>
-                                <th scope="row">항목</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>내용</td>
-                                <td>내용</td>
-                                <td>내용</td>
-                            </tr>
-                            <tr>
-                                <td>내용</td>
-                                <td>내용</td>
-                                <td>내용</td>
-                            </tr>
-                            <tr>
-                                <td>내용</td>
-                                <td>내용</td>
-                                <td>내용</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                        <col width="50%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="row">항목</th>
+                            <th scope="row">항목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                <!-- //table-type scroll -->
-                <section class="tit">
-                    table-type Scroll
-                </section>
+            <!-- //table-type 2 -->
+            <section class="tit">
+                table-type 2
+            </section>
 
-                <div class="table-wrap">
-                    <table>
-                        <caption></caption>
-                        <colgroup>
-                        <col width="15%">
-                        <col width="15%">
-                        <col width="15%">
-                        <col width="15%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="row">항목</th>
-                                <th scope="row">항목</th>
-                                <th scope="row">항목</th>
-                                <th scope="row">항목</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>내용</td>
-                                <td>내용</td>
-                                <td>내용</td>
-                                <td>내용</td>
-                            </tr>
-                            <tr>
-                                <td>내용</td>
-                                <td>내용</td>
-                                <td>내용</td>
-                                <td>내용</td>
-                            </tr>
-                            <tr>
-                                <td>내용</td>
-                                <td>내용</td>
-                                <td>내용</td>
-                                <td>내용</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="table-type2">
+                <table>
+                    <caption></caption>
+                    <colgroup>
+                    <col width="50%">
+                    <col width="25%">
+                    <col width="25%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan="2" scope="row" style="border-left: none;">항목</th>
+                            <th colspan="2" scope="row">항목</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">항목</th>
+                            <th scope="row">항목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                <!-- //table-type title -->
-                <section class="tit">
-                    tit/cap
-                </section>
+            <!-- //table-type 3 -->
+            <section class="tit">
+                table-type 3
+            </section>
 
-                <div class="table-type1">
-                    <div class="table-tit">
-                        <h4>
-                            타이틀 내용이 들어갑니다.
-                        </h4>
-                    </div>
-                    <table>
-                        <caption></caption>
-                        <colgroup>
-                            <col width="30%">
-                            <col width="70%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="row">항목</th>
-                                <th scope="row">항목</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>내용</td>
-                                <td>내용</td>
-                            </tr>
-                    </table>
-                    <div class="table-caption">
-                        <p>※ 내용을 입력해 주세요.</p>
-                    </div>
-                </div>
-                <!-- table-type 1-2// -->
+            <div class="table-type3">
+                <table>
+                    <caption></caption>
+                    <colgroup>
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="15%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="row">항목</th>
+                            <th scope="row">항목</th>
+                            <th scope="row">항목</th>
+                            <th scope="row">항목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
+            <!-- //table-type 4 -->
+            <section class="tit">
+                table-type 4
+            </section>
+
+            <div class="table-type4">
+                <div class="col">
+                    <dl>
+                        <dt>항목</dt>
+                        <dd>
+                            <span>내용</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>항목</dt>
+                        <dd>
+                            <span>내용</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>항목</dt>
+                        <dd>
+                            <span>내용</span>
+                        </dd>
+                    </dl>
                 </div>
             </div>
-        </form>
+
+            <!-- //table-type title -->
+            <section class="tit">
+                tit/cap
+            </section>
+
+            <div class="table-type1">
+                <div class="table-tit">
+                    <h4>
+                        타이틀 내용이 들어갑니다.
+                    </h4>
+                </div>
+                <table>
+                    <caption></caption>
+                    <colgroup>
+                        <col width="30%">
+                        <col width="70%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="row">항목</th>
+                            <th scope="row">항목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                </table>
+                <div class="table-caption">
+                    <p>※ 내용을 입력해 주세요.</p>
+                </div>
+            </div>
+            <!-- table-type 1-2// -->
+
+        </div>
+        <!-- E:contentWrap -->
+
+        <!--S:btmWrap-->
+        <div class="btmWrap">
+
+            <div class="btm-btn-area">
+                <button type="button" class="btm-btn app">지갑 만들기 </button>
+            </div>
+
+            <!-- s:footerWrap -->
+            <div id="footerWrap">
+                <script>
+                    $(document).ready(function(){
+                        $("#footerWrap").load("../include/inc_footer.html");
+                    });
+                </script>
+            </div>
+            <!-- e:footerWrap-->
+
+        </div>
+        <!--E:btmWrap-->
+
     </div>
+    <!-- E:wrap -->
+
 </body>
 </html>
