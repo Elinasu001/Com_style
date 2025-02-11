@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/* 필수 표시 */
+.essential { position: relative; }
+.essential::after { content:'*'; color:var(--error); padding-left:3px; }
+
+/* 스크린리더 전용 클래스 :: .sr-only */
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow: hidden;  border:0; clip:rect(0, 0, 0, 0); white-space: nowrap; }

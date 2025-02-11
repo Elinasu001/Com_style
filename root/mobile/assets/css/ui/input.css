@@ -6,8 +6,10 @@ body {
 /*---------------------------------------------
 	#인풋 기본 스타일
 ---------------------------------------------*/
-textarea { overflow-y:scroll; width:100%; height:240px; padding:14px 16px; resize:none; white-space:pre-line; line-height:1.188rem; color:var(--inactive); border:1px solid var(--inactive); background-color: var(--bg-color-f); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 0; -moz-border-radius: 0;-webkit-border-radius: 0; }
-input.form-control { padding:0 16px; height:46px; line-height:1.188rem; color:var(--inactive); border:1px solid var(--border-inactive); background-color: var(--bg-color-f); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  }
+textarea,
+input.form-control { transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 0; -moz-border-radius: 0;-webkit-border-radius: 0; }
+textarea { width:100%; height:240px; resize:none; white-space:pre-line; line-height:1.188rem; color:var(--inactive); border:1px solid var(--border-inactive); background-color: var(--bg-color-f);  }
+input.form-control { padding:0 16px; height:46px; line-height:1.188rem; color:var(--inactive); border:1px solid var(--border-inactive); background-color: var(--bg-color-f); }
 input.amount-num { padding:0 32px 0 16px; }
 textarea::placeholder,
 input.form-control::placeholder { color:var(--inactive); }
@@ -16,17 +18,32 @@ input.form-control::-ms-input-placeholder { color:var(--inactive); }
 textarea:focus,
 input.form-control:focus { border-color:var(--active); color:var(--active); }
 input.form-control:disabled,
-input.form-control:read-only  { background: var(--bg-color-c); color:var(--inactive); }
+input.form-control:read-only  { background: var(--bg-color-secondary); color:var(--inactive); }
+.form-group > label {  font-size:var(--font14); color:var(--txt-color-6); }
 
 /* 유효성 검사 */
-textarea:valid,
-input.form-control:valid { color:var(--active); }
-textarea:user-invalid,
-input.form-control:user-invalid { color:var(--error); }
-input.form-contro:user-valid ~ .valid { display: inline-block;}
-input.form-control:user-invalid + .error { display: block; }
+/* 기본 스타일: 유효한 상태 */
+input.form-control:valid,
+.form-group.user-valid input.form-control { color: var(--active); }
+/* 유효하지 않은 상태 */
+.form-group.user-invalid input.form-control { color: var(--error); border:1px solid var(--error);}
+/* 유효할 때, valid 메시지 표시 (인접 형제 선택자 사용) */
+.form-group.user-valid .valid  { display: inline-block; }
+/* 유효하지 않을 때, 바로 다음 형제인 error 메시지 표시 */
+.form-group.user-invalid .error { display: block; }
+/* valid, error 메시지 기본 숨김 처리 */
 .valid {display: none;color: green; }
-.error {display: none;color: red; }
+.error {display: none;color: var(--error); }
+.form-group { position:relative; }
+.valid { position:absolute; right:15px; top:50%; }
+.error { padding-left:24px; margin-top:5px; line-height:20px; font-size:var(--font14); }
+.error::before { content:'!'; position: absolute; left:0;  width:18px; height:18px; text-align: center; font-size:var(--font14); color:var(--bg-color-f);  background-color:var(--error); border-radius:50%; }
+
+/*---------------------------------------------
+	#인풋 마진
+---------------------------------------------*/
+.form-group > label { display:inline-block; margin-bottom:10px; }
+
 
 /*---------------------------------------------
 	#인풋 라디오/체크박스

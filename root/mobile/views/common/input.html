@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>공통>인풋</title>
@@ -26,7 +27,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="../../assets/icons/site.webmanifest" />
 
-    <link rel="stylesheet" href="../../assets/css/lib/swiper-bundle.min.css" >
+    <link rel="stylesheet" href="../../assets/css/lib/swiper-bundle.min.css">
     <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
     <link rel="stylesheet" href="../../assets/css/ui/input.css">
 
@@ -36,138 +37,142 @@
 </head>
 
 <body>
-    
+
     <!-- S:wrap -->
     <div class="wrap">
 
         <!-- S:headerWrap -->
         <div id="headerWrap" class="headerOn"><!--[D] : headerOn 클래스 : 스크립트 적용 중-->
             <script>
-                $(document).ready(function(){
+                $(document).ready(function () {
                     $("#headerWrap").load("../include/inc_header.html");
                 });
             </script>
         </div>
         <!-- E:headerWrap -->
+        
+            <!-- S:contentWrap -->
+            <div class="contentWrap sub">
+                <form id="myForm">
+                    <section class="tit">
+                        Input Radio/CheckBox/Toggle
+                    </section>
 
-        <!-- S:contentWrap -->
-        <div class="contentWrap sub">
-            
-            <section class="tit">
-                Input Radio/CheckBox/Toggle
-            </section>
+                    <div class="form-group check">
+                        <ul class="check-box">
+                            <li>
+                                <input type="checkbox" id="check-1" name="checkbox">
+                                <label for="check-1" class="check-button">
+                                    <span>Check Box OFF</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="check-2" name="checkbox" checked="">
+                                <label for="check-2" class="check-button">
+                                    <span>Check Box ON</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="check-3" name="checkbox" disabled="">
+                                <label for="check-3" class="check-button">
+                                    <span>Check Box Disabled</span>
+                                </label>
+                            </li>
 
-            <div class="form-group check">
-                <ul class="check-box">
-                    <li>
-                        <input type="checkbox" id="check-1" name="checkbox">
-                        <label for="check-1" class="check-button">
-                            <span>Check Box OFF</span>
-                        </label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="check-2" name="checkbox" checked="">
-                        <label for="check-2" class="check-button">
-                            <span>Check Box ON</span>
-                        </label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="check-3" name="checkbox" disabled="">
-                        <label for="check-3" class="check-button">
-                            <span>Check Box Disabled</span>
-                        </label>
-                    </li>
-                    
-                </ul>
-            </div>
+                        </ul>
+                    </div>
 
-            <div class="form-group radio">
-                <ul class="radio-box">
-                    <li>
-                        <input type="radio" id="radio-1" name="radio">
-                        <label for="radio-1" class="radio-button"><span>Radio Button1</span></label>
-                    </li>
-                    <li>
-                        <input type="radio" id="radio-2" name="radio" checked="">
-                        <label for="radio-2" class="radio-button"><span>Radio Button2</span></label>
-                    </li>
-                </ul>
-            </div>
+                    <div class="form-group radio">
+                        <ul class="radio-box">
+                            <li>
+                                <input type="radio" id="radio-1" name="radio">
+                                <label for="radio-1" class="radio-button"><span>Radio Button1</span></label>
+                            </li>
+                            <li>
+                                <input type="radio" id="radio-2" name="radio" checked="">
+                                <label for="radio-2" class="radio-button"><span>Radio Button2</span></label>
+                            </li>
+                        </ul>
+                    </div>
 
-            <div class="form-group toggle">
-                <div class="toggle-box">
-                    <input type="checkbox" id="checkbox01" name="checkbox">
-                    <label for="checkbox01" class="toggle-button"></label>
-                </div>
-            </div>
+                    <div class="form-group toggle">
+                        <div class="toggle-box">
+                            <input type="checkbox" id="checkbox01" name="checkbox">
+                            <label for="checkbox01" class="toggle-button"></label>
+                        </div>
+                    </div>
 
 
-            <section class="tit">
-                Input
-            </section>
+                    <section class="tit">
+                        Input
+                    </section>
 
-            <div class="form-group">
-                <label for="">성명</label>
-                <input id="" title="" type="text" name="" class="form-control" placeholder="성명">
-            </div>
-            
-            <form id="myForm">
-                <div class="form-wrap">
-                    <div class="form-group">
-                        <label for="email">Valid/inValid</label>
-                        <input id="email" title="" type="text" name="" class="form-control" placeholder="Valid/inValid" required>
+                    <div class="form-group user-invalid"><!--[D]: .user-invalid 유효하지 않을 경우 -->
+                        <label for="name">성명</label>
+                        <input id="name" type="text" name="name" class="form-control" placeholder="성명" required>
+                        <div class="error">성명은 필수입니다. 성명을 올바르게 입력해 주세요</div>
+                        <div class="valid">✓</div>
+                    </div>
+
+                    <div class="form-group user-valid"><!--[D]: .user-invalid 유효 할 경우 -->
+                        <label for="email">이메일</label>
+                        <input id="email" type="email" name="email" class="form-control" placeholder="이메일" required>
                         <div class="error">이메일은 필수입니다. 이메일을 올바르게 입력해 주세요</div>
                         <div class="valid">✓</div>
                     </div>
 
                     <div class="form-group">
-                        <label for="password">Valid/inValid</label>
-                        <input id="password" type="password" name="password" class="form-control" placeholder="Valid/inValid" required>
+                        <label for="password">패스워드</label>
+                        <input id="password" type="password" name="password" class="form-control" placeholder="패스워드" required>
                         <div class="error">비밀번호는 필수입니다. 또한 8자리 이상이어야 합니다.</div>
                         <div class="valid">✓</div>
                     </div>
-                    <input type="submit" value="가입하기">
+
+                    <div class="form-group">
+                        <label for="Disabled">Disabled</label>
+                        <input id="Disabled" type="text" name="Disabled" class="form-control" placeholder="Disabled" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Readonly">Readonly</label>
+                        <input id="Readonly" type="text" name="Readonly" class="form-control" placeholder="Readonly" readonly>
+                    </div>
+
+                    <section class="tit">
+                        Textarea
+                    </section>
+
+                    <div class="form-group">
+                        <textarea type="text" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength=""></textarea>
+                    </div>
+
+                    <section class="tit">
+                        Select
+                    </section>
+
+                </form>
+            </div>
+            <!-- E:contentWrap -->
+
+            <!--S:btmWrap-->
+            <div class="btmWrap">
+
+                <div class="btm-btn-area">
+                    <button type="submit" class="btm-btn">로그인</button>
                 </div>
-            </form>
 
-            <div class="form-group">
-                <label for="">Disabled</label>
-                <input id="" title="" type="text" name="" class="form-control" placeholder="Disabled" disabled="">
+                <!-- s:footerWrap -->
+                <div id="footerWrap">
+                    <script>
+                        $(document).ready(function () {
+                            $("#footerWrap").load("../include/inc_footer.html");
+                        });
+                    </script>
+                </div>
+                <!-- e:footerWrap-->
+
             </div>
-
-            <div class="forem-group">
-                <label for="">Readonly</label>
-                <input id="" title="" type="text" name="" class="form-control" placeholder="disabled" readonly=""/>
-            </div>
-
-
-            <section class="tit">
-                Select
-            </section>
-
-        </div>
-        <!-- E:contentWrap -->
-
-        <!--S:btmWrap-->
-        <div class="btmWrap">
-            
-            <div class="btm-btn-area">
-                <button type="button" class="btm-btn app">지갑 만들기 </button>
-            </div>
-
-            <!-- s:footerWrap -->
-            <div id="footerWrap">
-                <script>
-                    $(document).ready(function(){
-                        $("#footerWrap").load("../include/inc_footer.html");
-                    });
-                </script>
-            </div>
-            <!-- e:footerWrap-->
-
-        </div>
-        <!--E:btmWrap-->
-
+            <!--E:btmWrap-->
     </div>
     <!-- E:wrap -->
 
