@@ -43,7 +43,7 @@ input.form-control:valid,
 ---------------------------------------------*/
 .form-group > label { display:inline-block; margin:10px 0; }
 input.form-control { padding:0 15px; }
-textarea::placeholder { padding:10px; }
+textarea:valid { padding:10px; }
 input.form-control.amount-num { padding:0 32px 0 15px; }
 .error { margin:5px 0; }
 
