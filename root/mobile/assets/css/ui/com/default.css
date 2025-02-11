@@ -4,9 +4,11 @@
     --defalt-color-tr: transparent;
 }
 
+/*---------------------------------------------
+	#디폴트
+---------------------------------------------*/
 /* * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none; word-break:keep-all;  word-wrap:break-word; } */
-/* 디폴트 폰트 사이즈 16px */
-html { font-size:16px; }
+html { font-size:16px; }/*  기본 폰트 사이즈 16px */
 body { font-size:1rem;; font-weight:500; line-height: normal; font-family:'Pretendard', 'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; color: var(--default-color); -webkit-overflow-scrolling:touch; }
 body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, li, ol, li, table, caption, th, td, form, fieldset, legend, address, div, p, span, a { margin:0; padding:0; }
 ul,ol,li,dl,dt,dd { list-style: none; }
@@ -28,3 +30,23 @@ a, a:hover, a:focus, a:active { text-decoration: none !important; cursor: pointe
 .tal{ text-align: left !important; }
 .tac{ text-align: center !important; }
 .tar{ text-align: right !important; }
+
+/*---------------------------------------------
+	#인풋 리셋
+---------------------------------------------*/
+input { display:block; width:100%; line-height:initial; box-sizing:border-box; border:none; border-radius: 0; background-color: none; -o-appearance:none; -webkit-appearance:none; -moz-appearance: none; appearance: none; white-space: nowrap; overflow:hidden; outline:none; cursor: pointer; }
+input:disabled { cursor: initial; }
+/** Firefox Browser **/
+input[type=number],
+input[type=number] { -moz-appearance: textfield; }
+/** Webkit Browser (예: Chrome, Safari) **/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+/** Edge Browser **/
+input[type="password"]::-ms-reveal { display: none; }
+input[type="radio"],
+input[type="checkbox"] {  box-sizing: border-box; padding:0; }
+input::-ms-clear,
+input::-ms-reveal { display: none;}

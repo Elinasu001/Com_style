@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>공통>약관</title>
+    <title>공통>인풋</title>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -28,7 +28,7 @@
 
     <link rel="stylesheet" href="../../assets/css/lib/swiper-bundle.min.css" >
     <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
-    <link rel="stylesheet" href="../../assets/css/ui/terms.css">
+    <link rel="stylesheet" href="../../assets/css/ui/input.css">
 
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
@@ -53,6 +53,49 @@
         <!-- S:contentWrap -->
         <div class="contentWrap sub">
 
+            <div class="form-group check">
+                <ul class="check-box">
+                    <li>
+                        <input type="checkbox" id="check-1" name="checkbox">
+                        <label for="check-1" class="check-button">
+                            <span>Check Box OFF</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check-2" name="checkbox" checked="">
+                        <label for="check-2" class="check-button">
+                            <span>Check Box ON</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check-3" name="checkbox" disabled="">
+                        <label for="check-3" class="check-button">
+                            <span>Check Box Disabled</span>
+                        </label>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="form-group radio">
+                <ul class="radio-box">
+                    <li>
+                        <input type="radio" id="radio-1" name="radio">
+                        <label for="radio-1" class="radio-button"><span>Radio Button1</span></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="radio-2" name="radio" checked="">
+                        <label for="radio-2" class="radio-button"><span>Radio Button2</span></label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group toggle">
+                <div class="toggle-box">
+                    <input type="checkbox" id="checkbox01" name="checkbox">
+                    <label for="checkbox01" class="toggle-button"></label>
+                </div>
+            </div>
 
         </div>
         <!-- E:contentWrap -->

@@ -3,21 +3,21 @@
 /* 모바일 폰트 사이즈 기준 [html::16px], 짝수 단위입니다.[짝수 단위로 할 경우 소수점 최대 3자리로 떨어집니다.] */
 body{
     /* 폰트 size */
-    --font-s-12: 0.75rem;
-    --font-s-14: 0.875rem;
-    --font-s-16: 1rem;
-    --font-s-18: 1.125rem;
-    --font-s-20: 1.25rem;
-    --font-s-22: 1.375rem;
-    --font-s-24: 1.5rem;
-    --font-s-26: 1.625rem;
-    --font-s-28: 1.75rem;
-    --font-s-30: 1.875rem;
-    --font-s-32: 2rem;
-    --font-s-34: 2.125rem;
-    --font-s-36: 2.25rem;
-    --font-s-38: 2.375rem;
-    --font-s-40: 2.5rem;
+    --font12: 0.75rem;
+    --font14: 0.875rem;
+    --font16: 1rem;
+    --font18: 1.125rem;
+    --font20: 1.25rem;
+    --font22: 1.375rem;
+    --font24: 1.5rem;
+    --font26: 1.625rem;
+    --font28: 1.75rem;
+    --font30: 1.875rem;
+    --font32: 2rem;
+    --font34: 2.125rem;
+    --font36: 2.25rem;
+    --font38: 2.375rem;
+    --font40: 2.5rem;
 
      /* 폰트 weight */
     --font-w-b: 600;
@@ -30,7 +30,7 @@ body {
 
     /** 기본 색상 **/
     --color-primary: #1447A2;
-    --color-secondary: #1447A2;
+    --color-secondary: #2E5AF4;
 
     --color-semantic-1: #FF0000;
     --color-semantic-2: #086CFD;
@@ -38,6 +38,9 @@ body {
     --color-semantic-4: #00A2C4;
 
     /** 배경 기본 색상 **/
+    --bg-color-primary:#1447A2;
+    --bg-color-secondary:#2E5AF4;
+
     --bg-color-a: #AAAAAA;
     --bg-color-b: #BBBBBB;
     --bg-color-c: #CCCCCC;
@@ -47,14 +50,14 @@ body {
     --bg-color-f: #FFFFFF;
     --bg-color-f-7: #F7F7FA;
     --bg-color-f-8: #F8F8F8;
-    /* 배경 강조 색상 */
-    --bg-color-emp-1: #1447A2;
-    --bg-color-emp-2: #2E5AF4;
-    /* 배경 기타 색상상 */
+    /* 배경 기타 색상 */
     --bg-color-3: #EFF2F7;
     --bg-color-4: #EEF2F9;
     
     /** 텍스트 기본 색상 **/
+    --txt-primary: #111111;
+    --txt-secondary: #333333;
+
     --txt-color-1: #111111;
     --txt-color-2-4: #242424;
     --txt-color-3: #333333;
@@ -71,6 +74,9 @@ body {
     --txt-color-emp-1: #F1108E;
 
     /* 보더 기본 색상 */
+    --border-primary: #1447A2;
+    --border-secndary: #EEEEEE;
+
     --border-color-a:#AAAAAA;
     --border-color-b:#BBBBBB;
     --border-color-c:#CCCCCC;
@@ -84,4 +90,9 @@ body {
 
     /* 보더 기타 색상 */
     --border-color-etc-1:#F0F0F0;
+
+    --inactive: #333333;
+    --border-inactive: #DDDDDD;
+    --active: #1447A2;
+    --error: #FF0000;
 }
