@@ -27,6 +27,13 @@ $(document).ready(function(){
                 } else {
                     this.openPopup(id);
                 }
+            },
+            closePopupOnDim: function(){
+                $('.layerPopup.btmSheet').on('click', function(e){
+                    if(!$(e.target).closest('.pop-con-wrap').length){
+                        popupL.closePopup($(this).attr('id'));
+                    }
+                });
             }
         }
     })();
@@ -35,5 +42,7 @@ $(document).ready(function(){
     window.openPopup = popupL.openPopup;
     window.closePopup = popupL.closePopup;
     window.togglePopup = popupL.togglePopup;
+
+    popupL.closePopupOnDim();
 
 });

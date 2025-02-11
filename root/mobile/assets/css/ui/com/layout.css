@@ -53,7 +53,7 @@ body {
 .layerPopup { z-index:10; display:none; flex-direction: column; position: fixed; top:0; left:0; background-color: var(--bg-color-f); overflow: hidden; width:100%; }
 /* 팝업_헤더 */
 .layerPopup .pop-header { z-index: 11; width:100%; height:60px; display:flex; position: fixed; top: 0; left:0; display:flex; justify-content:center; align-items:center; overflow: hidden;  background-color: var(--bg-color-f); }
-.layerPopup .pop-header  .left,
+.layerPopup .pop-header .left,
 .layerPopup .pop-header .right { position: absolute; }
 .layerPopup .pop-header .left { left:10px; }
 .layerPopup .pop-header .right { right:10px; }
@@ -69,8 +69,9 @@ body {
 .layerPopup.full { height:100dvh; }
 .layerPopup.full .pop-con-wrap { padding-top:60px; flex:1 1 auto; }
 /* 팝업_bottom */
-.layerPopup.btmSheet { z-index:10; top:initial; bottom:0; min-height:auto; border-radius: 30px 30px 0 0; }
+.layerPopup.btmSheet { display:initial; z-index:10; top:initial; bottom:-100%; min-height:auto; border-radius: 30px 30px 0 0; transition:bottom 0.2s ease-in-out; }
 .layerPopup.btmSheet .pop-header .left { left:20px; }
+.layerPopup.btmSheet.on { bottom:0; }
 .layerPopup.btmSheet.on::before,
 .layerPopup.modal.on::before { content: ''; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0, 0, 0, 0.5); z-index:-1;}/*dim*/
 .layerPopup.btmSheet .pop-header { position: initial; border-radius: 30px 30px 0 0;}
@@ -81,7 +82,7 @@ body {
 .layerPopup.modal .pop-tit { font-size:var(--font-s-16); font-weight: var(--font-w-b); padding-bottom:10px; }
 .layerPopup.modal .pop-con-wrap { padding:50px 30px 40px 30px; }
 /* 전체메뉴 */
-.layerPopup.full.allMenu { display:initial;  left:100%;; transition:left 0.2s ease-in-out; }
-.layerPopup.full.allMenu .pop-header { left:100%;; transition:left 0.2s ease-in-out; }
+.layerPopup.full.allMenu { display:initial;  left:100%; transition:left 0.2s ease-in-out; }
+.layerPopup.full.allMenu .pop-header { left:100%; transition:left 0.2s ease-in-out; }
 .layerPopup.full.allMenu.on,
 .layerPopup.full.allMenu.on .pop-header { left:0; }
