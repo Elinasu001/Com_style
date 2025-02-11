@@ -92,6 +92,8 @@ body {
     --border-color-etc-1:#F0F0F0;
 
     --inactive: #333333;
+    --txt-inactive:#757575;
+    --txt-active:#111111;
     --border-inactive: #DDDDDD;
     --active: #1447A2;
     --error: #FF0000;

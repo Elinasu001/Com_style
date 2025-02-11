@@ -6,19 +6,21 @@ body {
 /*---------------------------------------------
 	#인풋 기본 스타일
 ---------------------------------------------*/
-textarea,
-input.form-control { transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 0; -moz-border-radius: 0;-webkit-border-radius: 0; }
-textarea { width:100%; height:240px; resize:none; white-space:pre-line; line-height:1.188rem; color:var(--inactive); border:1px solid var(--border-inactive); background-color: var(--bg-color-f);  }
-input.form-control { height:46px; line-height:1.188rem; color:var(--inactive); border:1px solid var(--border-inactive); background-color: var(--bg-color-f); }
-textarea::placeholder,
-input.form-control::placeholder { color:var(--inactive); }
-input.form-control::-moz-placeholder,
-input.form-control::-ms-input-placeholder { color:var(--inactive); }
-textarea:focus,
-input.form-control:focus { border-color:var(--active); color:var(--active); }
-input.form-control:disabled,
-input.form-control:read-only  { background: var(--bg-color-secondary); color:var(--inactive); }
 .form-group > label {  font-size:var(--font14); color:var(--txt-color-6); }
+textarea,
+input.form-control { transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 0; -moz-border-radius: 0;-webkit-border-radius: 0; color:var(--txt-inactive); font-size:var(--font16); }
+textarea { width:100%; height:240px; resize:none; white-space:pre-line; line-height:1.188rem; border:1px solid var(--border-inactive); background-color: var(--bg-color-f);  }
+input.form-control { height:46px; line-height:1.188rem; border:1px solid var(--border-inactive); background-color: var(--bg-color-f); }
+textarea::placeholder,
+input.form-control::placeholder,
+input.form-control::-moz-placeholder,
+input.form-control::-ms-input-placeholder { color:var(--txt-inactive); }
+input.form-control:disabled,
+input.form-control:read-only  { background: var(--bg-color-secondary); color:var(--txt-inactive); }
+
+textarea:focus,
+input.form-control:focus { border-color:var(--active); color:var(--txt-active); }
+
 
 /* 유효성 검사 */
 /* 기본 스타일: 유효한 상태 */

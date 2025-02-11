@@ -49,3 +49,17 @@ input[type="radio"],
 input[type="checkbox"] {  box-sizing: border-box; padding:0; }
 input::-ms-clear,
 input::-ms-reveal { display: none;}
+
+
+/*---------------------------------------------
+    #flex 레이아웃
+---------------------------------------------*/
+.flex-row { display:flex; flex-direction: row; }
+.flex-col { display:flex; flex-direction: column; }
+.col { position: relative; }
+
+.gap5 { gap:5px; }
+.gap10 { gap:10px; }
+.gap15 { gap:10px; }
+.gap20 { gap:10px; }
+.gap30 { gap:10px; }

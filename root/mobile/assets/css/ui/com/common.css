@@ -1,8 +1,17 @@
 @charset "UTF-8";
 
-/* 필수 표시 */
+/* 필수 표시 :: * */
 .essential { position: relative; }
 .essential::after { content:'*'; color:var(--error); padding-left:3px; }
 
-/* 스크린리더 전용 클래스 :: .sr-only */
+/* 스크린리더 전용 클래스 */
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow: hidden;  border:0; clip:rect(0, 0, 0, 0); white-space: nowrap; }
+
+/* 인풋 하이픈 :: -, ~ */
+.ipt-hyphen { display:flex; justify-content: center; align-items: center; font-size:var(--font14); }
+
+/* 인풋 텍스트 :: 원, 개월, % */
+.amount-txt { position: absolute; transform: translateY(-50%); top:50%; right:15px; font-size:var(--font16); font-weight: var(--font-w-b); color:var(--txt-primary); }
+
+/* 인풋 주민등록번호 :: 원, 개월, % */
+.id-mask { position: absolute;  transform: translateY(-50%); top:50%; left:34px; line-height: 16px; font-size:var(--font16); font-weight: var(--font-w-r); color:var(--txt-primary); }
