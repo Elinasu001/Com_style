@@ -35,7 +35,7 @@ input.form-control:valid,
 .error {display: none;color: var(--error); }
 .form-group { position:relative; }
 .valid { position:absolute; right:15px; top:55%; }
-.error { padding-left:24px; line-height:20px; font-size:var(--font14); }
+.error { padding-left:24px; line-height:17px; font-size:var(--font14); }
 .error::before { content:'!'; position: absolute; left:0;  width:18px; height:18px; text-align: center; font-size:var(--font14); color:var(--bg-color-f);  background-color:var(--error); border-radius:50%; }
 
 /*---------------------------------------------

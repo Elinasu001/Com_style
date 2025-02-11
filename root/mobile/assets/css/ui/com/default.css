@@ -7,7 +7,7 @@
 /*---------------------------------------------
 	#디폴트
 ---------------------------------------------*/
-/* * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none; word-break:keep-all;  word-wrap:break-word; } */
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none; word-break:keep-all;  word-wrap:break-word; }
 html { font-size:16px; }/*  기본 폰트 사이즈 16px */
 body { font-size:1rem;; font-weight:500; line-height: normal; font-family:'Pretendard', 'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; color: var(--default-color); -webkit-overflow-scrolling:touch; }
 body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, li, ol, li, table, caption, th, td, form, fieldset, legend, address, div, p, span, a { margin:0; padding:0; }
