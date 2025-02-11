@@ -7,21 +7,26 @@ body {
 	#인풋 기본 스타일
 ---------------------------------------------*/
 textarea { overflow-y:scroll; width:100%; height:240px; padding:14px 16px; resize:none; white-space:pre-line; line-height:1.188rem; color:var(--inactive); border:1px solid var(--inactive); background-color: var(--bg-color-f); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 0; -moz-border-radius: 0;-webkit-border-radius: 0; }
-input { padding:0 16px; height:46px; line-height:1.188rem; color:var(--inactive); border:1px solid var(--inactive); background-color: var(--bg-color-f); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  }
+input.form-control { padding:0 16px; height:46px; line-height:1.188rem; color:var(--inactive); border:1px solid var(--border-inactive); background-color: var(--bg-color-f); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  }
 input.amount-num { padding:0 32px 0 16px; }
 textarea::placeholder,
-input::placeholder { color:var(--inactive); }
-input::-moz-placeholder,
-input::-ms-input-placeholder { color:var(--inactive); }
+input.form-control::placeholder { color:var(--inactive); }
+input.form-control::-moz-placeholder,
+input.form-control::-ms-input-placeholder { color:var(--inactive); }
 textarea:focus,
-input:focus { border-color:var(--active); color:var(--active); }
+input.form-control:focus { border-color:var(--active); color:var(--active); }
+input.form-control:disabled,
+input.form-control:read-only  { background: var(--bg-color-c); color:var(--inactive); }
+
 /* 유효성 검사 */
 textarea:valid,
-input:valid { color:var(--active); }
-textarea:invalid,
-input:invalid { color:var(--error); }
-input:disabled,
-input:read-only  { background: var(--bg-color-c); color:var(--inactive); }
+input.form-control:valid { color:var(--active); }
+textarea:user-invalid,
+input.form-control:user-invalid { color:var(--error); }
+input.form-contro:user-valid ~ .valid { display: inline-block;}
+input.form-control:user-invalid + .error { display: block; }
+.valid {display: none;color: green; }
+.error {display: none;color: red; }
 
 /*---------------------------------------------
 	#인풋 라디오/체크박스
