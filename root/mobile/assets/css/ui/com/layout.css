@@ -16,7 +16,7 @@
 .sub-desc { padding:20px 0; line-height:32px; color:var(--txt-color-1); }
 .btm-btn-area { display:flex; justify-content: center; align-items: center; }
 .btm-btn-area .btm-btn { background:gray; width:100%; height:56px; color:var(--txt-color-f); }
-.layerPopup .btm-btn { background: var( --bg-color-emp-2); }
+.layerPopup .btm-btn { background: var(--bg-color-secondary); }
 .exc-type { line-height: 80px; }
 #footerWrap > footer { display:flex; align-items: center; justify-content: center; background: #3D3D3D; }
 #footerWrap > footer > .inner { width:375px; height:auto; }
