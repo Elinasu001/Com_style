@@ -165,19 +165,23 @@
                     </section>
 
                     <div class="form-group user-invalid">
-                        <label for="rrn-input">Input hyphen</label>
+                        <label for="rrn-first">주민등록번호 입력</label>
                         <div class="flex-row gap10">
                             <div class="col">
-                                <input id="rrn-frist" type="number" name="number" class="form-control" placeholder=""  min="0" step="1"  maxlength="6" oninput = "this.value = this.value.slice(0, 6)" required>
+                                <input id="rrn-first" type="number" name="rrn-first" class="form-control" placeholder="" min="0" step="1"
+                                    oninput="this.value = this.value.slice(0, 6); if(this.value.length === 6) document.getElementById('rrn-second').focus();" required>
                             </div>
                             <div class="ipt-hyphen">-</div>
                             <div class="col">
-                                <input id="rrn-second" type="number" name="number" class="form-control" placeholder="●"  min="0" step="1" maxlength="1" oninput = "this.value = this.value.slice(0, 1)" required>
+                                <!-- 두 번째 입력 필드는 스크린 리더를 위한 aria-labelledby 사용 -->
+                                <input id="rrn-second" type="number" name="rrn-second" class="form-control" placeholder="●" min="0" step="1"
+                                    oninput="this.value = this.value.slice(0, 1)" required aria-labelledby="rrn-first">
                                 <span class="id-mask">●●●●●●</span>
                             </div>
                         </div>
-                        <p class="feedback">유효하지 않은 주민등록번호 입니다.  주민등록번호를 올바르게 입력해 주세요</p>
+                        <p class="feedback">유효하지 않은 주민등록번호입니다. 주민등록번호를 올바르게 입력해 주세요.</p>
                     </div>
+                    
 
                     <section class="tit">
                         Textarea
