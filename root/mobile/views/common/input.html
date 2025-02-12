@@ -113,41 +113,24 @@
                         <label for="name" class="essential">성명</label>
                         <input id="name" type="text" name="name" class="form-control" placeholder="성명" required>
                         <p class="error">성명은 필수입니다. 성명을 올바르게 입력해 주세요.</p>
-                        <p class="valid">✓</p>
                     </div>
 
                     <div class="form-group user-valid"><!--[D]: .user-invalid 유효 할 경우 -->
                         <label for="email" class="essential">이메일</label>
                         <input id="email" type="email" name="email" class="form-control" placeholder="이메일" required>
                         <p class="error">이메일은 필수입니다. 이메일을 올바르게 입력해 주세요.</p>
-                        <p class="valid">✓</p>
                     </div>
 
                     <div class="form-group">
                         <label for="password" class="essential">패스워드</label>
                         <input id="password" type="password" name="password" class="form-control" placeholder="패스워드" required>
                         <p class="error">비밀번호는 필수입니다. 또한 8자리 이상이어야 합니다.</p>
-                        <p class="valid">✓</p>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Disabled">Disabled</label>
-                        <input id="Disabled" type="text" name="Disabled" class="form-control" placeholder="Disabled" disabled>
-                        <p class="error">유효하지 않을 경우 내용이 들어갑니다.</p>
-                        <p class="valid">✓</p>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Readonly">Readonly</label>
-                        <input id="Readonly" type="text" name="Readonly" class="form-control" placeholder="Readonly" readonly>
-                        <p class="error">유효하지 않을 경우 내용이 들어갑니다.</p>
-                        <p class="valid">✓</p>
                     </div>
 
                     <div class="form-group">
                         <label for="">원, %</label>
                         <div class="col">
-                            <input id="" type="text" class="form-control ipt-pd-r" placeholder="금액을 입력해주세요" inputmode="numeric"><!-- [D] 스크립트 inputmode="numeric" : 세자리 수마다 콤마 적용  -->
+                            <input id="" type="text" class="form-control ipt-pd-r" placeholder="금액을 입력해주세요" inputmode="numeric" required><!-- [D] 스크립트 inputmode="numeric" : 세자리 수마다 콤마 적용  -->
                             <span class="ipt-right amount">원</span>
                         </div>
                     </div>
@@ -161,11 +144,23 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="">아이디</label>
+                        <label for="">텍스트 인풋</label>
                         <div class="col">
-                            <input id="" type="text" class="form-control ipt-pd-r" placeholder="입력해주세요">
+                            <input id="" type="text" class="form-control ipt-pd-r" placeholder="입력해주세요" required>
                             <span class="ipt-right ico flex-row gap10"><button type="button" class="btn btn-ipt-close"><span class="sr-only">삭제버튼</span></button></span>
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Disabled">Disabled</label>
+                        <input id="Disabled" type="text" name="Disabled" class="form-control" placeholder="Disabled" disabled>
+                        <p class="error">유효하지 않을 경우 내용이 들어갑니다.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Readonly">Readonly</label>
+                        <input id="Readonly" type="text" name="Readonly" class="form-control" placeholder="Readonly" readonly>
+                        <p class="error">유효하지 않을 경우 내용이 들어갑니다.</p>
                     </div>
 
                     
@@ -177,16 +172,15 @@
                         <label for="">Input hyphen</label>
                         <div class="flex-row gap10">
                             <div class="col">
-                                <input id="" type="number" name="number" class="form-control" placeholder=""  min="0" step="1"  maxlength="6" oninput = "this.value = this.value.slice(0, 6)">
+                                <input id="" type="number" name="number" class="form-control" placeholder=""  min="0" step="1"  maxlength="6" oninput = "this.value = this.value.slice(0, 6)" required>
                             </div>
                             <div class="ipt-hyphen">-</div>
                             <div class="col">
-                                <input id="" type="number" name="number" class="form-control" placeholder="●"  min="0" step="1" maxlength="1" oninput = "this.value = this.value.slice(0, 1)" >
+                                <input id="" type="number" name="number" class="form-control" placeholder="●"  min="0" step="1" maxlength="1" oninput = "this.value = this.value.slice(0, 1)" required>
                                 <span class="id-mask">●●●●●●</span>
                             </div>
                         </div>
                         <p class="error">유효하지 않은 주민등록번호 입니다.  주민등록번호를 올바르게 입력해 주세요</p>
-                        <p class="valid">✓</p>
                     </div>
 
                     <section class="tit">
