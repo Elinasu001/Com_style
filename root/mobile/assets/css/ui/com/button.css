@@ -3,7 +3,7 @@
 button.btn:focus-visible{ outline: 1px solid var(--outline);}
 .btn.btn-ipt-clear:focus-visible { outline: 2px solid var(--outline); outline-offset: -4px; }
 
-/* 인풋 검색/삭제 버튼 */
+/* 인풋 검색 + 삭제 버튼 */
 .btn.btn-ipt-search::after{ content: ''; position: absolute; width:20px; height:20px; top:50%; transform: translateY(-50%);}
 .btn.btn-ipt-search::after,
 .btn.btn-ipt-clear {  mask-size:auto 20px; -webkit-mask-size: auto 20px; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;}
