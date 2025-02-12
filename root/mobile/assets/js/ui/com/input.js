@@ -18,4 +18,5 @@ $(document).ready(function(){
     $(document).on('keyup', 'input[inputmode=numeric]', function() {
         commaFormatter.format(this);
     });
+
 });

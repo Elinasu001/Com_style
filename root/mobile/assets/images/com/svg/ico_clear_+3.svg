@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <rect width="24" height="24" fill="black"/> <!-- 배경을 검은색으로 설정 -->
+    <path d="M3 3L21 21M3 21L21 3" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
