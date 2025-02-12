@@ -6,26 +6,28 @@ body {
 /*---------------------------------------------
 	#인풋 기본 스타일
 ---------------------------------------------*/
-.form-group > label {  font-size:var(--font14); color:var(--txt-color-6); }
+.form-group > label {  font-size:var(--font14); color:var(--ipt-label); }
 textarea,
-input.form-control { transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 0; -moz-border-radius: 0;-webkit-border-radius: 0; color:var(--txt-inactive); font-size:var(--font16); }
-textarea { width:100%; height:240px; resize:none; white-space:pre-line; line-height:1.188rem; border:1px solid var(--border-inactive); background-color: var(--bg-color-f);  }
-input.form-control { height:46px; line-height:1.188rem; border:1px solid var(--border-inactive); background-color: var(--bg-color-f); }
+input.form-control { transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 5px; -moz-border-radius: 5px;-webkit-border-radius: 5px; font-size:var(--font16);  border:1px solid var(--ipt-border); color:var(--ipt-txt); background-color: var(--bg-color-f); }
+textarea { width:100%; height:240px; resize:none; white-space:pre-line; line-height:1.188rem; }
+input.form-control { height:46px; line-height:1.188rem; }
+
 textarea::placeholder,
 input.form-control::placeholder,
 input.form-control::-moz-placeholder,
-input.form-control::-ms-input-placeholder { color:var(--txt-inactive); }
+input.form-control::-ms-input-placeholder { color:var(--ipt-txt-placeholder); }
+
 input.form-control:disabled,
-input.form-control:read-only  { background: var(--bg-color-secondary); color:var(--txt-inactive); }
+input.form-control:read-only  { border:1px solid var(--ipt-border-inactive); background: var(--ipt-bg-inactive); color:var(--ipt-txt-inactive); }
 
 textarea:focus,
-input.form-control:focus { border-color:var(--active); color:var(--txt-active); }
-
+input.form-control:focus { border-color:var(--ipt-border-active); color:var(--ipt-txt-active); }
+textarea:focus { outline-color: var(--ipt-border-active); }
 
 /* 유효성 검사 */
 /* 기본 스타일: 유효한 상태 */
 input.form-control:valid,
-.form-group.user-valid input.form-control { color: var(--active); }
+.form-group.user-valid input.form-control { color:var(--ipt-txt-active); }
 /* 유효하지 않은 상태 */
 .form-group.user-invalid input.form-control { color: var(--error); border:1px solid var(--error);}
 /* 유효할 때, valid 메시지 표시 (인접 형제 선택자 사용) */
@@ -33,8 +35,8 @@ input.form-control:valid,
 /* 유효하지 않을 때, 바로 다음 형제인 error 메시지 표시 */
 .form-group.user-invalid .error { display: block; }
 /* valid, error 메시지 기본 숨김 처리 */
-.valid {display: none;color: green; }
-.error {display: none;color: var(--error); }
+.valid {display: none; color: green; }
+.error {display: none; color: var(--error); }
 .form-group { position:relative; }
 .valid { position:absolute; right:15px; top:55%; }
 .error { padding-left:24px; line-height:17px; font-size:var(--font14); }
@@ -62,37 +64,45 @@ ul.check-box li > label,
 ul.radio-box li > label { line-height:30px; }
 
 ul.radio-box input[type="radio"] + label,
-ul.check-box input[type="checkbox"]  + label { font-weight:var(--font-w-r); color:var(--inactive); }
+ul.check-box input[type="checkbox"]  + label { font-weight:var(--font-w-r); color:var(--rc-txt); }
 
 ul.radio-box input[type="radio"]:checked + label,
-ul.check-box input[type="checkbox"]:checked  + label { font-weight: var(--font-w-b); color:var(--active); }
+ul.check-box input[type="checkbox"]:checked  + label { font-weight: var(--font-w-b); color:var(--rc-txt-active); }
+
+
+ul.radio-box input[type="radio"]:disabled + label,
+ul.check-box input[type="checkbox"]:disabled  + label { color:var(--rc-txt-inactive); }
 
 ul.radio-box>li,
 ul.check-box>li{ display:flex; column-gap:10px; }
 
-ul.radio-box input[type="radio"] { border:7.5px solid var(--border-inactive); background: var(--white); border-radius: 50%; }
-ul.radio-box input[type="radio"]:checked { background:var(--white); border:7.5px solid var(--active); }
+/* 라디오 */
+ul.radio-box input[type="radio"] { border:7.5px solid var(--rc-border); background: var(--bg-color-f); border-radius: 50%; }
+ul.radio-box input[type="radio"]:checked { background:var(--bg-color-f); border:7.5px solid var(--rc-active); }
+ul.radio-box input[type="radio"]:disabled { border-color: var(--rc-border-inactive); background-color: var(--rc-bg-inactive);  }
 
+/* 체크박스 */
+ul.check-box input[type="checkbox"] { border:2px solid var(--rc-border); background:var(--bg-color-f); }
 ul.check-box input[type="checkbox"]::before {
 	content:''; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width:13px; height:10px;
-	background-color: var(--bg-color-c); -webkit-mask-image:var(--ico-check); -webkit-mask-repeat:no-repeat; -webkit-mask-size: auto 10px;
+	background-color: var(--rc-border); -webkit-mask-image:var(--ico-check); -webkit-mask-repeat:no-repeat; -webkit-mask-size: auto 10px;
 }
-
-ul.check-box input[type="checkbox"] { border:2px solid var(--border-inactive); background:var(--bg-color-f); }
-ul.check-box input[type="checkbox"]:checked { border:1px solid var(--active);  background-color: var(--active); }
 ul.check-box input[type="checkbox"]:checked::before { background-color: var(--bg-color-f);  }
-ul.check-box input[type="checkbox"]:disabled { background-color: var(--border-inactive);  }
-ul.check-box input[type="checkbox"]:disabled::before { background-color: var(--bg-color-b); }
+ul.check-box input[type="checkbox"]:disabled::before { background-color: var(--rc-bg-inactive); }
+
+ul.check-box input[type="checkbox"]:checked { border:1px solid var(--rc-active);  background-color: var(--rc-active); }
+ul.check-box input[type="checkbox"]:disabled { background-color: var(--rc-border-inactive); border-color: var(--rc-border-inactive);  }
+
 
 ul.radio-box input[type="radio"]:focus-visible,
 ul.check-box input[type="checkbox"]:focus-visible,
-div.toggle-box input[type="checkbox"]:focus-visible  { outline: 1px solid var(--active); }
+div.toggle-box input[type="checkbox"]:focus-visible  { outline: 1px solid var(--outline); }
 
 /*---------------------------------------------
 	#인풋 토글
 ---------------------------------------------*/
-div.toggle-box input[type="checkbox"] { position: relative; display:inline-block; width:40px; height: 24px; border-radius: 12px;;  background:var(--border-inactive); border:1px solid var(--border-inactive); transition:all 0.3s ease; }
+div.toggle-box input[type="checkbox"] { position: relative; display:inline-block; width:40px; height: 24px; border-radius: 12px;;  background:var(--toggle-bg); transition:all 0.3s ease; }
 div.toggle-box input[type="checkbox"]:before { content:''; position:absolute; top:50%; left:3px; transform: translateY(-50%); width:18px; height:18px; border-radius: 50%; background: var(--bg-color-f); box-shadow:0px 2px 5px 0px rgba(23,4,61,0.2);  }
 
-div.toggle-box input[type="checkbox"]:checked { background: var(--active); }
-div.toggle-box input[type="checkbox"]:checked::before { left:auto; right:3px;}
+div.toggle-box input[type="checkbox"]:checked { background: var(--rc-active); }
+div.toggle-box input[type="checkbox"]:checked::before { left:auto; right:3px; }
