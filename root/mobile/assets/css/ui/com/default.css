@@ -23,7 +23,7 @@ input, textarea, select { display:inline-block; vertical-align: middle; color:va
 img { line-height:0; font-size:0; vertical-align:top; }
 table{ border-spacing:0; border-collapse: collapse; }
 address, em { font-style: normal; }
-button { background-color:var(--defalt-color-tr); background-position: center; background-size: contain;}
+button { background-color:var(--defalt-color-tr); background-position: center; background-size: contain; cursor: pointer;}
 a { display:block; color:var(--default-color);  }
 a, a:hover, a:focus, a:active { text-decoration: none !important; cursor: pointer !important; }
 .tal{ text-align: left !important; }

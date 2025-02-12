@@ -4,6 +4,7 @@ body {
     --ico-search: url(../../../images/com/svg/ico_search.svg);
     --ico-close: url(../../../images/com/svg/ico_close.svg);
 }
+.ipt-right.ico button:focus-visible {outline: 1px solid var(--outline); }
 
 .btn.btn-ipt-search,
 .btn.btn-ipt-close{ -webkit-mask-repeat:no-repeat; }
