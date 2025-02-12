@@ -33,17 +33,17 @@ input.form-control:valid,
 /* 유효하지 않은 상태 */
 .form-group.user-invalid input.form-control { color: var(--error); border:1px solid var(--error);}
 /* 유효할 때, valid 메시지 표시 (인접 형제 선택자 사용) */
-.form-group.user-valid .error  { display:block; color: green; }
-.form-group.user-valid .error:before { background-color:green; }
+.form-group.user-valid .feedback  { display:block; color: green; }
+.form-group.user-valid .feedback:before { background-color:green; }
 .form-group.user-valid .valid  { display: inline-block; }
 /* 유효하지 않을 때, 바로 다음 형제인 error 메시지 표시 */
-.form-group.user-invalid .error { display: block; }
+.form-group.user-invalid .feedback { display: block; }
 /* valid, error 메시지 기본 숨김 처리 */
 .form-group { position:relative; }
 .valid {display: none; position:absolute; right:15px; top:55%; color: green; }/* v 표시 */
-.error { position: relative; display: none; padding-left:24px; line-height:20px; font-size:var(--font14); color: var(--error); }
-.error::before { content:''; position: absolute; left:0; }
-.error::before { width:18px; height:18px; top:10px; left:0; transform: translateY(-50%); background-color: var(--error); mask-image: var(--ico-info); -webkit-mask-image:var(--ico-info);  mask-size:auto 18px; -webkit-mask-size: auto 18px; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; }
+.feedback { position: relative; display: none; padding-left:24px; line-height:20px; font-size:var(--font14); color: var(--error); }
+.feedback::before { content:''; position: absolute; left:0; }
+.feedback::before { width:18px; height:18px; top:10px; left:0; transform: translateY(-50%); background-color: var(--error); mask-image: var(--ico-info); -webkit-mask-image:var(--ico-info);  mask-size:auto 18px; -webkit-mask-size: auto 18px; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; }
 
 /*---------------------------------------------
 	#인풋 패딩/마진
@@ -51,7 +51,7 @@ input.form-control:valid,
 .form-group > label { display:inline-block; margin:10px 0; }
 input.form-control { padding:0 15px; }
 textarea:valid { padding:10px; }
-.error { margin:5px 0; }
+.feedback { margin:5px 0; }
 
 /*---------------------------------------------
 	#인풋 라디오/체크박스
