@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    /*---------------------------------------------
+	ready, load
+    ---------------------------------------------*/
+    $(document).ready(function(){
+        iptFocusScrl();
+    });
+
     /**
      * 3자리 수마다 콤마 적용
     **/
@@ -18,5 +25,21 @@ $(document).ready(function(){
     $(document).on('keyup', 'input[inputmode=numeric]', function() {
         commaFormatter.format(this);
     });
+
+
+    /**
+     * Android 인풋 포커스 스크롤 이슈
+    **/
+    function iptFocusScrl() {
+        if(/Android/i.test(navigator.userAgent) ) {
+            window.addEventListener("resize", function(){
+                if( document.activeElement.tagName=="INPUT" ){
+                    window.setTimeout(function(){
+                        document.activeElement.scrollIntoView({ behavior: "smooth", block: "center" });
+                    },0);
+                }
+            });
+        }
+    }
 
 });
