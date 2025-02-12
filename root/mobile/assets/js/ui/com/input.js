@@ -14,7 +14,7 @@ $(document).ready(function(){
         };
     })();
 
-    // 이벤트
+    // event
     $(document).on('keyup', 'input[inputmode=numeric]', function() {
         commaFormatter.format(this);
     });
