@@ -24,6 +24,9 @@ input.form-control:focus,
 textarea:focus { border-color:var(--ipt-border-active); color:var(--ipt-txt-active); }
 textarea:focus { outline-color: var(--ipt-border-active); }/* Webkit Browser (예: Chrome, Safari)  */
 
+/* amount 클래스 사용 시 오른쪽 정렬 :: 원, 개월, % */
+input[inputmode="numeric"]:not(:placeholder-shown) { text-align: right; }
+
 /*---------------------------------------------
 	#인풋 유효성 검사
 ---------------------------------------------*/
