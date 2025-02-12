@@ -10,8 +10,14 @@
 /* 인풋 하이픈 :: -, ~ */
 .ipt-hyphen { display:flex; justify-content: center; align-items: center; font-size:var(--font14); }
 
-/* 인풋 텍스트 :: 원, 개월, % */
-.amount-txt { position: absolute; transform: translateY(-50%); top:50%; right:15px; font-size:var(--font16); font-weight: var(--font-w-b); color:var(--txt-primary); }
+/* 인풋 오른쪽 : 텍스트, 아이콘콘*/
+input.form-control.ipt-pd-r { padding:0 32px 0 15px; }
+.ipt-right { position: absolute; transform: translateY(-50%); top:50%; right:15px; }
+
+/* 인풋 오른쪽  + 인풋 텍스트 :: 원, 개월, % */
+.amount { font-size:var(--font16); font-weight: var(--font-w-b); color:var(--txt-primary); }
+/* 인풋 오른쪽  + 아이콘 */
+.ipt-right.ico button { width:20px; height:20px;  }
 
 /* 인풋 주민등록번호 :: 원, 개월, % */
-.id-mask { position: absolute;  transform: translateY(-50%); top:50%; left:34px; line-height: 16px; font-size:var(--font16); font-weight: var(--font-w-r); color:var(--txt-primary); }
+.id-mask { position: absolute;  transform: translateY(-50%); top:50%; left:34px; font-size:var(--font16); font-weight: var(--font-w-r); color:var(--txt-primary); }

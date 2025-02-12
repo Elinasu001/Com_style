@@ -1,5 +1,5 @@
 body {
-    --ico-check: url(../../images/com/svg/ico_check.svg);
+    --ico-check: url(../../../images/com/svg/ico_check.svg);
 }
 
 
@@ -9,8 +9,8 @@ body {
 .form-group > label {  font-size:var(--font14); color:var(--ipt-label); }
 textarea,
 input.form-control { transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 5px; -moz-border-radius: 5px;-webkit-border-radius: 5px; font-size:var(--font16);  border:1px solid var(--ipt-border); color:var(--ipt-txt); background-color: var(--bg-color-f); }
-textarea { width:100%; height:240px; resize:none; white-space:pre-line; line-height:1.188rem; }
-input.form-control { height:46px; line-height:1.188rem; }
+textarea { width:100%; height:240px; resize:none; white-space:pre-line;  }
+input.form-control { height:46px; }
 
 textarea::placeholder,
 input.form-control::placeholder,
@@ -48,7 +48,6 @@ input.form-control:valid,
 .form-group > label { display:inline-block; margin:10px 0; }
 input.form-control { padding:0 15px; }
 textarea:valid { padding:10px; }
-input.form-control.amount-num { padding:0 32px 0 15px; }
 .error { margin:5px 0; }
 
 /*---------------------------------------------

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body {
+    --ico-search: url(../../../images/com/svg/ico_search.svg);
+    --ico-close: url(../../../images/com/svg/ico_close.svg);
+}
+
+.btn.btn-ipt-search,
+.btn.btn-ipt-close{ -webkit-mask-repeat:no-repeat; }
+
+.btn.btn-ipt-search { background-color: var(--ipt-search); -webkit-mask-image:var(--ico-search);  -webkit-mask-size: auto 20px; }
+.btn.btn-ipt-close { display:none; background-color: var(--ipt-close); -webkit-mask-image:var(--ico-close); -webkit-mask-size: auto 20px; }
+.form-control:not(:placeholder-shown) ~ .ipt-right .btn-ipt-close { display: block; }

@@ -81,6 +81,10 @@ body {
     --outline: #1447A2;
     --error: #FF0000;
 
+    /* 아이콘 색상 */
+    --ipt-close:#CCCCCC;
+    --ipt-search:#666666;
+
     /* 인풋 스타일 */
     --ipt-label: #222222;
     --ipt-txt:#333333;

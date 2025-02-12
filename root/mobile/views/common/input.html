@@ -29,7 +29,6 @@
 
     <link rel="stylesheet" href="../../assets/css/lib/swiper-bundle.min.css">
     <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
-    <link rel="stylesheet" href="../../assets/css/ui/input.css">
 
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
@@ -146,12 +145,29 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="">금액</label>
+                        <label for="">원, %</label>
                         <div class="col">
-                            <input id="" type="amount" class="form-control amount-num" placeholder="금액을 입력해주세요" inputmode="numeric"><!-- [D] 스크립트 inputmode="numeric" : 세자리 수마다 콤마 적용  -->
-                            <span class="amount-txt">원</span>
+                            <input id="" type="text" class="form-control ipt-pd-r" placeholder="금액을 입력해주세요" inputmode="numeric"><!-- [D] 스크립트 inputmode="numeric" : 세자리 수마다 콤마 적용  -->
+                            <span class="ipt-right amount">원</span>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label for="">검색</label>
+                        <div class="col">
+                            <input id="" type="text" class="form-control ipt-pd-r" placeholder="입력해주세요">
+                            <span class="ipt-right ico flex-row gap10"><button type="button" class="btn btn-ipt-close"><span class="sr-only">삭제버튼</span></button><button type="button" class="btn btn-ipt-search"><span class="sr-only">검색버튼</span></button></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">아이디</label>
+                        <div class="col">
+                            <input id="" type="text" class="form-control ipt-pd-r" placeholder="입력해주세요">
+                            <span class="ipt-right ico flex-row gap10"><button type="button" class="btn btn-ipt-close"><span class="sr-only">삭제버튼</span></button></span>
+                        </div>
+                    </div>
+
                     
                     <section class="tit">
                         Input flex
