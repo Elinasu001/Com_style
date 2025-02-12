@@ -59,7 +59,7 @@ textarea:-webkit-autofill:hover { -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset
 ---------------------------------------------*/
 .flex-row { display:flex; flex-direction: row; }
 .flex-col { display:flex; flex-direction: column; }
-.col { position: relative; }
+.col { position: relative; width:100%; }
 
 .gap5 { gap:5px; }
 .gap10 { gap:10px; }
