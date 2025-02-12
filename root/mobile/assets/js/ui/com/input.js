@@ -1,6 +1,6 @@
 $(document).ready(function(){
     /**
-     * 3자리 수마다 콤마 적용 기능
+     * 3자리 수마다 콤마 적용
     **/
     var commaFormatter = (function() {
         
