@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>공통>레이아웃</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="공통keywords">
+    <meta name="description" content="공통description">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0, viewport-fit=cover"> -->
+    <meta name="viewport" content="user-scalable=no,width=375">
+    <meta property="og:image" content="http://gallery2gate.kr/resources/images/common/ui-maeta-img">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <!-- 일반 Favicon 설정 -->
+    <link rel="icon" type="image/png" href="../../assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="../../assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="../../assets/icons/site.webmanifest" />
+
+    <link rel="stylesheet" href="../../assets/css/lib/swiper-bundle.min.css" >
+    <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
+
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
+    <script type="module" src="../../assets/js/ui/ui-util.js"></script>
+</head>
+
+<body>
+    
+    <!-- S:wrap -->
+    <div class="wrap">
+
+        <!-- S:headerWrap -->
+        <div id="headerWrap" class="headerOn"><!--[D] : headerOn 클래스 : 스크립트 적용 중-->
+            <script>
+                $(document).ready(function(){
+                    $("#headerWrap").load("../include/inc_header.html");
+                });
+            </script>
+        </div>
+        <!-- E:headerWrap -->
+
+        <!-- S:contentWrap -->
+        <div class="contentWrap sub">
+            <div class="sub-desc">
+                <p class="desc">
+                    11 ARS 인증을 위한 전화를 걸고 있습니다.<br>
+                    전화를 받은 후 <b>자동 출금이체 동의를 위한 승인번호</b>를 눌러주시기 바랍니다.
+                </p>
+            </div>
+        </div>
+        <!-- E:contentWrap -->
+
+        <!--S:btmWrap-->
+        <div class="btmWrap">
+            
+            <div class="btm-btn-area">
+                <button type="button" class="btm-btn app">지갑 만들기 </button>
+            </div>
+
+            <!-- s:footerWrap -->
+            <div id="footerWrap">
+                <script>
+                    $(document).ready(function(){
+                        $("#footerWrap").load("../include/inc_footer.html");
+                    });
+                </script>
+            </div>
+            <!-- e:footerWrap-->
+
+        </div>
+        <!--E:btmWrap-->
+
+    </div>
+    <!-- E:wrap -->
+
+</body>
+</html>
