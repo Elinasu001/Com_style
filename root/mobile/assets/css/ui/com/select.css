@@ -295,9 +295,9 @@
 
 }
 
-/* .btn-fake-slt.has-error {
-   background-color: var(--error);
-} */
+.btn-fake-slt.has-error {
+    background-color: var(--error);
+}
 
 .btn-fake-slt:focus:not(.disabled) {
     border-color:var(--ipt-border-active);
