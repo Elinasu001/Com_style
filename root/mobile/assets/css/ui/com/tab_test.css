@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+
+/*********************************************************************
+tab #탭
+스크립트 있는 버전:tab-item
+스크립트 없는 버전:tab-list
+*********************************************************************/
+.tabs-wrap .tab-item,
+.tabs-wrap .tab-list { display:flex; align-items:center; position:relative; background-color:var(--bg-color-f); font-size:0; }
+.tabs-wrap .tab-item.line::after { content:""; display:inline-block; margin-top:70px; width:100%; height:1px; background:var(--tab-border-active); }
+.tabs-wrap .tab-item li,
+.tabs-wrap .tab-list li { display:inline-block; position:relative; /*max-width:241px;*/ width:100%; overflow: hidden; border-radius: 10px 10px 0 0; border:1px solid var(--tab-border); border-bottom: 1px solid var(--tab-border-active); font-size:var(--font18); color:var(--tab-bg); line-height:2.2; }
+.tabs-wrap .tab-item li a:focus-visible,
+.tabs-wrap .tab-list li a:focus-visible { outline:1px solid var(--outline); }
+.tabs-wrap .tab-item li.style2,
+.tabs-wrap .tab-list li.style2 { line-height:initial; }
+.tabs-wrap .tab-item li:last-child,
+.tabs-wrap .tab-list li:last-child { margin-right:0; }
+.tabs-wrap .tab-item li a,
+.tabs-wrap .tab-list li a { display:block;  padding:24px 0; line-height:initial; text-align:center; font-weight:var(--font-w-b); color:var(--tab-tit); }
+
+.tabs-wrap .tab-item li.on,
+.tabs-wrap .tab-list li.on { border:2px solid var(--tab-border-active); border-bottom:none; font-weight:var(--font-w-b); color:var(--tab-tit-active); }
+.tabs-wrap .tab-item li.on a,
+.tabs-wrap .tab-list li.on a { color:var(--tab-tit-active); font-weight:var(--font-w-b); background-color: var(--tab-bg); }

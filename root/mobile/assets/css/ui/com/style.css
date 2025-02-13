@@ -119,4 +119,13 @@ body {
     --aco-border:#DDDDDD;
     --aco-bg:#EEF2F9;
 
+
+    /* 탭 */
+    --tab-border:#DDDDDD;
+    --tab-bg:#eef2f9;
+    --tab-tit:#555555;
+    --tab-tit-active:#005FCC;
+    --tab-border-active:#005FCC;
+    --tab-bg-active:#005FCC;
+
 }

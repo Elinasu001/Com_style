@@ -41,3 +41,6 @@ input.form-control.ipt-pd-r { padding:0 32px 0 15px; }
 
 /* 텍스트 줄바꿈 */
 .txt-prewrap { white-space: pre-wrap; }
+
+/* none */
+.dp-none { display:none; }
