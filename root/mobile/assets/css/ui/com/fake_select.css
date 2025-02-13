@@ -187,9 +187,9 @@
     top: 20px;
     left: 20px;
     display: inline-block;
-    width: calc(100% - 55px);
-    font-size: 19px;
-    font-weight: 900;
+    /* width: calc(100% - 55px); */
+    font-size: var(--font18);
+    font-weight: var(--font-w-b);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
