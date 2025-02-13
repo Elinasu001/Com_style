@@ -1,17 +1,6 @@
 @charset "UTF-8";
 
-.terms-container {
-    width: 300px;
-    margin: 20px auto;
-    padding: 15px;
-    border: 1px solid #ddd;
-    background: #f9f9f9;
-    border-radius: 5px;
-}
-
-.terms-group {
-    margin-bottom: 15px;
-}
+.terms { display: flex; flex-direction: column; flex-wrap: initial;}
 
 button.btn-primary {
     width: 100%;
