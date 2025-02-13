@@ -46,7 +46,7 @@
     padding: 0px 32px 0px 15px;
     background-image: var(--ico-se-arrow);
     background-repeat: no-repeat;
-    background-size: 24px;
+    background-size: 28px;
     background-position: right 8px center;
     color:var(--ipt-txt);
     border-radius: 5px;
@@ -55,27 +55,26 @@
 }
 
 .se-select select option {
-    color: #303030;
+    color:var(--ipt-txt-active);
 }
 
 .se-select select:disabled,
 .se-select select[disabled=disabled] {
     opacity: 1;
-    border-bottom-color: transparent;
-    color: #707070;
-    background-image: var(--ico-se-arrow);
+    border:1px solid var(--ipt-border-inactive);
+    color:var(--ipt-txt-inactive);
 }
 
-.se-select select:invalid {
+/* .se-select select:invalid {
     color: #c8c8c8;
 }
 
 .se-select select.has-error {
     border-bottom-color: #E42939;
-}
+} */
 
 .se-select select:focus {
-    border-bottom-color: #1B6DFA;
+    border-color:var(--ipt-border-active);
 }
 
 /*---------------------------------------------
@@ -105,7 +104,7 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background:var(--dim) ;
 }
 
 .se-select[data-stove=select] div.stove-dim.on {
@@ -122,13 +121,13 @@
     width: 100%;
     height: auto;
     max-height: calc(100% - 55px);
-    padding-top: 75px;
-    background-color: #ffffff;
+    padding-top: 60px;
+    background-color: var(--bg-color-f);
     box-sizing: border-box;
     border: 1px solid transparent;
-    border-radius: 12px 12px 0 0;
+    border-radius: 30px 30px 0 0;
     outline: none;
-    transition: bottom 300ms;
+    transition:bottom 0.2s ease-in-out;
 }
 
 .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll {
@@ -138,38 +137,40 @@
     max-height: 100%;
     padding-bottom: 40px;
     overflow-y: auto;
-    box-sizing: border-box;
 }
 
 .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options {
     padding: 0 15px;
-    box-sizing: border-box;
 }
 
 .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option {
     width: 100%;
-    min-height: 48px;
+    min-height: 50px;
     margin-bottom: 10px;
     border: none;
+    border-radius: 10px;
     margin: 0;
-    padding: 11px 54px 13px 0;
+    padding: 15px 20px;
     box-sizing: border-box;
-    background-color: #fff;
-    font-size: 17px;
+    border:1px solid var(--fk-se-inactive);
+    background-color: var(--bg-color-f);
+    font-size: var(--font18);
     text-align: left;
-    cursor: pointer;
 }
 
-.se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option.on {
-    font-weight: bold;
-    background-image: url("../image/component/form/chkbx_on.png");
-    background-size: 24px;
-    background-position: right top 12px;
-    background-repeat: no-repeat;
+.se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:focus-visible { outline:var(--outline); border:1px solid var(--outline); }
+.se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option.on { 
+    background-color: var(--fk-se-ative);
+    border:1px solid var(--color-primary);
+    font-weight: var(--font-w-b);
+    /* background-image: ; */
+    /* background-size: 24px; */
+    /* background-position: right top 12px; */
+    /* background-repeat: no-repeat; */
 }
 
 .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:disabled {
-    color: #C8C8C8;
+    color: var(--ipt-txt-inactive);
     cursor: default;
 }
 
@@ -179,8 +180,8 @@
 
 .se-select[data-stove=select] div.stove-option-layer div.stove-options-title {
     position: absolute;
-    top: 23px;
-    left: 15px;
+    top: 20px;
+    left: 20px;
     display: inline-block;
     width: calc(100% - 55px);
     font-size: 19px;
@@ -188,19 +189,20 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: var(--fk-se-title);
 }
 
 .se-select[data-stove=select] div.stove-option-layer button.stove-btn-close {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 54px;
-    height: 75px;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
     border: 1px solid transparent;
     background-color: transparent;
-    background-image: url("../image/layout/btn_close.png");
+    background-image: var(--ico-close);
     background-repeat: no-repeat;
-    background-size: 24px;
+    background-size: 40px;
     background-position: center center;
     cursor: pointer;
 }
@@ -244,7 +246,7 @@
     background-color: var(--bg-color-f);
     background-image: var(--ico-se-arrow);
     background-repeat: no-repeat;
-    background-size: 24px;
+    background-size: 28px;
     background-position: right 8px center;
     color:var(--ipt-txt);
     outline: none;
@@ -299,7 +301,6 @@
 
 .btn-fake-slt:focus:not(.disabled) {
     border-color:var(--ipt-border-active);
-    color:var(--ipt-txt-active);
 }
 
 

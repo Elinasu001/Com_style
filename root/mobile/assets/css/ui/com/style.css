@@ -29,7 +29,7 @@ body{
 body {
 
     /** 기본 색상 **/
-    --color-primary: #1447A2;
+    --color-primary: #005FCC;
     --color-secondary: #2E5AF4;
 
     --color-semantic-1: #FF0000;
@@ -81,6 +81,8 @@ body {
     --outline: #1447A2;
     --error: #FF0000;
 
+    --dim: rgba(0, 0, 0, 0.5);
+
     /* 아이콘 색상 */
     --ipt-clear:#CCCCCC;
     --ipt-search:#999999;
@@ -106,4 +108,9 @@ body {
 
     /* toggle */
     --toggle-bg: #DDDDDD;
+
+    /* fake select */
+    --fk-se-ative: #EEF2F9;
+    --fk-se-inactive:#DDDDDD;
+    --fk-se-title: #333333;
 }
