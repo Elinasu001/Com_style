@@ -64,7 +64,7 @@
 .layerPopup .pop-header.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }/*스크립트 :: 스크롤*/
 /* 팝업_풀팝업 */
 .layerPopup.full { height:100dvh; }
-.layerPopup.full .pop-con-wrap { padding-top:60px; flex:1 1 auto; }
+.layerPopup.full .pop-con-wrap { padding-top:65px; flex:1 1 auto; }
 /* 팝업_바텀팝업 */
 .layerPopup.btmSheet { display:initial; top:initial; bottom:-100%; min-height:auto; transition:bottom 0.2s ease-in-out; }
 .layerPopup.btmSheet .pop-header .left { left:20px; }
