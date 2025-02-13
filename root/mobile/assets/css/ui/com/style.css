@@ -87,7 +87,7 @@ body {
     --ipt-clear:#CCCCCC;
     --ipt-search:#999999;
 
-    /* 인풋 스타일 */
+    /* 인풋 */
     --ipt-label: #222222;
     --ipt-txt:#333333;
     --ipt-txt-active:#333333;
@@ -98,7 +98,7 @@ body {
     --ipt-border-inactive:#CCCCCC;
     --ipt-bg-inactive:#F5F5F5;
 
-    /* radio/check */
+    /* 라디오/체크박스 */
     --rc-txt:#333333;
     --rc-active: #005FCC;
     --rc-txt-inactive: #ABABAB;
@@ -106,11 +106,17 @@ body {
     --rc-border-inactive:#CCCCCC;
     --rc-bg-inactive:#F5F5F5;
 
-    /* toggle */
+    /* 토글 */
     --toggle-bg: #DDDDDD;
 
-    /* fake select */
+    /* 커스텀 셀렉트 */
     --fk-se-ative: #EEF2F9;
     --fk-se-inactive:#DDDDDD;
     --fk-se-title: #333333;
+
+    /* 아코디언 */
+    --aco-tit: #555555;
+    --aco-border:#DDDDDD;
+    --aco-bg:#EEF2F9;
+
 }
