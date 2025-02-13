@@ -1,3 +1,20 @@
 @charset "UTF-8";
 
+/* 탭 목록 */
+.tab-list, .nested-tab-list { display: flex; border-bottom: 2px solid #ddd; }
+.tab-item, .nested-tab-item { padding: 10px 20px; border: 1px solid #ddd; border-bottom: none; background: #f9f9f9; margin-right: 5px; transition: all 0.3s ease; }
+.tab-item:hover, .nested-tab-item:hover { background: #eaeaea; }
+
+/* 활성화된 탭 */
+.tab-item.active, .nested-tab-item.active { background: #007bff; color: white; border-color: #007bff; font-weight: bold; }
+
+/* 탭 내용 영역 */
+.tab-content, .nested-tab-content { border: 1px solid #ddd; padding: 15px; background: #fff; }
+.tab-panel, .nested-tab-panel { display: none; /* 기본적으로 숨김 */ }
+.tab-panel.active, .nested-tab-panel.active { display: block; /* 활성화된 패널만 보이게 함 */ }
+
+/* 중첩 탭 스타일 */
+.nested-tab-container { margin-top: 15px; border: 1px solid #ddd; padding: 10px; background: #f5f5f5; }
+.nested-tab-list { border-bottom: 1px solid #ccc; }
+.nested-tab-item { font-size: 14px; padding: 8px 15px; }
 
