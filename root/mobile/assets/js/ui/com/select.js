@@ -136,7 +136,8 @@ $(document).ready(function () {
                 setTimeout(function () {
                     $dim.remove();
                     $optionLayer.remove();
-                    $stage.css({ 'overflow': '' });
+                    // $stage.css({ 'overflow': '' });
+                    fkSelAndPopupResetOverflow(); // 모든 팝업과 select layer 닫힘 여부 확인 후 overflow 초기화
                 }, 0);
             }
             setTimeout(function () {

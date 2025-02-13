@@ -242,6 +242,72 @@
                 </div>
             </div>
 
+            <section class="tit">
+                Test.Ver3
+            </section>
+
+            <button type="button" class="btn-etc" onclick="openPopup('samplePopup_3')">Test.Ver3</button>
+
+            <div id="samplePopup_3" class="layerPopup full">
+                <div class="pop-header popHeader">
+                    <button type="button" name="button" class="btn btn-back left"><span class="sr-only">뒤로가기</span></button>
+                    <h2 class="pop-tit">샘플 팝업</h2>
+                    <button type="button" name="button" class="btn btn-close right" onclick="closePopup('samplePopup_3')"><span class="sr-only">닫기</span></button>
+                </div>
+                <div class="pop-con-wrap">
+                    <div id="select01" class="se-select" data-stove="select" data-uicase="slide">
+                        <div class="e-hidden-title">option hidden title</div>
+                        <select required="" title="">
+                            <option value="" hidden="">default</option>
+                            <option value="0">option 00</option>
+                            <option value="1">option 01</option>
+                            <option value="2">option 02</option>
+                            <option value="3" disabled="">option 03</option>
+                            <option value="4" disabled="">option 04</option>
+                            <option value="9">option 09</option>
+                            <option value="10">option 10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pop-btm-wrap">
+                    <div class="btm-btn-area">
+                        <button type="button" class="btm-btn" onclick="openPopup('btmSheetPopup_3')">지갑 만들기 </button>
+                        <button type="button" class="btm-btn" onclick="openPopup('btmSheetPopup_3')">지갑 만들기 </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="btmSheetPopup_3" class="layerPopup btmSheet">
+                <div class="pop-header popHeader">
+                    <h2 class="pop-tit left">바텀시트</h2>
+                    <button type="button" name="button" class="btn btn-close right" onclick="closePopup('btmSheetPopup_3')"><span class="sr-only">닫기</span></button>
+                </div>
+                <div class="pop-con-wrap">
+                    바텀시트 컨텐츠 영역입니다.
+                </div>
+                <div class="pop-btm-wrap">
+                    <div class="btm-btn-area">
+                        <button type="button" class="btm-btn" onclick="openModal('modal_4')">지갑 만들기 </button>
+                        <button type="button" class="btm-btn"  onclick="openModal('modal_4')">지갑 만들기 </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal_4" class="layerPopup modal">
+                <div class="modal-wrap">
+                    <div class="pop-con-wrap">
+                        <h2 class="pop-tit">샘플 모달 팝업</h2>
+                        샘플 모달 팝업 컨텐츠 영역입니다.
+                    </div>
+                    <div class="pop-btm-wrap">
+                        <div class="btm-btn-area">
+                            <button type="button" class="btm-btn" onclick="closePopup('modal_4')">닫기</button>
+                            <button type="button" class="btm-btn" onclick="closePopup('modal_4')">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!-- E:contentWrap -->
 
