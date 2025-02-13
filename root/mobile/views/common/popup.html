@@ -51,8 +51,14 @@
 
         <!-- S:contentWrap -->
         <div class="contentWrap sub">
+
             <section class="tit">
-                layerPopup full
+                layerPopup allmenu :: openMenu 메서드
+            </section>
+            <p style="text-align: center; width:100%;">헤더 전체 메뉴 :: openMenu 메서드</p>
+
+            <section class="tit">
+                layerPopup full :: openPopup 메서드
             </section>
             
             <button type="button" class="btn-etc" onclick="openPopup('fullPopup')">fullPopup</button>
@@ -100,7 +106,7 @@
             </div>
 
             <section class="tit">
-                layerPopup btmSheet
+                layerPopup btmSheet :: openPopup 메서드
             </section>
 
             <button type="button" class="btn-etc" onclick="openPopup('btmSheetPopup')">btmSheetPopup</button>
@@ -122,13 +128,13 @@
             </div>
 
             <section class="tit">
-                layerPopup modal
+                layerPopup modal :: openModal 메서드
             </section>
 
-            <button type="button" class="btn-etc" onclick="openPopup('modalPopup')">modalPopup</button>
+            <button type="button" class="btn-etc" onclick="openModal('modal')">modal</button>
 
             
-            <div id="modalPopup" class="layerPopup modal">
+            <div id="modal" class="layerPopup modal">
                 <div class="modal-wrap">
                     <div class="pop-con-wrap">
                         <h2 class="pop-tit">모달</h2>
@@ -136,18 +142,18 @@
                     </div>
                     <div class="pop-btm-wrap">
                         <div class="btm-btn-area">
-                            <button type="button" class="btm-btn" onclick="closePopup('modalPopup')">닫기</button>
-                            <button type="button" class="btm-btn" onclick="closePopup('modalPopup')">확인</button>
+                            <button type="button" class="btm-btn" onclick="closePopup('modal')">닫기</button>
+                            <button type="button" class="btm-btn" onclick="closePopup('modal')">확인</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <section class="tit">
-                sample.Ver1
+                Test.Ver1
             </section>
 
-            <button type="button" class="btn-etc" onclick="openPopup('samplePopup')">sample.Ver1</button>
+            <button type="button" class="btn-etc" onclick="openPopup('samplePopup')">Test.Ver1</button>
 
             <div id="samplePopup" class="layerPopup full">
                 <div class="pop-header popHeader">
@@ -160,13 +166,13 @@
                 </div>
                 <div class="pop-btm-wrap">
                     <div class="btm-btn-area">
-                        <button type="button" class="btm-btn" onclick="openPopup('sampleModalPopup')">지갑 만들기 </button>
-                        <button type="button" class="btm-btn" onclick="openPopup('sampleModalPopup')">지갑 만들기 </button>
+                        <button type="button" class="btm-btn" onclick="openModal('modal_2')">지갑 만들기 </button>
+                        <button type="button" class="btm-btn" onclick="openModal('modal_2')">지갑 만들기 </button>
                     </div>
                 </div>
             </div>
 
-            <div id="sampleModalPopup" class="layerPopup modal">
+            <div id="modal_2" class="layerPopup modal">
                 <div class="modal-wrap">
                     <div class="pop-con-wrap">
                         <h2 class="pop-tit">샘플 모달 팝업</h2>
@@ -174,18 +180,18 @@
                     </div>
                     <div class="pop-btm-wrap">
                         <div class="btm-btn-area">
-                            <button type="button" class="btm-btn" onclick="closePopup('sampleModalPopup')">닫기</button>
-                            <button type="button" class="btm-btn" onclick="closePopup('sampleModalPopup')">확인</button>
+                            <button type="button" class="btm-btn" onclick="closePopup('modal_2')">닫기</button>
+                            <button type="button" class="btm-btn" onclick="closePopup('modal_2')">확인</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <section class="tit">
-                sample.Ver2
+                Test.Ver2
             </section>
             
-            <button type="button" class="btn-etc" onclick="openPopup('samplePopup_2')">sample.Ver2</button>
+            <button type="button" class="btn-etc" onclick="openPopup('samplePopup_2')">Test.Ver2</button>
 
             <div id="samplePopup_2" class="layerPopup full">
                 <div class="pop-header popHeader">
@@ -214,14 +220,14 @@
                 </div>
                 <div class="pop-btm-wrap">
                     <div class="btm-btn-area">
-                        <button type="button" class="btm-btn" onclick="openPopup('sampleModalPopup_2')">지갑 만들기 </button>
-                        <button type="button" class="btm-btn"  onclick="openPopup('sampleModalPopup_2')">지갑 만들기 </button>
+                        <button type="button" class="btm-btn" onclick="openModal('modal_3')">지갑 만들기 </button>
+                        <button type="button" class="btm-btn"  onclick="openModal('modal_3')">지갑 만들기 </button>
                     </div>
                 </div>
             </div>
 
             
-            <div id="sampleModalPopup_2" class="layerPopup modal">
+            <div id="modal_3" class="layerPopup modal">
                 <div class="modal-wrap">
                     <div class="pop-con-wrap">
                         <h2 class="pop-tit">샘플 모달 팝업</h2>
@@ -229,14 +235,13 @@
                     </div>
                     <div class="pop-btm-wrap">
                         <div class="btm-btn-area">
-                            <button type="button" class="btm-btn" onclick="closePopup('sampleModalPopup_2')">닫기</button>
-                            <button type="button" class="btm-btn" onclick="closePopup('sampleModalPopup_2')">확인</button>
+                            <button type="button" class="btm-btn" onclick="closePopup('modal_3')">닫기</button>
+                            <button type="button" class="btm-btn" onclick="closePopup('modal_3')">확인</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
         </div>
         <!-- E:contentWrap -->
 
