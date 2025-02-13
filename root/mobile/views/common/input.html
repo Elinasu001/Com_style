@@ -60,7 +60,7 @@
                     <div class="form-group check">
                         <ul class="check-box">
                             <li>
-                                <input type="checkbox" id="check-1" name="checkbox" required>
+                                <input type="checkbox" id="check-1" name="checkbox">
                                 <label for="check-1" class="check-button">
                                     <span>Check Box OFF</span>
                                 </label>
@@ -111,19 +111,19 @@
 
                     <div class="form-group user-invalid"><!--[D]: .user-invalid 유효하지 않을 경우 -->
                         <label for="name-input" class="essential">성명</label>
-                        <input id="name-input" type="text" name="name" class="form-control" placeholder="성명" required>
+                        <input id="name-input" type="text" name="name" class="form-control" placeholder="성명">
                         <p class="feedback">유효하지 않을 경우 사용합니다. 유효하지 않을 경우 사용합니다. 유효하지 않을 경우 사용합니다.</p>
                     </div>
 
                     <div class="form-group user-valid"><!--[D]: .user-invalid 유효 할 경우 -->
                         <label for="email-input" class="essential">이메일</label>
-                        <input id="email-input" type="email" name="email" class="form-control" placeholder="이메일" required>
+                        <input id="email-input" type="email" name="email" class="form-control" placeholder="이메일">
                         <p class="feedback">유효할 경우 사용합니다. 유효할 경우 사용합니다. 유효할 경우 사용합니다. 유효할 경우 사용합니다.</p>
                     </div>
 
                     <div class="form-group">
                         <label for="password-input" class="essential">패스워드</label>
-                        <input id="password-input" type="password" name="password" class="form-control" placeholder="패스워드" required>
+                        <input id="password-input" type="password" name="password" class="form-control" placeholder="패스워드">
                         <p class="feedback">비밀번호는 필수입니다. 또한 8자리 이상이어야 합니다.</p>
                         <ul class="info">
                             <li>중요한 내용이 필요할 경우 사용합니다. 중요한 내용이 필요할 경우 사용합니다.</li>
@@ -134,7 +134,7 @@
                     <div class="form-group">
                         <label for="amount-input">원, %</label>
                         <div class="col">
-                            <input id="amount-input" type="text" class="form-control ipt-pd-r" placeholder="금액을 입력해주세요" inputmode="numeric" required><!-- [D] 스크립트 inputmode="numeric" : 세자리 수마다 콤마 적용  -->
+                            <input id="amount-input" type="text" class="form-control ipt-pd-r" placeholder="금액을 입력해주세요" inputmode="numeric"><!-- [D] 스크립트 inputmode="numeric" : 세자리 수마다 콤마 적용  -->
                             <span class="ipt-right amount">원</span>
                         </div>
                     </div>
@@ -169,13 +169,13 @@
                         <div class="flex-row gap10">
                             <div class="col">
                                 <input id="rrn-first" type="number" name="rrn-first" class="form-control" placeholder="" min="0" step="1"
-                                    oninput="this.value = this.value.slice(0, 6); if(this.value.length === 6) document.getElementById('rrn-second').focus();" required>
+                                    oninput="this.value = this.value.slice(0, 6); if(this.value.length === 6) document.getElementById('rrn-second').focus();">
                             </div>
                             <div class="ipt-hyphen">-</div>
                             <div class="col">
                                 <!-- 두 번째 입력 필드는 스크린 리더를 위한 aria-labelledby 사용 -->
                                 <input id="rrn-second" type="number" name="rrn-second" class="form-control" placeholder="●" min="0" step="1"
-                                    oninput="this.value = this.value.slice(0, 1)" required aria-labelledby="rrn-first">
+                                    oninput="this.value = this.value.slice(0, 1)" aria-labelledby="rrn-first">
                                 <span class="id-mask">●●●●●●</span>
                             </div>
                         </div>
@@ -191,6 +191,26 @@
                         <textarea type="text" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength=""></textarea>
                     </div>
 
+                    <section class="tit">
+                        Fake Select
+                    </section>
+                    <div class="form-group">
+                        <label for="select">주민등록번호 입력</label>
+                        <div id="select" class="se-select" data-stove="select" data-uicase="slide">
+                            <div class="e-hidden-title">option hidden title</div>
+                            <select required="" title="">
+                                <option value="" hidden="">default</option>
+                                <option value="0">option 00</option>
+                                <option value="1">option 01</option>
+                                <option value="2">option 02</option>
+                                <option value="3" disabled="">option 03</option>
+                                <option value="4" disabled="">option 04</option>
+                                <option value="9">option 09</option>
+                                <option value="10">option 10</option>
+                            </select>
+                        </div>
+                    </div>
+
                 </form>
             </div>
             <!-- E:contentWrap -->
@@ -199,7 +219,7 @@
             <div class="btmWrap">
 
                 <div class="btm-btn-area">
-                    <button type="submit" form="myForm" class="btm-btn">로그인</button>
+                    <!-- <button type="submit" form="myForm" class="btm-btn">로그인</button> -->
                 </div>
 
                 <!-- s:footerWrap -->

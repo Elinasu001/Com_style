@@ -8,7 +8,7 @@ $(document).ready(function(){
     **/
     var popupL = (function() {
 
-        // 헬퍼 함수
+        // 헬퍼 fn
         function initPopup(id) {
             var _target = $('#' + id);
             _target.addClass('on');
