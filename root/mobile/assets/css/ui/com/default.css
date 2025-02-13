@@ -62,8 +62,22 @@ textarea:-webkit-autofill:hover { -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset
 .flex-col { display:flex; flex-direction: column; }
 .col { position: relative; width:100%; }
 
+.col-1 { width: 10%; }
+.col-2 { width: 20%; }
+.col-3 { width: 30%; }
+.col-4 { width: 40%; }
+.col-5 { width: 50%; }
+.col-6 { width: 60%; }
+.col-7 { width: 70%; }
+.col-8 { width: 80%; }
+.col-9 { width: 90%; }
+.col-10 { width: 100%; }
+
 .gap5 { gap:5px; }
 .gap10 { gap:10px; }
 .gap15 { gap:10px; }
 .gap20 { gap:10px; }
 .gap30 { gap:10px; }
+
+
+

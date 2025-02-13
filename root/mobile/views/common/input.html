@@ -175,7 +175,7 @@
                             <div class="col">
                                 <!-- 두 번째 입력 필드는 스크린 리더를 위한 aria-labelledby 사용 -->
                                 <input id="rrn-second" type="number" name="rrn-second" class="form-control" placeholder="●" min="0" step="1"
-                                    oninput="this.value = this.value.slice(0, 1)" aria-labelledby="rrn-first">
+                                    oninput="this.value = this.value.slice(0, 1)" aria-labelledby="rrn-second">
                                 <span class="id-mask">●●●●●●</span>
                             </div>
                         </div>
@@ -184,20 +184,12 @@
                     
 
                     <section class="tit">
-                        Textarea
-                    </section>
-
-                    <div class="form-group">
-                        <textarea type="text" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength=""></textarea>
-                    </div>
-
-                    <section class="tit">
-                        Fake Select
+                        selectCustom
                     </section>
                     <div class="form-group">
-                        <label for="select">주민등록번호 입력</label>
-                        <div id="select" class="se-select" data-stove="select" data-uicase="slide">
-                            <div class="e-hidden-title">option hidden title</div>
+                        <label for="selectCustom">셀렉트 선택</label>
+                        <div id="selectCustom" class="se-select" data-stove="select" data-uicase="slide">
+                            <div class="e-hidden-title">TITLE</div>
                             <select required="" title="">
                                 <option value="" hidden="">default</option>
                                 <option value="0">option 00</option>
@@ -209,6 +201,72 @@
                                 <option value="10">option 10</option>
                             </select>
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selectDisabled">셀렉트 disabled</label>
+                        <div id="selectDisabled" class="se-select" data-stove="select" data-uicase="slide">
+                            <div class="e-hidden-title">TITLE</div>
+                            <select required="" title="" disabled><!--[D] disabled-->
+                                <option value="" hidden="">disabled</option>
+                                <option value="0">option 00</option>
+                                <option value="1">option 01</option>
+                                <option value="2">option 02</option>
+                                <option value="3" disabled="">option 03</option>
+                                <option value="4" disabled="">option 04</option>
+                                <option value="9">option 09</option>
+                                <option value="10">option 10</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selectReadonly">셀렉트 readonly</label>
+                        <div id="selectReadonly" class="se-select" data-stove="select" data-uicase="slide">
+                            <div class="e-hidden-title">TITLE</div>
+                            <select required="" title="" readonly><!--[D] readonly-->
+                                <option value="" hidden="">readonly</option>
+                                <option value="0">option 00</option>
+                                <option value="1">option 01</option>
+                                <option value="2">option 02</option>
+                                <option value="3" disabled="">option 03</option>
+                                <option value="4" disabled="">option 04</option>
+                                <option value="9">option 09</option>
+                                <option value="10">option 10</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group user-invalid">
+                        <label for="phn-first">셀렉트 선택</label>
+                        <div class="flex-row gap10">
+                            <div class="col col-4">
+                                <div id="phn-first" class="se-select" data-stove="select" data-uicase="slide">
+                                    <div class="e-hidden-title">TITLE</div>
+                                    <select required="" title="">
+                                        <option value="" hidden="">010</option>
+                                        <option value="0">010</option>
+                                        <option value="1">011</option>
+                                        <option value="2">016</option>
+                                        <option value="3">017</option>
+                                        <option value="4">018</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <input id="phn-second" type="number" name="phn-second" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second">
+                            </div>
+                        </div>
+                        <p class="feedback">전화번호 뒷자리는 필수 입력 항목입니다.</p>
+                    </div>
+
+                    <section class="tit">
+                        Textarea
+                    </section>
+
+                    <div class="form-group">
+                        <textarea type="text" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength=""></textarea>
                     </div>
 
                 </form>

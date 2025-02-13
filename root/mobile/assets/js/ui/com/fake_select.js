@@ -237,7 +237,9 @@ $(document).ready(function () {
                         if ($select.attr('disabled')) {
                             $fakeSlt.addClass('disabled');
                         }
-
+                        if($select.attr('readonly')){
+                            $fakeSlt.addClass('readonly');
+                        }
                         $select.find('option').each(function () {
                             if ($(this).attr('hidden')) {
                                 $fakeSltPlaceholder.text($(this).text());
@@ -250,15 +252,28 @@ $(document).ready(function () {
                     }
                 });
             },
-            errorChk: function (_target) { // 에러감지
+            // errorChk: function (_target) { // 에러감지
+            //     var $slt = $(_target),
+            //         $sltWrap = $slt.closest('.se-select'),
+            //         $fakeSlt = $sltWrap.find('.btn-fake-slt');
+                    
+
+            //     if ($slt.hasClass('has-error')) {
+            //         $fakeSlt.addClass('has-error');
+            //     } else {
+            //         $fakeSlt.removeClass('has-error');
+            //     }
+            // },
+
+            errorChk: function (_target) { // 에러 감지
                 var $slt = $(_target),
                     $sltWrap = $slt.closest('.se-select'),
-                    $fakeSlt = $sltWrap.find('.btn-fake-slt');
-
-                if ($slt.hasClass('has-error')) {
-                    $fakeSlt.addClass('has-error');
+                    $formGroup = $sltWrap.closest('.form-group'); // form-group 찾기
+            
+                if ($formGroup.hasClass('user-invalid')) {
+                    $formGroup.addClass('user-invalid');
                 } else {
-                    $fakeSlt.removeClass('has-error');
+                    $formGroup.removeClass('user-invalid');
                 }
             },
             /**
