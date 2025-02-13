@@ -13,4 +13,4 @@
 .accordion-area .accordion-list.on > .tit > p { font-weight: var(--font-w-b);}
 .accordion-area .accordion-list.on > .tit > .ic-arr { transform: rotate(180deg); }
 .accordion-area .accordion-list.on > .cont { display: block; }
-.accordion-area .accordion-list.on > .cont > p { line-height: 16px; white-space: pre-wrap;  color:var(--aco-tit);}
+.accordion-area .accordion-list.on > .cont > p { line-height: 16px; color:var(--aco-tit);}
