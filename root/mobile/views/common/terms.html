@@ -52,8 +52,59 @@
 
         <!-- S:contentWrap -->
         <div class="contentWrap sub">
-
-
+            <form id="termsForm">
+                <div class="terms-container">
+                    <!-- 전체 동의 -->
+                    <label>
+                        <input type="checkbox" id="checkAll">
+                        전체 동의
+                    </label>
+                    
+                    <hr>
+            
+                    <!-- 필수 항목 -->
+                    <div class="terms-group">
+                        <p><strong>필수 약관</strong></p>
+                        <label>
+                            <input type="checkbox" class="check-required" data-group="required">
+                            이용약관 동의 (필수)
+                        </label>
+                        <label>
+                            <input type="checkbox" class="check-required" data-group="required">
+                            개인정보 수집 및 이용 동의 (필수)
+                        </label>
+                        <label>
+                            <input type="checkbox" class="check-required" data-group="required">
+                            위치 정보 이용 동의 (필수)
+                        </label>
+                    </div>
+            
+                    <hr>
+            
+                    <!-- 선택 항목 -->
+                    <div class="terms-group">
+                        <p><strong>선택 약관</strong></p>
+                        <label>
+                            <input type="checkbox" class="check-optional" data-group="optional">
+                            광고성 정보 수신 동의 (선택)
+                        </label>
+                        <label>
+                            <input type="checkbox" class="check-optional" data-group="optional">
+                            SMS 수신 동의 (선택)
+                        </label>
+                        <label>
+                            <input type="checkbox" class="check-optional" data-group="optional">
+                            이메일 수신 동의 (선택)
+                        </label>
+                    </div>
+            
+                    <hr>
+            
+                    <!-- 가입 버튼 -->
+                    <button type="submit" id="submitBtn" disabled>가입하기</button>
+                </div>
+            </form>
+            
         </div>
         <!-- E:contentWrap -->
 

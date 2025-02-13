@@ -1,4 +1,33 @@
-/** 헤더 **/
-body {
-    --ico-check: url(../../../images/com/svg/ico_check.svg);
+@charset "UTF-8";
+
+.terms-container {
+    width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.terms-group {
+    margin-bottom: 15px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
