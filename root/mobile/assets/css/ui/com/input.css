@@ -6,9 +6,9 @@ body {
 /*---------------------------------------------
 	#인풋 기본 스타일
 ---------------------------------------------*/
-.form-group > label {  font-size:var(--font14); color:var(--ipt-label); }
+.form-group > label { font-size:var(--font14); font-weight: var(--font-w-m); color:var(--ipt-label); }
 input.form-control,
-textarea { transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 5px; -moz-border-radius: 5px;-webkit-border-radius: 5px; font-size:var(--font16);  border:1px solid var(--ipt-border); color:var(--ipt-txt); background-color: var(--bg-color-f); }
+textarea { transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 5px; -moz-border-radius: 5px;-webkit-border-radius: 5px; font-size:var(--font16); font-weight: var(--font-w-r); border:1px solid var(--ipt-border); background-color: var(--bg-color-f); color:var(--ipt-txt);  }
 input.form-control { height:46px; }
 textarea { width:100%; height:240px; resize:none; white-space:pre-line;  }
 
@@ -34,7 +34,9 @@ input[inputmode="numeric"]:not(:placeholder-shown) { text-align: right; }
 input.form-control:valid,
 .form-group.user-valid input.form-control { color:var(--ipt-txt-active); }
 /* 유효하지 않은 상태 */
-.form-group.user-invalid input.form-control { color: var(--error); border:1px solid var(--error);}
+.form-group.user-invalid input.form-control,
+.form-group.user-invalid .btn-fake-slt,
+.form-group.user-invalid select { color: var(--error); border:1px solid var(--error);}
 /* 유효할 때, valid 메시지 표시 (인접 형제 선택자 사용) */
 .form-group.user-valid .feedback  { display:block; color: green; }
 .form-group.user-valid .feedback:before { background-color:green; }

@@ -6,13 +6,12 @@
 /*
 	reset
 */
-.se-select {
+/* .se-select {
     display: inline-block;
     width: 100%;
-    box-sizing: border-box;
-}
+} */
 
-.se-select select {
+/* .se-select select {
     display: inline-block;
     width: 100%;
     -webkit-appearance: none;
@@ -22,11 +21,11 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer;
-}
+} */
 
-.se-select select:focus {
+/* .se-select select:focus {
     outline: none;
-}
+} */
 
 .se-select select::-ms-expand {
     display: none;
@@ -39,22 +38,20 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    height: 38px;
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    font-size: 21px;
-    font-weight: bold;
-    border-bottom: 2px solid #e9ebee;
-    background-color: #fff;
-    color: #303030;
-    padding-right: 40px;
+    height: 46px;
+    font-size:var(--font16);
+    font-weight: var(--font-w-r);
+    border:1px solid var(--ipt-border);
+    background-color: var(--bg-color-f);
+    padding: 0px 32px 0px 15px;
     background-image: var(--ico-se-arrow);
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: right 8px center;
-    color: #303030;
+    color:var(--ipt-txt);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
 .se-select select option {
@@ -66,7 +63,7 @@
     opacity: 1;
     border-bottom-color: transparent;
     color: #707070;
-    background-image: url("../image/component/form/select_arrow_disabled.png");
+    background-image: var(--ico-se-arrow);
 }
 
 .se-select select:invalid {
@@ -238,20 +235,22 @@
     position: relative;
     max-width: 100%;
     width: 100%;
-    height: 38px;
+    height: 46px;
     text-align: left;
-    font-size: 21px;
-    font-weight: bold;
-    border-bottom: 2px solid #e9ebee;
-    background-color: #fff;
-    color: #303030;
-    padding-right: 40px;
+    padding: 0 32px 0 15px;
+    font-size:var(--font16);
+    font-weight: var(--font-w-r);
+    border:1px solid var(--ipt-border);
+    background-color: var(--bg-color-f);
     background-image: var(--ico-se-arrow);
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: right 8px center;
-    color: #303030;
+    color:var(--ipt-txt);
     outline: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
 .btn-fake-slt>* {
@@ -267,7 +266,7 @@
 }
 
 .btn-fake-slt .placeholder {
-    color: #c8c8c8;
+    color:var(--ipt-txt-placeholder);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -288,26 +287,28 @@
 }
 
 .btn-fake-slt.disabled {
-    border-bottom-color: transparent;
-    color: #707070;
-    background-image: url("../image/component/form/select_arrow_disabled.png");
+    border:1px solid var(--ipt-border-inactive);
+    background: var(--ipt-bg-inactive);
+    color:var(--ipt-txt-inactive);
+
 }
 
-.btn-fake-slt.has-error {
-    border-bottom-color: #E42939;
-}
+/* .btn-fake-slt.has-error {
+   background-color: var(--error);
+} */
 
 .btn-fake-slt:focus:not(.disabled) {
-    border-bottom-color: #1B6DFA;
+    border-color:var(--ipt-border-active);
+    color:var(--ipt-txt-active);
 }
 
 
 /* layout */
 
 .se-select[data-stove=select] div.stove-dim {
-    z-index: 1001;
+    z-index: 110;
 }
 
 .se-select[data-stove=select] div.stove-option-layer {
-    z-index: 1001;
+    z-index: 110;
 }

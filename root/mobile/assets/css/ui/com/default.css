@@ -13,7 +13,7 @@ body { font-size:1rem;; font-weight:500; line-height: normal; font-family:'Prete
 body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, li, ol, li, table, caption, th, td, form, fieldset, legend, address, div, p, span, a { margin:0; padding:0; }
 ul,ol,li,dl,dt,dd { list-style: none; }
 form, fieldset, legend, input, button, textarea, label { color: var(--default-color); }
-div, img, form, fieldset, button, blockquote, p, hr { border:0; padding:0; margin:0; }
+div, img, form, fieldset, button, blockquote, p, hr, select { border:0; padding:0; margin:0; }
 img, table { width:100%; }
 legend, caption { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow: hidden;  border:0; clip:rect(0, 0, 0, 0); white-space: nowrap; }
 input, textarea, select, address { font-family: 'Pretendard', 'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; }
@@ -33,7 +33,8 @@ a, a:hover, a:focus, a:active { text-decoration: none !important; cursor: pointe
 /*---------------------------------------------
 	#인풋 리셋
 ---------------------------------------------*/
-input { display:block; width:100%; line-height:initial; box-sizing:border-box; border:none; border-radius: 0; background-color: none; -o-appearance:none; -webkit-appearance:none; -moz-appearance: none; appearance: none; white-space: nowrap; overflow:hidden; outline:none; cursor: pointer; }
+input,
+.se-select select { display:block; width:100%; line-height:initial; box-sizing:border-box; border:none; border-radius: 0; background-color: none; -o-appearance:none; -webkit-appearance:none; -moz-appearance: none; appearance: none; white-space: nowrap; overflow:hidden; outline:none; cursor: pointer; }
 input:disabled { cursor: initial; }
 /** Firefox Browser **/
 input[type=number],
