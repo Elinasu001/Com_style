@@ -13,21 +13,14 @@
     margin-bottom: 15px;
 }
 
-input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-button {
+button.btn-primary {
     width: 100%;
     padding: 10px;
     background: #007bff;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-button:disabled {
+button:disabled.btn-primary {
     background: #ccc;
     cursor: not-allowed;
 }
