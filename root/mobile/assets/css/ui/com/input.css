@@ -1,7 +1,4 @@
-body {
-    --ico-check: url(../../../images/com/svg/ico_check.svg);
-}
-
+@charset "UTF-8";
 
 /*---------------------------------------------
 	#인풋 기본 스타일
