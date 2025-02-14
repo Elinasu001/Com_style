@@ -78,8 +78,8 @@ ul.check-box input[type="checkbox"]:checked  + label { font-weight: var(--font-w
 ul.radio-box input[type="radio"]:disabled + label,
 ul.check-box input[type="checkbox"]:disabled  + label { color:var(--rc-txt-inactive); }
 
-ul.radio-box>li,
-ul.check-box>li{ display:flex; column-gap:10px; }
+ul.radio-box li,
+ul.check-box li{ display:flex; column-gap:10px; }
 
 /* 라디오 */
 ul.radio-box input[type="radio"] { border:7.5px solid var(--rc-border); background: var(--bg-color-f); border-radius: 50%; }

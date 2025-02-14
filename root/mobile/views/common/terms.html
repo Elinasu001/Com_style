@@ -53,22 +53,20 @@
         <!-- S:contentWrap -->
         <div class="contentWrap sub">
             <form id="termsForm">
-                <div class="form-group check">
-                    <ul class="check-box terms">
+                <div class="form-group">
+                    <ul class="check-box terms"><!--[D] temrs 클래스 :: 스타일만 변경 -->
                         <!-- 전체 동의 -->
-                        <li>
-                            <input type="checkbox" id="checkAll" class="checkAll">
+                        <li class="check-all-area">
+                            <input type="checkbox" id="checkAll"><!--[D] checkAll 아이디 :: 스크립트 -->
                             <label for="checkAll" class="check-button">
                                 <span>전체 동의</span>
                             </label>
                         </li>
             
-                        <hr>
-            
                         <!-- 필수 항목 -->
-                        <p><strong>필수 약관</strong></p>
+                        <!-- <p><strong>필수 약관</strong></p> -->
                         <li>
-                            <input type="checkbox" id="check-required-1" class="chkReq">
+                            <input type="checkbox" id="check-required-1" class="chkReq"><!--[D] chkReq 클래스 :: 스크립트 -->
                             <label for="check-required-1" class="check-button">
                                 <span>이용약관 동의 (필수)</span>
                             </label>
@@ -86,12 +84,10 @@
                             </label>
                         </li>
             
-                        <hr>
-            
                         <!-- 선택 항목 -->
-                        <p><strong>선택 약관</strong></p>
+                        <!-- <p><strong>선택 약관</strong></p> -->
                         <li>
-                            <input type="checkbox" id="check-optional-1" class="chkOpt">
+                            <input type="checkbox" id="check-optional-1" class="chkOpt"><!--[D] chkOpt 클래스 :: 스크립트 -->
                             <label for="check-optional-1" class="check-button">
                                 <span>광고성 정보 수신 동의 (선택)</span>
                             </label>
@@ -111,16 +107,18 @@
 
                         <!-- 수신 동의 항목 -->
                         <li>
-                            <p><strong>수신 동의 항목</strong></p>
-                            <ul>
+                            <!-- <p><strong>수신 동의 항목</strong></p> -->
+                            <ul class="check-consent">
                                 <li>
-                                    <input type="checkbox" id="chkCons" class="chkCons">
+                                    <input type="checkbox" id="chkCons"><!--[D] chkCons 아이디 :: 스크립트 -->
                                     <label for="chkCons" class="check-button">
                                         <span>수신 동의 (선택)</span>
                                     </label>
+                                </li>
+                                <li>
                                     <ul class="sub-check-box">
                                         <li>
-                                            <input type="checkbox" id="check-consent-sms" class="chkConsChild">
+                                            <input type="checkbox" id="check-consent-sms" class="chkConsChild"><!--[D] chkConsChild 클래스 :: 스크립트 -->
                                             <label for="check-consent-sms" class="check-button">
                                                 <span>SMS 수신 동의</span>
                                             </label>

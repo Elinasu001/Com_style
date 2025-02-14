@@ -13,3 +13,11 @@ button:disabled.btn-primary {
     background: #ccc;
     cursor: not-allowed;
 }
+
+ul.check-box.terms { display:flex; flex-wrap:initial; }
+ul.check-box.terms li.check-all-area {  padding:16px; border-radius: 15px; border:1px solid #DDDDDD; }
+ul.check-box.terms li input[type="checkbox"] { border-radius: 50%; }
+ul.check-box.terms li:not(.check-all-area) input[type="checkbox"] { border:none; }
+ul.check-box.terms li:not(.check-all-area) input[type="checkbox"]:checked { background-color: #ffffff; }
+ul.check-box.terms li:not(.check-all-area) input[type="checkbox"]:checked::before { background-color:var(--rc-active); }
+ul.check-box.terms ul.sub-check-box { display:flex; flex-wrap:wrap; padding:16px; gap:10px; }

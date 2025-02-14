@@ -15,7 +15,7 @@ $(document).ready(function(){
                 $optChks = $('.chkOpt'); // 선택 항목
                 $consChk = $('#chkCons'); // 수신 동의 (부모)
                 $consChks = $('.chkConsChild'); // 수신 동의 항목 (SMS, 이메일, 광고성)
-                $allChks = $('.chkReq, .chkOpt, .chkCons, .chkConsChild'); // 전체 항목
+                $allChks = $('.chkReq, .chkOpt, #chkCons, .chkConsChild'); // 전체 항목
                 $submitBtn = $('#submitBtn'); // 가입 버튼
 
                 this.bindEvents();
@@ -39,13 +39,14 @@ $(document).ready(function(){
 
                 // 수신 동의 (부모)
                 $consChk.on('change', function () {
-                    $consChks.prop('checked', $(this).prop('checked'));
+                    var isChecked = $(this).prop('checked');
+                    $consChks.prop('checked', isChecked);
                     self.uptAllChk();
                 });
 
                 // 수신 동의 항목
-                $consChk.on('change', function () {
-                    self.uptConsentChk();
+                $consChks.on('change', function () {
+                    self.uptConsAllChk()
                     self.uptAllChk();
                 });
             },
@@ -63,7 +64,7 @@ $(document).ready(function(){
                 var allConsChked = $consChks.length === $consChks.filter(':checked').length; // 수신 동의
                 var allChecked = $allChks.length === $allChks.filter(':checked').length; // 모든 항목
 
-                 //  필수 + 선택 + 수신 동의 모두 체크 > 전체 동의 체크 활성화
+                 //  필수 + 선택 + 수신 동의 ( 모두 체크 시 전체 동의 체크 활성화 )
                 if (allReqChked && allSelChked && allConsChked) {
                     $chkAll.prop('checked', true);
                 } else {
@@ -71,10 +72,10 @@ $(document).ready(function(){
                 }
             },
 
-            // 수신 동의 항목 (하위 항목 모두 체크)
-            uptConsentChk: function () {
-                var allConsChked = $consChks.length === $consChks.filter(':checked').length;
-                $consChk.prop('checked', allConsChked);
+            // 수신 동의 항목 (하위 항목 중 하나라도 선택 시)
+            uptConsAllChk: function () {
+                var anyConsChked = $consChks.filter(':checked').length > 0;
+                $consChk.prop('checked', anyConsChked);
             },
 
             //버튼 활성화 (필수 항목)
