@@ -33,7 +33,6 @@
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
     <script type="module" src="../../assets/js/ui/ui-util.js"></script>
-    <script type="module" src="../../assets/js/ui/terms.js"></script>
 </head>
 
 <body>
@@ -58,9 +57,9 @@
                     <ul class="check-box terms"><!--[D] temrs 클래스 :: 스타일만 변경 -->
                         <!-- 전체 동의 -->
                         <li class="check-all-area">
-                            <input type="checkbox" id="chkAll"><!--[D] checkAll 아이디 :: 스크립트 -->
+                            <input type="checkbox" id="checkAll"><!--[D] checkAll 아이디 :: 스크립트 -->
                             <label for="checkAll" class="check-button">
-                                <span>전체 동의</span>
+                                <span>필수 동의</span>
                             </label>
                         </li>
             
@@ -81,6 +80,23 @@
                             <input type="checkbox" id="check-required-3" class="chkReq">
                             <label for="check-required-3" class="check-button">
                                 <span>위치 정보 이용 동의 (필수)</span>
+                            </label>
+                        </li>
+            
+                    </ul>
+                </div>
+            
+            </form>
+
+
+            <form id="termsForm">
+                <div class="form-group">
+                    <ul class="check-box terms"><!--[D] temrs 클래스 :: 스타일만 변경 -->
+                        <!-- 전체 동의 -->
+                        <li class="check-all-area">
+                            <input type="checkbox" id="checkAll"><!--[D] checkAll 아이디 :: 스크립트 -->
+                            <label for="checkAll" class="check-button">
+                                <span>선택 동의</span>
                             </label>
                         </li>
             

@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+});$(document).ready(function(){
+
     /**
      * 약관 동의 모듈
      */
@@ -10,7 +12,7 @@ $(document).ready(function(){
         return {
             // 초기화
             init: function () {
-                $chkAll = $('#checkAll'); // 전체 동의 (부모)
+                $chkAll = $('#chkAll'); // 전체 동의 (부모)
                 $reqChks = $('.chkReq'); // 필수 항목
                 $optChks = $('.chkOpt'); // 선택 항목
                 $consChk = $('#chkCons'); // 수신 동의 (부모)

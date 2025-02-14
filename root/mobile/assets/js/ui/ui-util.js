@@ -7,5 +7,4 @@ import "./com/input.js";
 import "./com/layout.js";
 import "./com/popup.js";
 import "./com/tab.js";
-import "./com/terms.js";
 

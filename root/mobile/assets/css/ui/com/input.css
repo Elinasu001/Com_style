@@ -90,7 +90,9 @@ ul.radio-box input[type="radio"]:disabled { border-color: var(--rc-border-inacti
 ul.check-box input[type="checkbox"] { border:2px solid var(--rc-border); background:var(--bg-color-f); }
 ul.check-box input[type="checkbox"]::before {
 	content:''; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width:13px; height:10px;
-	background-color: var(--rc-border); -webkit-mask-image:var(--ico-check); -webkit-mask-repeat:no-repeat; -webkit-mask-size: auto 10px;
+	background-color: var(--rc-border);
+	mask-image:var(--ico-check); mask-repeat:no-repeat; mask-size: auto 10px;
+	-webkit-mask-image:var(--ico-check); -webkit-mask-repeat:no-repeat; -webkit-mask-size: auto 10px;
 }
 ul.check-box input[type="checkbox"]:checked::before { background-color: var(--bg-color-f);  }
 ul.check-box input[type="checkbox"]:disabled::before { background-color: var(--rc-bg-inactive); }
