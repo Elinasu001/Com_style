@@ -21,7 +21,7 @@
 #footerWrap > footer > .inner { width:375px; height:auto; }
 /* safe-area */
 .wrap { padding-right:constant(safe-area-inset-right); padding-left:constant(safe-area-inset-left); padding-right:env(safe-area-inset-right); padding-left:env(safe-area-inset-left); }
-.btmWrap { padding: 15px 0 calc(constant(safe-area-inset-bottom) + 15px); padding: 15px 0 calc(env(safe-area-inset-bottom) + 15px); }
+.btmWrap { padding: calc(constant(safe-area-inset-bottom) + 15px); padding: 15px 0 calc(env(safe-area-inset-bottom) + 15px); }
 
 /*---------------------------------------------
     #헤더 레이아웃
