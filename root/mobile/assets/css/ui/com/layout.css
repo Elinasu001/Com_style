@@ -5,9 +5,10 @@
 ---------------------------------------------*/
 .wrap { display:flex; flex-direction: column; flex:1 1 auto; width:100%; height:auto; margin:0 auto; min-height:100dvh; min-width: 320px; overflow: hidden; }
 /* 컨텐츠 */
-.contentWrap { display:flex; flex-direction: column; flex:1 1 auto; height:100%; height:auto; margin-top:60px;/* 헤더 높이 만클 마진 추가 */ margin-bottom: 20px; padding:0 20px; }
+.contentWrap { display:flex; flex-direction: column; flex:1 1 auto; height:100%; height:auto; /* 헤더 높이 만클 마진 추가 */ padding:60px 20px 20px; }
 .btmWrap { width:100%; height:auto; }
 /* 기타 **추후에 삭제 예정 현재 작업중 */
+.contentWrap { background-color: #F8F8F8; }
 .sub-desc { padding:20px 0; line-height:32px; color:var(--txt-color-1); }
 .btm-btn-area { display:flex; justify-content: center; align-items: center; }
 .btm-btn-area .btm-btn { background:var(--bg-color-primary); width:100%; height:56px; color:var(--txt-color-f); }
