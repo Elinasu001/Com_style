@@ -5,13 +5,8 @@
 ---------------------------------------------*/
 .wrap { display:flex; flex-direction: column; flex:1 1 auto; width:100%; height:auto; margin:0 auto; min-height:100dvh; min-width: 320px; overflow: hidden; }
 /* 컨텐츠 */
-.contentWrap { display:flex; flex-direction: column; flex:1 1 auto; height:100%; }
-.contentWrap { height:auto; }
+.contentWrap { display:flex; flex-direction: column; flex:1 1 auto; height:100%; height:auto; margin-top:60px;/* 헤더 높이 만클 마진 추가 */ margin-bottom: 20px; padding:0 20px; }
 .btmWrap { width:100%; height:auto; }
-.contentWrap { padding:0 20px; }
-/* 헤더 높이 만클 마진 추가 */
-.contentWrap { margin-top:60px; }
-.contentWrap.sub { margin-bottom: 20px; }
 /* 기타 **추후에 삭제 예정 현재 작업중 */
 .sub-desc { padding:20px 0; line-height:32px; color:var(--txt-color-1); }
 .btm-btn-area { display:flex; justify-content: center; align-items: center; }
@@ -19,9 +14,10 @@
 .exc-type { line-height: 80px; }
 #footerWrap > footer { display:flex; align-items: center; justify-content: center; background: #3D3D3D; }
 #footerWrap > footer > .inner { width:375px; height:auto; }
+
 /* safe-area */
 .wrap { padding-right:constant(safe-area-inset-right); padding-left:constant(safe-area-inset-left); padding-right:env(safe-area-inset-right); padding-left:env(safe-area-inset-left); }
-.btmWrap > div:last-child { padding: calc(constant(safe-area-inset-bottom) + 15px); padding: calc(env(safe-area-inset-bottom) + 15px); }
+/* .btmWrap { padding: 15px 0 calc(constant(safe-area-inset-bottom) + 15px); padding: 15px 0 calc(env(safe-area-inset-bottom) + 15px);} */
 
 /*---------------------------------------------
     #헤더 레이아웃
