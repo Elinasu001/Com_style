@@ -1,96 +1,82 @@
-$(document).ready(function(){
-
-});$(document).ready(function(){
-
-    /**
-     * 약관 동의 모듈
-     */
+$(document).ready(function () {
     var TermsAgreement = (function () {
+        
+        var $requiredGroup = $('.check-box.terms[data-group="required"]'); // 필수 동의 그룹
+        var $optionalGroup = $('.check-box.terms[data-group="optional"]'); // 선택 동의 그룹
 
-        var $chkAll, $reqChks, $optChks, $consChk, $consChks, $allChks, $submitBtn;
+        // 필수 동의 그룹
+        var $chkAll = $requiredGroup.find('#chkAll');
+        var $reqChks = $requiredGroup.find('.chkReq');
+
+        // 선택 동의 그룹
+        var $chkOptAll = $optionalGroup.find('#chkOptAll');
+        var $optChks = $optionalGroup.find('.chkOpt');
+        var $consChk = $optionalGroup.find('#chkCons');
+        var $consChks = $optionalGroup.find('.chkConsChild');
+
+        var $submitBtn = $('#submitBtn');
 
         return {
-            // 초기화
             init: function () {
-                $chkAll = $('#chkAll'); // 전체 동의 (부모)
-                $reqChks = $('.chkReq'); // 필수 항목
-                $optChks = $('.chkOpt'); // 선택 항목
-                $consChk = $('#chkCons'); // 수신 동의 (부모)
-                $consChks = $('.chkConsChild'); // 수신 동의 항목 (SMS, 이메일, 광고성)
-                $allChks = $('.chkReq, .chkOpt, #chkCons, .chkConsChild'); // 전체 항목
-                $submitBtn = $('#submitBtn'); // 가입 버튼
-
                 this.bindEvents();
             },
 
-            // 이벤트
             bindEvents: function () {
-
                 var self = this;
 
-                // 전체 동의 (부모)
+                // 필수 동의 전체 체크
                 $chkAll.on('change', function () {
-                    self.toggleAll($(this).prop('checked'));
-                });
-
-                // 전체 항목
-                $allChks.on('change', function () {
-                    self.uptSubmitBtn();
-                    self.uptAllChk();
-                });
-
-                // 수신 동의 (부모)
-                $consChk.on('change', function () {
                     var isChecked = $(this).prop('checked');
+                    $reqChks.prop('checked', isChecked);
+                    self.updateChkAll();
+                    self.updateSubmitBtn();
+                });
+
+                // 선택 동의 전체 체크
+                $chkOptAll.on('change', function () {
+                    var isChecked = $(this).prop('checked');
+                    $optChks.prop('checked', isChecked);
+                    $consChk.prop('checked', isChecked);
                     $consChks.prop('checked', isChecked);
-                    self.uptAllChk();
+                    self.updateChkOptAll();
                 });
 
-                // 수신 동의 항목
+                // 개별 항목 변경 시 전체 체크박스 업데이트
+                $reqChks.on('change', function () {
+                    self.updateChkAll();
+                    self.updateSubmitBtn();
+                });
+
+                $optChks.on('change', function () {
+                    self.updateChkOptAll();
+                });
+
                 $consChks.on('change', function () {
-                    self.uptConsAllChk()
-                    self.uptAllChk();
+                    self.updateConsChk();
+                    self.updateChkOptAll();
                 });
             },
 
-            toggleAll: function (isChecked) {
-                $allChks.prop('checked', isChecked);
-                this.uptSubmitBtn();
-                this.uptAllChk();
+            updateChkAll: function () {
+                var allChecked = $reqChks.length === $reqChks.filter(':checked').length;
+                $chkAll.prop('checked', allChecked);
             },
 
-            // 전체 동의 체크 상태 업데이트 (체크 여부)
-            uptAllChk: function () {
-                var allReqChked = $reqChks.length === $reqChks.filter(':checked').length; // 필수 항목
-                var allSelChked = $optChks.length === $optChks.filter(':checked').length; // 선택 항목
-                var allConsChked = $consChks.length === $consChks.filter(':checked').length; // 수신 동의
-                var allChecked = $allChks.length === $allChks.filter(':checked').length; // 모든 항목
-
-                 //  필수 + 선택 + 수신 동의 ( 모두 체크 시 전체 동의 체크 활성화 )
-                if (allReqChked && allSelChked && allConsChked) {
-                    $chkAll.prop('checked', true);
-                } else {
-                    $chkAll.prop('checked', false);
-                }
+            updateChkOptAll: function () {
+                var allOptChecked = $optChks.length === $optChks.filter(':checked').length;
+                var allConsChecked = $consChks.length === $consChks.filter(':checked').length;
+                $chkOptAll.prop('checked', allOptChecked && allConsChecked);
             },
 
-            // 수신 동의 항목 (하위 항목 중 하나라도 선택 시)
-            uptConsAllChk: function () {
-                var anyConsChked = $consChks.filter(':checked').length > 0;
-                $consChk.prop('checked', anyConsChked);
+            updateConsChk: function () {
+                $consChk.prop('checked', $consChks.filter(':checked').length > 0);
             },
 
-            //버튼 활성화 (필수 항목)
-            uptSubmitBtn: function () {
-                var allReqChked = $reqChks.length === $reqChks.filter(':checked').length;
-                $submitBtn.prop('disabled', !allReqChked);
+            updateSubmitBtn: function () {
+                $submitBtn.prop('disabled', $reqChks.length !== $reqChks.filter(':checked').length);
             }
         };
     })();
 
-    $(document).ready(function () {
-        TermsAgreement.init();
-    });
-
-
+    TermsAgreement.init();
 });
