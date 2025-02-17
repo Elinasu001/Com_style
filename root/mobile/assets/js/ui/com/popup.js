@@ -90,5 +90,6 @@ $(document).ready(function(){
     window.fkSelAndPopupResetOverflow = popupL.fkSelAndPopupResetOverflow;
 
     popupL.closePopupOnDim();
+    window.popupL = popupL;
 
 });

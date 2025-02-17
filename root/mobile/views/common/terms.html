@@ -28,7 +28,6 @@
 
     <link rel="stylesheet" href="../../assets/css/lib/swiper-bundle.min.css" >
     <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
-    <link rel="stylesheet" href="../../assets/css/ui/terms.css">
 
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
@@ -56,7 +55,7 @@
             <div class="contArea">
                 <form id="termsForm">
                     <div class="form-group">
-                        <ul class="check-box terms "><!--[D] temrs 클래스 :: 스타일만 변경  -->
+                        <ul class="check-box terms " onclick="openPopup('fullPopup')"><!--[D] temrs 클래스 :: 스타일만 변경  -->
                             <!-- 전체 동의 -->
                             <li class="check-all-area">
                                 <input type="checkbox" id="chkAll"><!--[D] checkAll 아이디 :: 스크립트 -->
@@ -171,5 +170,114 @@
     </div>
     <!-- E:wrap -->
 
+    <div id="fullPopup" class="layerPopup full fullPopupOn"><!--[D] fullPopupOn 클래스 :: 헤더 스크립트 적용중-->
+        <div class="pop-header">
+            <button type="button" name="button" class="btn btn-back left"><span class="sr-only">뒤로가기</span></button>
+            <h2 class="pop-tit">풀팝업</h2>
+            <button type="button" name="button" class="btn btn-close right" onclick="closePopup('fullPopup')"><span class="sr-only">닫기</span></button>
+        </div>
+        <div class="pop-con-wrap">
+            <ul class="terms-list-area">
+                <li>
+                    전체 동의
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+
+                </li>
+                <li>
+                    이용약관 동의 (필수)
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+                    <section class="tit">
+                        test
+                    </section>
+
+
+                </li>
+                <li>
+                    개인정보 수집 및 이용 동의 (필수)
+
+
+                </li>
+                <li>
+                    위치 정보 이용 동의 (필수)
+
+
+                </li>
+                <li>
+                    광고성 정보 수신 동의 (선택)
+                
+                </li>
+                <li>
+                    SMS 수신 동의 (선택)
+
+                </li>
+                <li>
+                    이메일 수신 동의 (선택)
+
+                </li>
+                <li>
+                    수신 동의 (선택)
+
+                </li>
+            </ul>
+        </div>
+        <div class="pop-btm-wrap">
+            <div class="btm-btn-area">
+                <button type="button" class="btn btn-secondary" disabled>레이아웃</button>
+            </div>
+        </div>
+    </div>
+<style>
+    ul.terms-list-area { height:100%; }
+    ul.terms-list-area li { display: none; }
+</style>
 </body>
 </html>
