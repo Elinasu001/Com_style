@@ -1,23 +1,31 @@
 $(document).ready(function () {
+
+    /**
+     * 약관 동의 필수/선택 분리 될 경우
+     */
     var TermsAgreement = (function () {
-        
-        var $requiredGroup = $('.check-box.terms[data-group="required"]'); // 필수 동의 그룹
-        var $optionalGroup = $('.check-box.terms[data-group="optional"]'); // 선택 동의 그룹
 
-        // 필수 동의 그룹
-        var $chkAll = $requiredGroup.find('#chkAll');
-        var $reqChks = $requiredGroup.find('.chkReq');
-
-        // 선택 동의 그룹
-        var $chkOptAll = $optionalGroup.find('#chkOptAll');
-        var $optChks = $optionalGroup.find('.chkOpt');
-        var $consChk = $optionalGroup.find('#chkCons');
-        var $consChks = $optionalGroup.find('.chkConsChild');
-
-        var $submitBtn = $('#submitBtn');
+        var $reqGroup, $optGroup, $elems, $submitBtn;
 
         return {
             init: function () {
+                $reqGroup = $('.check-box.terms[data-group="required"]'); // 필수 동의 그룹
+                $optGroup = $('.check-box.terms[data-group="optional"]'); // 선택 동의 그룹
+
+                $elems = {
+                    // 필수 동의 그룹
+                    $chkAll : $reqGroup.find('#chkAll'),
+                    $reqChks : $reqGroup.find('.chkReq'),
+
+                    // 선택 동의 그룹
+                    $chkOptAll : $optGroup.find('#chkOptAll'),
+                    $optChks : $optGroup.find('.chkOpt'),
+                    $consChk : $optGroup.find('#chkCons'),
+                    $consChks : $optGroup.find('.chkConsChild')
+                };
+
+                $submitBtn = $('#submitBtn');
+
                 this.bindEvents();
             },
 
@@ -25,55 +33,55 @@ $(document).ready(function () {
                 var self = this;
 
                 // 필수 동의 전체 체크
-                $chkAll.on('change', function () {
+                $elems.$chkAll.on('change', function () {
                     var isChecked = $(this).prop('checked');
-                    $reqChks.prop('checked', isChecked);
+                    $elems.$reqChks.prop('checked', isChecked);
                     self.updateChkAll();
                     self.updateSubmitBtn();
                 });
 
                 // 선택 동의 전체 체크
-                $chkOptAll.on('change', function () {
+                $elems.$chkOptAll.on('change', function () {
                     var isChecked = $(this).prop('checked');
-                    $optChks.prop('checked', isChecked);
-                    $consChk.prop('checked', isChecked);
-                    $consChks.prop('checked', isChecked);
+                    $elems.$optChks.prop('checked', isChecked);
+                    $elems.$consChk.prop('checked', isChecked);
+                    $elems.$consChks.prop('checked', isChecked);
                     self.updateChkOptAll();
                 });
 
                 // 개별 항목 변경 시 전체 체크박스 업데이트
-                $reqChks.on('change', function () {
+                $elems.$reqChks.on('change', function () {
                     self.updateChkAll();
                     self.updateSubmitBtn();
                 });
 
-                $optChks.on('change', function () {
+                $elems.$optChks.on('change', function () {
                     self.updateChkOptAll();
                 });
 
-                $consChks.on('change', function () {
+                $elems.$consChks.on('change', function () {
                     self.updateConsChk();
                     self.updateChkOptAll();
                 });
             },
 
             updateChkAll: function () {
-                var allChecked = $reqChks.length === $reqChks.filter(':checked').length;
-                $chkAll.prop('checked', allChecked);
+                var allChecked = $elems.$reqChks.length === $elems.$reqChks.filter(':checked').length;
+                $elems.$chkAll.prop('checked', allChecked);
             },
 
             updateChkOptAll: function () {
-                var allOptChecked = $optChks.length === $optChks.filter(':checked').length;
-                var allConsChecked = $consChks.length === $consChks.filter(':checked').length;
-                $chkOptAll.prop('checked', allOptChecked && allConsChecked);
+                var allOptChecked = $elems.$optChks.length === $elems.$optChks.filter(':checked').length;
+                var allConsChecked = $elems.$consChks.length === $elems.$consChks.filter(':checked').length;
+                $elems.$chkOptAll.prop('checked', allOptChecked && allConsChecked);
             },
 
             updateConsChk: function () {
-                $consChk.prop('checked', $consChks.filter(':checked').length > 0);
+                $elems.$consChk.prop('checked', $elems.$consChks.filter(':checked').length > 0);
             },
 
             updateSubmitBtn: function () {
-                $submitBtn.prop('disabled', $reqChks.length !== $reqChks.filter(':checked').length);
+                $submitBtn.prop('disabled', $elems.$reqChks.length !== $elems.$reqChks.filter(':checked').length);
             }
         };
     })();

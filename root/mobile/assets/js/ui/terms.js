@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     /**
-     * 약관 동의 모듈
+     * 약관 동의
      */
     var TermsAgreement = (function () {
 
@@ -86,9 +86,7 @@ $(document).ready(function(){
         };
     })();
 
-    $(document).ready(function () {
-        TermsAgreement.init();
-    });
+    TermsAgreement.init();
 
 
 });
