@@ -51,225 +51,227 @@
         <!-- E:headerWrap -->
         
             <!-- S:contentWrap -->
-            <div class="contentWrap sub">
-                <form id="myForm">
-                    <section class="tit">
-                        Input Radio/CheckBox/Toggle
-                    </section>
+            <div class="contentWrap scroll-hidden">
+                <div class="cont-body">
+                    <form id="myForm">
+                        <section class="tit">
+                            Input Radio/CheckBox/Toggle
+                        </section>
 
-                    <div class="form-group check">
-                        <ul class="check-box">
-                            <li>
-                                <input type="checkbox" id="check-1" name="checkbox">
-                                <label for="check-1" class="check-button">
-                                    <span>Check Box OFF</span>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="check-2" name="checkbox" checked>
-                                <label for="check-2" class="check-button">
-                                    <span>Check Box ON</span>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="check-3" name="checkbox" disabled="">
-                                <label for="check-3" class="check-button">
-                                    <span>Check Box Disabled</span>
-                                </label>
-                            </li>
+                        <div class="form-group check">
+                            <ul class="check-box">
+                                <li>
+                                    <input type="checkbox" id="check-1" name="checkbox">
+                                    <label for="check-1" class="check-button">
+                                        <span>Check Box OFF</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check-2" name="checkbox" checked>
+                                    <label for="check-2" class="check-button">
+                                        <span>Check Box ON</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check-3" name="checkbox" disabled="">
+                                    <label for="check-3" class="check-button">
+                                        <span>Check Box Disabled</span>
+                                    </label>
+                                </li>
 
-                        </ul>
-                    </div>
-
-                    <div class="form-group radio">
-                        <ul class="radio-box">
-                            <li>
-                                <input type="radio" id="radio1" name="radio">
-                                <label for="radio1" class="radio-button"><span>Radio Button1</span></label>
-                            </li>
-                            <li>
-                                <input type="radio" id="radio2" name="radio" checked>
-                                <label for="radio2" class="radio-button"><span>Radio Button2</span></label>
-                            </li>
-                            <li>
-                                <input type="radio" id="radio3" name="radio" disabled>
-                                <label for="radio3" class="radio-button"><span>Radio Button2</span></label>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="form-group toggle">
-                        <div class="toggle-box">
-                            <input type="checkbox" id="checkbox01" name="checkbox">
-                            <label for="checkbox01" class="toggle-button"></label>
+                            </ul>
                         </div>
-                    </div>
 
-                    <section class="tit">
-                        Input
-                    </section>
-
-                    <div class="form-group user-invalid"><!--[D]: .user-invalid 유효하지 않을 경우 -->
-                        <label for="name-input" class="essential">성명</label>
-                        <input id="name-input" type="text" name="name" class="form-control" placeholder="성명">
-                        <p class="feedback">유효하지 않을 경우 사용합니다. 유효하지 않을 경우 사용합니다. 유효하지 않을 경우 사용합니다.</p>
-                    </div>
-
-                    <div class="form-group user-valid"><!--[D]: .user-invalid 유효 할 경우 -->
-                        <label for="email-input" class="essential">이메일</label>
-                        <input id="email-input" type="email" name="email" class="form-control" placeholder="이메일">
-                        <p class="feedback">유효할 경우 사용합니다. 유효할 경우 사용합니다. 유효할 경우 사용합니다. 유효할 경우 사용합니다.</p>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password-input" class="essential">패스워드</label>
-                        <input id="password-input" type="password" name="password" class="form-control" placeholder="패스워드">
-                        <p class="feedback">비밀번호는 필수입니다. 또한 8자리 이상이어야 합니다.</p>
-                        <ul class="info">
-                            <li>중요한 내용이 필요할 경우 사용합니다. 중요한 내용이 필요할 경우 사용합니다.</li>
-                            <li>중요한 내용이 필요할 경우 사용합니다. 중요한 내용이 필요할 경우 사용합니다.</li>
-                        </ul>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="amount-input">원, %</label>
-                        <div class="col">
-                            <input id="amount-input" type="text" class="form-control ipt-pd-r" placeholder="금액을 입력해주세요" inputmode="numeric"><!-- [D] 스크립트 inputmode="numeric" : 세자리 수마다 콤마 적용  -->
-                            <span class="ipt-right amount">원</span>
+                        <div class="form-group radio">
+                            <ul class="radio-box">
+                                <li>
+                                    <input type="radio" id="radio1" name="radio">
+                                    <label for="radio1" class="radio-button"><span>Radio Button1</span></label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="radio2" name="radio" checked>
+                                    <label for="radio2" class="radio-button"><span>Radio Button2</span></label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="radio3" name="radio" disabled>
+                                    <label for="radio3" class="radio-button"><span>Radio Button2</span></label>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="search-input">검색</label>
-                        <div class="col">
-                            <input id="search-input" type="text" class="form-control ipt-pd-r" placeholder="입력해주세요">
-                            <span class="ipt-right ico flex-row gap10"><button type="reset" class="btn btn-ipt-clear"><span class="sr-only">삭제버튼</span></button><button type="button" class="btn btn-ipt-search"><span class="sr-only">검색버튼</span></button></span>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Disabled">Disabled</label>
-                        <input id="Disabled" type="text" name="Disabled" class="form-control" placeholder="Disabled" disabled>
-                        <p class="feedback">유효하지 않을 경우 내용이 들어갑니다.</p>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Readonly">Readonly</label>
-                        <input id="Readonly" type="text" name="Readonly" class="form-control" placeholder="Readonly" readonly>
-                        <p class="feedback">유효하지 않을 경우 내용이 들어갑니다.</p>
-                    </div>
-
-                    
-                    <section class="tit">
-                        Input flex
-                    </section>
-
-                    <div class="form-group user-invalid">
-                        <label for="rrn-first">주민등록번호 입력</label>
-                        <div class="flex-row gap10">
-                            <div class="col">
-                                <input id="rrn-first" type="number" name="rrn-first" class="form-control" placeholder="" min="0" step="1"
-                                    oninput="this.value = this.value.slice(0, 6); if(this.value.length === 6) document.getElementById('rrn-second').focus();">
-                            </div>
-                            <div class="ipt-hyphen">-</div>
-                            <div class="col">
-                                <!-- 두 번째 입력 필드는 스크린 리더를 위한 aria-labelledby 사용 -->
-                                <input id="rrn-second" type="number" name="rrn-second" class="form-control" placeholder="●" min="0" step="1"
-                                    oninput="this.value = this.value.slice(0, 1)" aria-labelledby="rrn-second">
-                                <span class="id-mask">●●●●●●</span>
+                        <div class="form-group toggle">
+                            <div class="toggle-box">
+                                <input type="checkbox" id="checkbox01" name="checkbox">
+                                <label for="checkbox01" class="toggle-button"></label>
                             </div>
                         </div>
-                        <p class="feedback">유효하지 않은 주민등록번호입니다. 주민등록번호를 올바르게 입력해 주세요.</p>
-                    </div>
-                    
 
-                    <section class="tit">
-                        selectCustom
-                    </section>
-                    <div class="form-group">
-                        <label for="selectCustom">셀렉트 선택</label>
-                        <div id="selectCustom" class="se-select" data-stove="select" data-uicase="slide">
-                            <div class="e-hidden-title">TITLE</div>
-                            <select required="" title="">
-                                <option value="" hidden="">default</option>
-                                <option value="0">option 00</option>
-                                <option value="1">option 01</option>
-                                <option value="2">option 02</option>
-                                <option value="3" disabled="">option 03</option>
-                                <option value="4" disabled="">option 04</option>
-                                <option value="9">option 09</option>
-                                <option value="10">option 10</option>
-                            </select>
+                        <section class="tit">
+                            Input
+                        </section>
+
+                        <div class="form-group user-invalid"><!--[D]: .user-invalid 유효하지 않을 경우 -->
+                            <label for="name-input" class="essential">성명</label>
+                            <input id="name-input" type="text" name="name" class="form-control" placeholder="성명">
+                            <p class="feedback">유효하지 않을 경우 사용합니다. 유효하지 않을 경우 사용합니다. 유효하지 않을 경우 사용합니다.</p>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="selectDisabled">셀렉트 disabled</label>
-                        <div id="selectDisabled" class="se-select" data-stove="select" data-uicase="slide">
-                            <div class="e-hidden-title">TITLE</div>
-                            <select required="" title="" disabled><!--[D] disabled-->
-                                <option value="" hidden="">disabled</option>
-                                <option value="0">option 00</option>
-                                <option value="1">option 01</option>
-                                <option value="2">option 02</option>
-                                <option value="3" disabled="">option 03</option>
-                                <option value="4" disabled="">option 04</option>
-                                <option value="9">option 09</option>
-                                <option value="10">option 10</option>
-                            </select>
+                        <div class="form-group user-valid"><!--[D]: .user-invalid 유효 할 경우 -->
+                            <label for="email-input" class="essential">이메일</label>
+                            <input id="email-input" type="email" name="email" class="form-control" placeholder="이메일">
+                            <p class="feedback">유효할 경우 사용합니다. 유효할 경우 사용합니다. 유효할 경우 사용합니다. 유효할 경우 사용합니다.</p>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="selectReadonly">셀렉트 readonly</label>
-                        <div id="selectReadonly" class="se-select" data-stove="select" data-uicase="slide">
-                            <div class="e-hidden-title">TITLE</div>
-                            <select required="" title="" readonly><!--[D] readonly-->
-                                <option value="" hidden="">readonly</option>
-                                <option value="0">option 00</option>
-                                <option value="1">option 01</option>
-                                <option value="2">option 02</option>
-                                <option value="3" disabled="">option 03</option>
-                                <option value="4" disabled="">option 04</option>
-                                <option value="9">option 09</option>
-                                <option value="10">option 10</option>
-                            </select>
+                        <div class="form-group">
+                            <label for="password-input" class="essential">패스워드</label>
+                            <input id="password-input" type="password" name="password" class="form-control" placeholder="패스워드">
+                            <p class="feedback">비밀번호는 필수입니다. 또한 8자리 이상이어야 합니다.</p>
+                            <ul class="info">
+                                <li>중요한 내용이 필요할 경우 사용합니다. 중요한 내용이 필요할 경우 사용합니다.</li>
+                                <li>중요한 내용이 필요할 경우 사용합니다. 중요한 내용이 필요할 경우 사용합니다.</li>
+                            </ul>
                         </div>
-                    </div>
 
+                        <div class="form-group">
+                            <label for="amount-input">원, %</label>
+                            <div class="col">
+                                <input id="amount-input" type="text" class="form-control ipt-pd-r" placeholder="금액을 입력해주세요" inputmode="numeric"><!-- [D] 스크립트 inputmode="numeric" : 세자리 수마다 콤마 적용  -->
+                                <span class="ipt-right amount">원</span>
+                            </div>
+                        </div>
 
-                    <div class="form-group user-invalid">
-                        <label for="phn-first">셀렉트 선택</label>
-                        <div class="flex-row gap10">
-                            <div class="col col-4">
-                                <div id="phn-first" class="se-select" data-stove="select" data-uicase="slide">
-                                    <div class="e-hidden-title">TITLE</div>
-                                    <select required="" title="">
-                                        <option value="" hidden="">010</option>
-                                        <option value="0">010</option>
-                                        <option value="1">011</option>
-                                        <option value="2">016</option>
-                                        <option value="3">017</option>
-                                        <option value="4">018</option>
-                                    </select>
+                        <div class="form-group">
+                            <label for="search-input">검색</label>
+                            <div class="col">
+                                <input id="search-input" type="text" class="form-control ipt-pd-r" placeholder="입력해주세요">
+                                <span class="ipt-right ico flex-row gap10"><button type="reset" class="btn btn-ipt-clear"><span class="sr-only">삭제버튼</span></button><button type="button" class="btn btn-ipt-search"><span class="sr-only">검색버튼</span></button></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Disabled">Disabled</label>
+                            <input id="Disabled" type="text" name="Disabled" class="form-control" placeholder="Disabled" disabled>
+                            <p class="feedback">유효하지 않을 경우 내용이 들어갑니다.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Readonly">Readonly</label>
+                            <input id="Readonly" type="text" name="Readonly" class="form-control" placeholder="Readonly" readonly>
+                            <p class="feedback">유효하지 않을 경우 내용이 들어갑니다.</p>
+                        </div>
+
+                        
+                        <section class="tit">
+                            Input flex
+                        </section>
+
+                        <div class="form-group user-invalid">
+                            <label for="rrn-first">주민등록번호 입력</label>
+                            <div class="flex-row gap10">
+                                <div class="col">
+                                    <input id="rrn-first" type="number" name="rrn-first" class="form-control" placeholder="" min="0" step="1"
+                                        oninput="this.value = this.value.slice(0, 6); if(this.value.length === 6) document.getElementById('rrn-second').focus();">
+                                </div>
+                                <div class="ipt-hyphen">-</div>
+                                <div class="col">
+                                    <!-- 두 번째 입력 필드는 스크린 리더를 위한 aria-labelledby 사용 -->
+                                    <input id="rrn-second" type="number" name="rrn-second" class="form-control" placeholder="●" min="0" step="1"
+                                        oninput="this.value = this.value.slice(0, 1)" aria-labelledby="rrn-second">
+                                    <span class="id-mask">●●●●●●</span>
                                 </div>
                             </div>
-                            <div class="col">
-                                <input id="phn-second" type="number" name="phn-second" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second">
+                            <p class="feedback">유효하지 않은 주민등록번호입니다. 주민등록번호를 올바르게 입력해 주세요.</p>
+                        </div>
+                        
+
+                        <section class="tit">
+                            selectCustom
+                        </section>
+                        <div class="form-group">
+                            <label for="selectCustom">셀렉트 선택</label>
+                            <div id="selectCustom" class="se-select" data-stove="select" data-uicase="slide">
+                                <div class="e-hidden-title">TITLE</div>
+                                <select required="" title="">
+                                    <option value="" hidden="">default</option>
+                                    <option value="0">option 00</option>
+                                    <option value="1">option 01</option>
+                                    <option value="2">option 02</option>
+                                    <option value="3" disabled="">option 03</option>
+                                    <option value="4" disabled="">option 04</option>
+                                    <option value="9">option 09</option>
+                                    <option value="10">option 10</option>
+                                </select>
                             </div>
                         </div>
-                        <p class="feedback">전화번호 뒷자리는 필수 입력 항목입니다.</p>
-                    </div>
 
-                    <section class="tit">
-                        Textarea
-                    </section>
+                        <div class="form-group">
+                            <label for="selectDisabled">셀렉트 disabled</label>
+                            <div id="selectDisabled" class="se-select" data-stove="select" data-uicase="slide">
+                                <div class="e-hidden-title">TITLE</div>
+                                <select required="" title="" disabled><!--[D] disabled-->
+                                    <option value="" hidden="">disabled</option>
+                                    <option value="0">option 00</option>
+                                    <option value="1">option 01</option>
+                                    <option value="2">option 02</option>
+                                    <option value="3" disabled="">option 03</option>
+                                    <option value="4" disabled="">option 04</option>
+                                    <option value="9">option 09</option>
+                                    <option value="10">option 10</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <textarea type="text" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength=""></textarea>
-                    </div>
+                        <div class="form-group">
+                            <label for="selectReadonly">셀렉트 readonly</label>
+                            <div id="selectReadonly" class="se-select" data-stove="select" data-uicase="slide">
+                                <div class="e-hidden-title">TITLE</div>
+                                <select required="" title="" readonly><!--[D] readonly-->
+                                    <option value="" hidden="">readonly</option>
+                                    <option value="0">option 00</option>
+                                    <option value="1">option 01</option>
+                                    <option value="2">option 02</option>
+                                    <option value="3" disabled="">option 03</option>
+                                    <option value="4" disabled="">option 04</option>
+                                    <option value="9">option 09</option>
+                                    <option value="10">option 10</option>
+                                </select>
+                            </div>
+                        </div>
 
-                </form>
+
+                        <div class="form-group user-invalid">
+                            <label for="phn-first">셀렉트 선택</label>
+                            <div class="flex-row gap10">
+                                <div class="col col-4">
+                                    <div id="phn-first" class="se-select" data-stove="select" data-uicase="slide">
+                                        <div class="e-hidden-title">TITLE</div>
+                                        <select required="" title="">
+                                            <option value="" hidden="">010</option>
+                                            <option value="0">010</option>
+                                            <option value="1">011</option>
+                                            <option value="2">016</option>
+                                            <option value="3">017</option>
+                                            <option value="4">018</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input id="phn-second" type="number" name="phn-second" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second">
+                                </div>
+                            </div>
+                            <p class="feedback">전화번호 뒷자리는 필수 입력 항목입니다.</p>
+                        </div>
+
+                        <section class="tit">
+                            Textarea
+                        </section>
+
+                        <div class="form-group">
+                            <textarea type="text" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength=""></textarea>
+                        </div>
+
+                    </form>
+                </div>
             </div>
             <!-- E:contentWrap -->
 

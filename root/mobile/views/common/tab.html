@@ -50,83 +50,88 @@
         <!-- E:headerWrap -->
 
         <!-- S:contentWrap -->
-        <div class="contentWrap sub">
-            <section class="tit">
-                Tab.Ver1 [스크립트]
-            </section>
+        <div class="contentWrap scroll-hidden">
 
-            <div class="tab-container jsTab"><!--[D] jsTab 클래스 :: 스크립트-->
-                <ul class="tab-list">
-                    <li class="tab-item active" data-tab="tab1" title="선택됨">탭 1</li>
-                    <li class="tab-item" data-tab="tab2">탭 2</li>
-                    <li class="tab-item" data-tab="tab3">탭 3</li>
-                </ul>
-                <div class="tab-content">
-                    <div id="tab1" class="tab-panel active">
-                        <p>탭 1의 내용</p>
-                        <!-- 탭 안에 탭 (중첩 탭) -->
-                        <div class="nested-tab-container nestedJsTab"><!--[D] nestedJsTab 클래스 :: 스크립트-->
-                            <ul class="nested-tab-list">
-                                <li class="nested-tab-item active" data-tab="nested1" title="선택됨">서브 탭 1</li>
-                                <li class="nested-tab-item" data-tab="nested2">서브 탭 2</li>
-                            </ul>
-                            <div class="nested-tab-content">
-                                <div id="nested1" class="nested-tab-panel active">
-                                    <p>서브 탭 1의 내용</p>
-                                </div>
-                                <div id="nested2" class="nested-tab-panel">
-                                    <p>서브 탭 2의 내용</p>
+            <div class="cont-body">
+
+                <section class="tit">
+                    Tab.Ver1 [스크립트]
+                </section>
+
+                <div class="tab-container jsTab"><!--[D] jsTab 클래스 :: 스크립트-->
+                    <ul class="tab-list">
+                        <li class="tab-item active" data-tab="tab1" title="선택됨">탭 1</li>
+                        <li class="tab-item" data-tab="tab2">탭 2</li>
+                        <li class="tab-item" data-tab="tab3">탭 3</li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab1" class="tab-panel active">
+                            <p>탭 1의 내용</p>
+                            <!-- 탭 안에 탭 (중첩 탭) -->
+                            <div class="nested-tab-container nestedJsTab"><!--[D] nestedJsTab 클래스 :: 스크립트-->
+                                <ul class="nested-tab-list">
+                                    <li class="nested-tab-item active" data-tab="nested1" title="선택됨">서브 탭 1</li>
+                                    <li class="nested-tab-item" data-tab="nested2">서브 탭 2</li>
+                                </ul>
+                                <div class="nested-tab-content">
+                                    <div id="nested1" class="nested-tab-panel active">
+                                        <p>서브 탭 1의 내용</p>
+                                    </div>
+                                    <div id="nested2" class="nested-tab-panel">
+                                        <p>서브 탭 2의 내용</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="tab2" class="tab-panel">
-                        <p>탭 2의 내용</p>
-                    </div>
-                    <div id="tab3" class="tab-panel">
-                        <p>탭 3의 내용</p>
+                        <div id="tab2" class="tab-panel">
+                            <p>탭 2의 내용</p>
+                        </div>
+                        <div id="tab3" class="tab-panel">
+                            <p>탭 3의 내용</p>
+                        </div>
                     </div>
                 </div>
+                
+                <section class="tit">
+                    Tab Test
+                </section>
+
+                <div class="tab-container jsTab">
+                    <ul class="tab-list">
+                        <li class="tab-item active" data-tab="tab1_1" title="선택됨">탭 1</li>
+                        <li class="tab-item" data-tab="tab2_2">탭 2</li>
+                        <li class="tab-item" data-tab="tab3_3">탭 3</li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab1_1" class="tab-panel active">
+                            <p>탭 1의 내용</p>
+                            <!-- 탭 안에 탭 (중첩 탭) -->
+                            <div class="nested-tab-container nestedJsTab">
+                                <ul class="nested-tab-list">
+                                    <li class="nested-tab-item active" data-tab="nested1_1" title="선택됨">서브 탭 1</li>
+                                    <li class="nested-tab-item" data-tab="nested2_2">서브 탭 2</li>
+                                </ul>
+                                <div class="nested-tab-content">
+                                    <div id="nested1_1" class="nested-tab-panel active">
+                                        <p>서브 탭 1의 내용</p>
+                                    </div>
+                                    <div id="nested2_2" class="nested-tab-panel">
+                                        <p>서브 탭 2의 내용</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab2_2" class="tab-panel">
+                            <p>탭 2의 내용</p>
+                        </div>
+                        <div id="tab3_3" class="tab-panel">
+                            <p>탭 3의 내용</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             
-            <section class="tit">
-                Tab Test
-            </section>
-
-            <div class="tab-container jsTab">
-                <ul class="tab-list">
-                    <li class="tab-item active" data-tab="tab1_1" title="선택됨">탭 1</li>
-                    <li class="tab-item" data-tab="tab2_2">탭 2</li>
-                    <li class="tab-item" data-tab="tab3_3">탭 3</li>
-                </ul>
-                <div class="tab-content">
-                    <div id="tab1_1" class="tab-panel active">
-                        <p>탭 1의 내용</p>
-                        <!-- 탭 안에 탭 (중첩 탭) -->
-                        <div class="nested-tab-container nestedJsTab">
-                            <ul class="nested-tab-list">
-                                <li class="nested-tab-item active" data-tab="nested1_1" title="선택됨">서브 탭 1</li>
-                                <li class="nested-tab-item" data-tab="nested2_2">서브 탭 2</li>
-                            </ul>
-                            <div class="nested-tab-content">
-                                <div id="nested1_1" class="nested-tab-panel active">
-                                    <p>서브 탭 1의 내용</p>
-                                </div>
-                                <div id="nested2_2" class="nested-tab-panel">
-                                    <p>서브 탭 2의 내용</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab2_2" class="tab-panel">
-                        <p>탭 2의 내용</p>
-                    </div>
-                    <div id="tab3_3" class="tab-panel">
-                        <p>탭 3의 내용</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
         <!-- E:contentWrap -->
 

@@ -52,99 +52,99 @@
         <!-- E:headerWrap -->
 
         <!-- S:contentWrap -->
-        <div class="contentWrap sub">
-            <form id="termsForm">
-                <div class="form-group">
-                    <ul class="check-box terms "><!--[D] temrs 클래스 :: 스타일만 변경  -->
-                        <!-- 전체 동의 -->
-                        <li class="check-all-area">
-                            <input type="checkbox" id="chkAll"><!--[D] checkAll 아이디 :: 스크립트 -->
-                            <label for="chkAll" class="check-button">
-                                <span>전체 동의</span>
-                            </label>
-                        </li>
-            
-                        <!-- 필수 항목 -->
-                        <li>
-                            <input type="checkbox" id="check-required-1" class="chkReq"><!--[D] chkReq 클래스 :: 스크립트 -->
-                            <label for="check-required-1" class="check-button">
-                                <span>이용약관 동의 (필수)</span>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="check-required-2" class="chkReq">
-                            <label for="check-required-2" class="check-button">
-                                <span>개인정보 수집 및 이용 동의 (필수)</span>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="check-required-3" class="chkReq">
-                            <label for="check-required-3" class="check-button">
-                                <span>위치 정보 이용 동의 (필수)</span>
-                            </label>
-                        </li>
-            
-                        <!-- 선택 항목 -->
-                        <li>
-                            <input type="checkbox" id="check-optional-1" class="chkOpt"><!--[D] chkOpt 클래스 :: 스크립트 -->
-                            <label for="check-optional-1" class="check-button">
-                                <span>광고성 정보 수신 동의 (선택)</span>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="check-optional-2" class="chkOpt">
-                            <label for="check-optional-2" class="check-button">
-                                <span>SMS 수신 동의 (선택)</span>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="check-optional-3" class="chkOpt">
-                            <label for="check-optional-3" class="check-button">
-                                <span>이메일 수신 동의 (선택)</span>
-                            </label>
-                        </li>
+        <div class="contentWrap  scroll-hidden">
+            <div class="cont-body">
+                <form id="termsForm">
+                    <div class="form-group">
+                        <ul class="check-box terms "><!--[D] temrs 클래스 :: 스타일만 변경  -->
+                            <!-- 전체 동의 -->
+                            <li class="check-all-area">
+                                <input type="checkbox" id="chkAll"><!--[D] checkAll 아이디 :: 스크립트 -->
+                                <label for="chkAll" class="check-button">
+                                    <span>전체 동의</span>
+                                </label>
+                            </li>
+                
+                            <!-- 필수 항목 -->
+                            <li>
+                                <input type="checkbox" id="check-required-1" class="chkReq"><!--[D] chkReq 클래스 :: 스크립트 -->
+                                <label for="check-required-1" class="check-button">
+                                    <span>이용약관 동의 (필수)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="check-required-2" class="chkReq">
+                                <label for="check-required-2" class="check-button">
+                                    <span>개인정보 수집 및 이용 동의 (필수)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="check-required-3" class="chkReq">
+                                <label for="check-required-3" class="check-button">
+                                    <span>위치 정보 이용 동의 (필수)</span>
+                                </label>
+                            </li>
+                
+                            <!-- 선택 항목 -->
+                            <li>
+                                <input type="checkbox" id="check-optional-1" class="chkOpt"><!--[D] chkOpt 클래스 :: 스크립트 -->
+                                <label for="check-optional-1" class="check-button">
+                                    <span>광고성 정보 수신 동의 (선택)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="check-optional-2" class="chkOpt">
+                                <label for="check-optional-2" class="check-button">
+                                    <span>SMS 수신 동의 (선택)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="check-optional-3" class="chkOpt">
+                                <label for="check-optional-3" class="check-button">
+                                    <span>이메일 수신 동의 (선택)</span>
+                                </label>
+                            </li>
 
-                        <!-- 수신 동의 항목 -->
-                        <li>
-                            <ul class="check-consent">
-                                <li>
-                                    <input type="checkbox" id="chkCons"><!--[D] chkCons 아이디 :: 스크립트 -->
-                                    <label for="chkCons" class="check-button">
-                                        <span>수신 동의 (선택)</span>
-                                    </label>
-                                </li>
-                                <li>
-                                    <ul class="sub-check-box">
-                                        <li>
-                                            <input type="checkbox" id="check-consent-sms" class="chkConsChild"><!--[D] chkConsChild 클래스 :: 스크립트 -->
-                                            <label for="check-consent-sms" class="check-button">
-                                                <span>SMS 수신 동의</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="check-consent-email" class="chkConsChild">
-                                            <label for="check-consent-email" class="check-button">
-                                                <span>이메일 수신 동의</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="check-consent-ads" class="chkConsChild">
-                                            <label for="check-consent-ads" class="check-button">
-                                                <span>광고성 정보 수신 동의</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                            <!-- 수신 동의 항목 -->
+                            <li>
+                                <ul class="check-consent">
+                                    <li>
+                                        <input type="checkbox" id="chkCons"><!--[D] chkCons 아이디 :: 스크립트 -->
+                                        <label for="chkCons" class="check-button">
+                                            <span>수신 동의 (선택)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <ul class="sub-check-box">
+                                            <li>
+                                                <input type="checkbox" id="check-consent-sms" class="chkConsChild"><!--[D] chkConsChild 클래스 :: 스크립트 -->
+                                                <label for="check-consent-sms" class="check-button">
+                                                    <span>SMS 수신 동의</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="check-consent-email" class="chkConsChild">
+                                                <label for="check-consent-email" class="check-button">
+                                                    <span>이메일 수신 동의</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="check-consent-ads" class="chkConsChild">
+                                                <label for="check-consent-ads" class="check-button">
+                                                    <span>광고성 정보 수신 동의</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
 
-                    
-                </div>
-            
-            </form>
-            
-            
+                        
+                    </div>
+                
+                </form>
+            </div>
         </div>
         <!-- E:contentWrap -->
 
