@@ -1,0 +1,83 @@
+@charset "UTF-8";
+:root{
+    --default-color: #111111;
+    --defalt-color-tr: transparent;
+}
+
+/*---------------------------------------------
+	#디폴트
+---------------------------------------------*/
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none; word-break:keep-all;  word-wrap:break-word; }
+html { font-size:16px; }/*  기본 폰트 사이즈 16px */
+body { font-size:1rem;; font-weight:500; line-height: normal; font-family:'Pretendard', 'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; color: var(--default-color); -webkit-overflow-scrolling:touch; }
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, li, ol, li, table, caption, th, td, form, fieldset, legend, address, div, p, span, a { margin:0; padding:0; }
+ul,ol,li,dl,dt,dd { list-style: none; }
+form, fieldset, legend, input, button, textarea, label { color: var(--default-color); }
+div, img, form, fieldset, button, blockquote, p, hr, select, input { border:0; padding:0; margin:0; }
+img, table { width:100%; }
+legend, caption { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow: hidden;  border:0; clip:rect(0, 0, 0, 0); white-space: nowrap; }
+input, textarea, select, address { font-family: 'Pretendard', 'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; }
+input, button, select, textarea { font-family: inherit; }
+input, textarea, select { display:inline-block; vertical-align: middle; color:var(--default-color); }
+
+img { line-height:0; font-size:0; vertical-align:top; }
+table{ border-spacing:0; border-collapse: collapse; }
+address, em { font-style: normal; }
+button { background-color:var(--defalt-color-tr); background-position: center; background-size: contain; cursor: pointer;}
+a { display:block; color:var(--default-color);  }
+a, a:hover, a:focus, a:active { text-decoration: none !important; cursor: pointer !important; }
+.tal{ text-align: left !important; }
+.tac{ text-align: center !important; }
+.tar{ text-align: right !important; }
+
+/*---------------------------------------------
+	#인풋 리셋
+---------------------------------------------*/
+input,
+.se-select select { display:block; width:100%; line-height:initial; box-sizing:border-box; border:none; border-radius: 0; background-color: none; -o-appearance:none; -webkit-appearance:none; -moz-appearance: none; appearance: none; white-space: nowrap; overflow:hidden; outline:none; cursor: pointer; }
+input:disabled { cursor: initial; }
+/** Firefox Browser **/
+input[type=number],
+input[type=number] { -moz-appearance: textfield; }
+/** Webkit Browser (예: Chrome, Safari) **/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+/** Edge Browser **/
+input[type="password"]::-ms-reveal { display: none; }
+input[type="radio"],
+input[type="checkbox"] {  box-sizing: border-box; padding:0; }
+input::-ms-clear,
+input::-ms-reveal { display: none;}
+/* Chrome의 autofill 관련 기본 스타일 제거 */
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover { -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important; box-shadow: 0 0 0 1000px #FFFFFF inset !important;}
+
+/*---------------------------------------------
+    #flex 레이아웃
+---------------------------------------------*/
+.flex-row { display:flex; flex-direction: row; }
+.flex-col { display:flex; flex-direction: column; }
+.col { position: relative; width:100%; }
+
+.col-1 { width: 10%; }
+.col-2 { width: 20%; }
+.col-3 { width: 30%; }
+.col-4 { width: 40%; }
+.col-5 { width: 50%; }
+.col-6 { width: 60%; }
+.col-7 { width: 70%; }
+.col-8 { width: 80%; }
+.col-9 { width: 90%; }
+.col-10 { width: 100%; }
+
+.gap5 { gap:5px; }
+.gap10 { gap:10px; }
+.gap15 { gap:10px; }
+.gap20 { gap:10px; }
+.gap30 { gap:10px; }
+
+
+
