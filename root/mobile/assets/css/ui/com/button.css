@@ -32,6 +32,7 @@ button.btn:focus-visible{ outline: 1px solid var(--outline);}
 .btn-area { gap:10px; }
 .btn-area .btn { height:45px; }
 /* 버튼 */
+.btm-btn-area .btn:disabled,
 .btn:disabled { background-color: var(--btn-disabled); cursor: not-allowed; color: var(--btn-txt-disabled); }
 .btn-primary { background-color: var(--btn-primary); color: var(--white); }
 .btn-secondary { background-color: var(--btn-secondary); }
