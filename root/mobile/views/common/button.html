@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>공통>레이아웃</title>
+    <title>공통>버튼</title>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -55,7 +55,63 @@
                 <section class="tit">
                     콘텐츠 Button
                 </section>
-                
+                <div class="btn-area">
+                    <button type="button" class="btn btn-secondary">레이아웃</button>
+                    <button type="button" class="btn btn-primary">레이아웃</button>
+                </div>
+
+                <section class="tit">
+                    콘텐츠 Button Ver.2
+                </section>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-secondary">레이아웃</button>
+                    <button type="button" class="btn btn-primary">레이아웃</button>
+                    <button type="button" class="btn btn-primary">레이아웃</button>
+                </div>
+
+                <section class="tit">
+                    인풋 Button
+                </section>
+                <div class="form-group">
+                    <label for="search-input">검색</label>
+                    <div class="col">
+                        <input id="search-input" type="text" class="form-control ipt-pd-r" placeholder="입력해주세요">
+                        <span class="ipt-right ico flex-row gap10"><button type="reset" class="btn btn-ipt-clear"><span class="sr-only">삭제버튼</span></button><button type="button" class="btn btn-ipt-search"><span class="sr-only">검색버튼</span></button></span>
+                    </div>
+                </div>
+
+
+                <section class="tit">
+                    인풋 Button Ver.2
+                </section>
+                <div class="form-group">
+                    <label for="phn-first">셀렉트 선택</label>
+                    <div class="flex-row gap5">
+                        <div class="col col-4">
+                            <div id="phn-first" class="se-select" data-stove="select" data-uicase="slide">
+                                <div class="e-hidden-title">TITLE</div>
+                                <select required="" title="">
+                                    <option value="" hidden="">010</option>
+                                    <option value="0">010</option>
+                                    <option value="1">011</option>
+                                    <option value="2">016</option>
+                                    <option value="3">017</option>
+                                    <option value="4">018</option>
+                                </select>
+                            <button type="button" class="se-btn btn-fake-slt"><span class="placeholder">010</span><span class="value"></span></button></div>
+                        </div>
+                        <div class="col">
+                            <input id="phn-second" type="number" name="phn-second" class="form-control" placeholder="" min="0" step="1" oninput="this.value = this.value.slice(0, 8)" aria-labelledby="phn-second">
+                            <span class="ipt-right">03:00</span><!--[D]: 인증 시간 -->
+                        </div>
+                        <div class="col col-4">
+                            <button type="button" class="btn btn-primary">인증 번호 요청</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
         <!-- E:contentWrap -->

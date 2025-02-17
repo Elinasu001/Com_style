@@ -14,17 +14,37 @@ button.btn:focus-visible{ outline: 1px solid var(--outline);}
 .btn.btn-ipt-clear { display: none; }
 .form-control:not(:placeholder-shown) ~ .ipt-right .btn-ipt-clear { display: block; }
 
+/** 공통 버튼 **/
+.btm-btn-area,
+.btn-area { display:flex; justify-content: center; align-items: center; background-color: var(--white); }
+.btn { display:flex; align-items: center; justify-content: center; width:100%; border-radius: 5px; font-weight: var(--font-w-r); font-size:var(--font16); }
+/* 버튼_3개일 경우 */
+.btm-btn-area:has(> button:nth-child(3):last-child),
+.btn-area:has(> button:nth-child(3):last-child) { display: flex; flex-wrap: wrap; }
+.btm-btn-area:has(> button:nth-child(3):last-child) button:nth-child(1),
+.btm-btn-area:has(> button:nth-child(3):last-child) button:nth-child(2),
+.btn-area:has(> button:nth-child(3):last-child) button:nth-child(1),
+.btn-area:has(> button:nth-child(3):last-child) button:nth-child(2) { flex: 1; }
+.btm-btn-area:has(> button:nth-child(3):last-child) button:last-child,
+.btn-area:has(> button:nth-child(3):last-child) button:last-child { width: 100%; }
+
+/** 컨텐츠 버튼 **/
+.btn-area { gap:10px; }
+.btn-area .btn { height:45px; }
+/* 버튼 */
+.btn:disabled { background-color: var(--btn-disabled); cursor: not-allowed; }
+.btn.btn-primary { background-color: var(--primary); color: var(--white); }
+.btn.btn-secondary { background-color: var(--secondary); }
 
 /** 하단 버튼 **/
-.btm-btn-area { padding:16px; gap:10px;  }
-.btm-btn-area .btn { display:flex; align-items: center; justify-content: center; width:100%; height:56px; border-radius: 5px; font-weight: var(--font-w-r); font-size:var(--font16); }
-/* 버튼 3개일 경우 */
-.btm-btn-area.btm-btn-area:has(> button:nth-child(3):last-child) { display: flex; flex-wrap: wrap; }
-.btm-btn-area:has(> button:nth-child(3):last-child) button:nth-child(1),
-.btm-btn-area:has(> button:nth-child(3):last-child) button:nth-child(2) { flex: 1; }
-.btm-btn-area:has(> button:nth-child(3):last-child) button:last-child { width: 100%; }
-/* 버튼 */
+.btm-btn-area { padding:16px; gap:10px; }
+.btm-btn-area .btn { height:56px; }
+/*  버튼 */
 .btm-btn-area .btn-primary { background-color: var(--btm-btn-primary); }
 .btm-btn-area .btn-secondary { background-color: var(--btm-btn-secondary); }
+
+/* 인풋 버튼 */
+.form-group .btn { height:46px; font-size:var(--font14); }
+
 
 

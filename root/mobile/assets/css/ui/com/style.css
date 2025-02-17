@@ -29,8 +29,9 @@ body{
 body {
 
     /** 기본 색상 **/
-    --primary: #8B4513;
-    --secondary: #143f71;
+    --primary: #143f71;
+    --secondary: #BAD1EC;
+    --disabled: #f5f5f5;
 
     /* 컨텐츠 */
     --con-primary: #005FCC;
@@ -140,7 +141,8 @@ body {
 
     /* 하단 버튼 */
     --btm-btn-primary: #1C1F4A;
-    --btm-btn-secondary:#B0B0B0;
+    --btm-btn-secondary:#DADFEA;
 
+    --btn-disabled:#B0B0B0;
 
 }

@@ -2,18 +2,6 @@
 
 .terms { display: flex; flex-direction: column; flex-wrap: initial;}
 
-button.btn-primary {
-    width: 100%;
-    padding: 20px;
-    background: #007bff;
-    color: white;
-}
-
-button:disabled.btn-primary {
-    background: #ccc;
-    cursor: not-allowed;
-}
-
 ul.check-box.terms { display:flex; flex-wrap:initial; }
 ul.check-box.terms li { position: relative; }
 ul.check-box.terms li input[type="checkbox"] { position: absolute; top:50%; left:0; transform: translateY(-50%); border-radius: 50%; }
