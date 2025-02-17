@@ -33,54 +33,23 @@ body {
     --secondary: #BAD1EC;
     --disabled: #f5f5f5;
 
-    /* 컨텐츠 */
-    --con-primary: #005FCC;
-    --con-secondary: #143f71;
-
     --red: #FF0000;
     --white: #FFFFFF;
-
-    /** 배경 기본 색상 **/
-    --bg-color-primary:#143f71;
-    --bg-color-secondary:#F8F8F8;
-
-    --bg-color-a: #AAAAAA;
-    --bg-color-b: #BBBBBB;
-    --bg-color-c: #CCCCCC;
-    --bg-color-d: #DDDDDD;
-    --bg-color-e: #EEEEEE;
-    --bg-color-e-4: #E4E4E4;
     --bg-color-f: #FFFFFF;
-    --bg-color-f-7: #F7F7FA;
     --bg-color-f-8: #F8F8F8;
     
     /** 텍스트 기본 색상 **/
     --txt-primary: #111111;
     --txt-secondary: #333333;
 
-    --txt-color-1: #111111;
-    --txt-color-2-4: #242424;
     --txt-color-3: #333333;
-    --txt-color-4-5: #454545;
-    --txt-color-5: #555555;
-    --txt-color-6: #666666;
-    --txt-color-7-5: #757575;
-    --txt-color-8: #888888;
-    --txt-color-9: #999999;
-    --txt-color-C: #CCCCCC;
+    --txt-color-6: #666666; /*//*/
+    --txt-color-9: #999999; /*//*/
     --txt-color-f: #FFFFFF;
 
-    /* 보더 기본 색상 */
-    --border-primary: #1447A2;
-    --border-secndary: #EEEEEE;
-
-    --border-color-a:#AAAAAA;
-    --border-color-b:#BBBBBB;
-    --border-color-c:#CCCCCC;
-    --border-color-d:#DDDDDD;
-    --border-color-e:#EEEEEE;
     --border-color-f:#FFFFFF;
-
+    --border-color-e:#EEEEEE;
+    --border-color-d:#DDDDDD;
 }
 
 body {

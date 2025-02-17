@@ -3,7 +3,7 @@
 /*---------------------------------------------
     #테이블 기본 스타일
 ---------------------------------------------*/
-table colgroup { display: table-column-group; unicode-bidi: isolate; }
+/* table colgroup { display: table-column-group; unicode-bidi: isolate; } */
 thead tr th { padding: 15px 20px; background-color: var( --bg-color-f-8); border-top: 1px solid var(--border-color-e); border-bottom: 1px solid var(--border-color-e); border-left: 1px solid var(--border-color-e); font-size: var( --font16); color: var(--txt-color-3); font-weight: 500; }
 thead tr th:first-child { border-left: none;}
 tbody tr td { padding: 15px 20px; background-color:  var( --bg-color-f); border-bottom: 1px solid var(--border-color-e); border-left: 1px solid var(--border-color-e); font-size: var( --font16); color: var( --txt-color-6); font-weight: 400;}
