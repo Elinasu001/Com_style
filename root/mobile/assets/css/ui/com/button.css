@@ -32,9 +32,9 @@ button.btn:focus-visible{ outline: 1px solid var(--outline);}
 .btn-area { gap:10px; }
 .btn-area .btn { height:45px; }
 /* 버튼 */
-.btn:disabled { background-color: var(--btn-disabled); cursor: not-allowed; }
-.btn.btn-primary { background-color: var(--primary); color: var(--white); }
-.btn.btn-secondary { background-color: var(--secondary); }
+.btn:disabled { background-color: var(--btn-disabled); cursor: not-allowed; color: var(--btn-txt-disabled); }
+.btn-primary { background-color: var(--btn-primary); color: var(--white); }
+.btn-secondary { background-color: var(--btn-secondary); }
 
 /** 하단 버튼 **/
 .btm-btn-area { padding:16px; gap:10px; }

@@ -33,14 +33,28 @@ body {
     --secondary: #BAD1EC;
     --disabled: #f5f5f5;
 
-    --red: #FF0000;
-    --white: #FFFFFF;
-    --bg-color-f: #FFFFFF;
-    --bg-color-f-8: #F8F8F8;
-    
     /** 텍스트 기본 색상 **/
     --txt-primary: #111111;
     --txt-secondary: #333333;
+    --txt-tertiary: #666666;
+
+    /* 배경 기본 색상 */
+    --bg-primary: #F8F8F8;
+
+    /* 보더 기본 색상 */
+    --border-primary: #EEEEEE;
+
+    --active: #005FCC;
+
+    --red: #FF0000;
+    --white: #FFFFFF;
+    --bg-color-f: #FFFFFF;
+    
+
+    --color-ab: #ABABAB;
+    --color-c:#CCCCCC;
+    --color-d:#CCCCCC;
+    --color-9:#999999;
 
     --txt-color-3: #333333;
     --txt-color-6: #666666; /*//*/
@@ -53,7 +67,6 @@ body {
 }
 
 body {
-
     --outline: #1447A2;
     --error: var(--red);
 
@@ -63,55 +76,61 @@ body {
     --info-color: var(--primary);
 
     /* 아이콘 색상 */
-    --ipt-clear:#CCCCCC;
-    --ipt-search:#999999;
+    --ipt-clear: var(--color-c);
+    --ipt-search:var(--color-9);
 
-    /* 인풋 */
-    --ipt-label: #222222;
-    --ipt-txt:#333333;
-    --ipt-txt-active:#333333;
-    --ipt-txt-inactive:#ABABAB;
-    --ipt-txt-placeholder:#999999;
-    --ipt-border: #CCCCCC;
-    --ipt-border-active: #005FCC;
-    --ipt-border-inactive:#CCCCCC;
-    --ipt-bg-inactive:#F5F5F5;
-
-    /* 라디오/체크박스 */
-    --rc-txt:#333333;
-    --rc-active: #005FCC;
-    --rc-txt-inactive: #ABABAB;
-    --rc-border:#767676;
-    --rc-border-inactive:#CCCCCC;
-    --rc-bg-inactive:#F5F5F5;
-
-    /* 토글 */
-    --toggle-bg: #DDDDDD;
-
-    /* 커스텀 셀렉트 */
-    --fk-se-ative: #EEF2F9;
-    --fk-se-inactive:#DDDDDD;
-    --fk-se-title: #333333;
-
-    /* 아코디언 */
-    --aco-tit: #555555;
-    --aco-border:#DDDDDD;
-    --aco-bg:#EEF2F9;
-
-
-    /* 탭 */
-    --tab-border:#DDDDDD;
-    --tab-bg:#eef2f9;
-    --tab-tit:#555555;
-    --tab-tit-active:#005FCC;
-    --tab-border-active:#005FCC;
-    --tab-bg-active:#005FCC;
-
-
-    /* 하단 버튼 */
+    /* 버튼 */
+    --btn-disabled:#B0B0B0;
+    --btn-txt-disabled: var(--txt-secondary);
+    --btn-primary: var(--primary);
+    --btn-secondary: var(--secondary);
+    /* 버튼_하단 */
     --btm-btn-primary: #1C1F4A;
     --btm-btn-secondary:#DADFEA;
 
-    --btn-disabled:#B0B0B0;
+    /* 폼_인풋 */
+    --ipt-label: var(--txt-secondary);
+    --ipt-txt: var(--txt-secondary);
+    --ipt-txt-active: var(--txt-secondary);
+    --ipt-txt-inactive: var(--color-ab);
+    --ipt-txt-placeholder: var(--color-9);
+    --ipt-border: var(--color-c);
+    --ipt-border-active: var(--active);
+    --ipt-border-inactive:var(--color-c);
+    --ipt-bg-inactive:#F5F5F5;
+
+    /* 폼_라디오/체크박스 */
+    --rc-txt: var(--txt-secondary);
+    --rc-active: var(--active);
+    --rc-txt-inactive: var(--color-ab);
+    --rc-border:#767676;
+    --rc-border-inactive:var(--color-c);
+    --rc-bg-inactive:#F5F5F5;
+
+    /* 폼_토글 */
+    --toggle-bg: var(--color-d);
+
+    /* 폼_커스텀 셀렉트 */
+    --fk-se-ative: #EEF2F9;
+    --fk-se-inactive: var(--color-d);
+    --fk-se-title: var(--txt-secondary);
+
+    /* 아코디언 */
+    --aco-tit: var(--txt-secondary);
+    --aco-border: var(--color-d);
+    --aco-bg:#EEF2F9;
+
+    /* 탭 */
+    /* --tab-border: var(--color-d);
+    --tab-bg:#EEF2F9;
+    --tab-tit:#555555;
+    --tab-tit-active:#005FCC;
+    --tab-border-active:#005FCC;
+    --tab-bg-active:#005FCC; */
+
+    /* 테이블 */
+    --tbl-bg: var(--bg-primary);
+    --tbl-border: var(--border-primary);
+    --tbl-txt: var(--txt-secondary);
 
 }

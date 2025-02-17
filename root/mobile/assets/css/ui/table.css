@@ -4,9 +4,9 @@
     #테이블 기본 스타일
 ---------------------------------------------*/
 /* table colgroup { display: table-column-group; unicode-bidi: isolate; } */
-thead tr th { padding: 15px 20px; background-color: var( --bg-color-f-8); border-top: 1px solid var(--border-color-e); border-bottom: 1px solid var(--border-color-e); border-left: 1px solid var(--border-color-e); font-size: var( --font16); color: var(--txt-color-3); font-weight: 500; }
+thead tr th { padding: 15px 20px; background-color: var( --tbl-bg); border-top: 1px solid var(--tbl-border); border-bottom: 1px solid var(--tbl-border); border-left: 1px solid var(--tbl-border); font-size: var( --font16); color: var(--tbl-txt); font-weight: 500; }
 thead tr th:first-child { border-left: none;}
-tbody tr td { padding: 15px 20px; background-color:  var( --bg-color-f); border-bottom: 1px solid var(--border-color-e); border-left: 1px solid var(--border-color-e); font-size: var( --font16); color: var( --txt-color-6); font-weight: 400;}
+tbody tr td { padding: 15px 20px; background-color:  var( --bg-color-f); border-bottom: 1px solid var(--tbl-border); border-left: 1px solid var(--tbl-border); font-size: var( --font16); color: var( --txt-color-6); font-weight: 400;}
 tbody tr td:first-child { border-left: none; border-top: none;}
 
 /*---------------------------------------------
@@ -25,15 +25,15 @@ tbody tr td:first-child { border-left: none; border-top: none;}
 /* table-type 4 */
 .table-type4 { margin-bottom: 40px;}
 .table-type4 .col { width: 100%;}
-.table-type4 > div.col dl { display: flex; width: 100%; table-layout: fixed; border-top: 1px solid var(--border-color-e); border-bottom: 1px solid var(--border-color-e); }
+.table-type4 > div.col dl { display: flex; width: 100%; table-layout: fixed; border-top: 1px solid var(--tbl-border); border-bottom: 1px solid var(--tbl-border); }
 .table-type4 > div.col dl:first-child { border-bottom: none;}
 .table-type4 > div.col dl:last-child { border-top: none; }
-.table-type4> div.col dt { display: table-cell; width: 50%; background-color: var( --bg-color-f-8); padding: 15px; font-size: var( --font16); color: var( --txt-color-3); font-weight: var(--font-w-m);}
+.table-type4> div.col dt { display: table-cell; width: 50%; background-color: var( --tbl-bg); padding: 15px; font-size: var( --font16); color: var( --tbl-txt); font-weight: var(--font-w-m);}
 .table-type4> div.col dd { width: 50%; display: table-cell; padding: 15px; font-size: var( --font16); color: var( --txt-color-6); font-weight: var(--font-w-r);}
 
 /* table-tit */
 .table-tit { padding: 0 0 20px 0 ;}
-.table-tit h4 { font-size: var( --font18); font-weight: var(--font-w-m); text-align: left; color: var( --txt-color-3); }
+.table-tit h4 { font-size: var( --font18); font-weight: var(--font-w-m); text-align: left; color: var( --tbl-txt); }
 /* table-caption */
 .table-caption { padding-top: 12px;}
 .table-caption p { text-align: right; font-size: var(--font-s-12); font-weight: var(--font-w-r); color: var( --txt-color-9);}
