@@ -37,7 +37,8 @@ button.btn:focus-visible{ outline: 1px solid var(--outline);}
 .btn-secondary { background-color: var(--btn-secondary); }
 
 /** 하단 버튼 **/
-.btm-btn-area { padding:16px; gap:10px; padding: 16px calc(constant(safe-area-inset-bottom) + 16px); padding: 16px calc(env(safe-area-inset-bottom) + 16px); }
+.btmWrap .btm-btn-area { padding: 16px calc(constant(safe-area-inset-bottom) + 16px); padding: 16px calc(env(safe-area-inset-bottom) + 16px);  }
+.btm-btn-area { padding:16px; gap:10px; }
 .btm-btn-area .btn { height:56px; }
 /*  버튼 */
 .btm-btn-area .btn-primary { background-color: var(--btm-btn-primary); }
