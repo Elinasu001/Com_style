@@ -34,7 +34,8 @@ body { position: relative; -webkit-text-size-adjust: none; }
 #headerWrap > header .btn.btn-back { background: var(--ico-back) no-repeat 100%/40px auto; }
 /* 헤더_ on 스크립트 / 헤더까지 꽉 찬 배경 있을 경우 (transToWhite)*/
 #headerWrap.on,
-#headerWrap.transToWhite.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); background-color:var(--bg-color-f); }
+#headerWrap.transToWhite.on,
+.btnWrap.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); background-color:var(--bg-color-f); }
 #headerWrap.transToWhite { background-color: transparent; }
 
 /*---------------------------------------------
@@ -62,7 +63,7 @@ body { position: relative; -webkit-text-size-adjust: none; }
 .layerPopup .pop-con-wrap { width:auto; height:100%; padding:0 20px; overflow-y: auto; background-color: var(--bg-color-f); }
 .layerPopup.on { display:flex !important; }/*스크립트 :: display:block; 방지*/
 .layerPopup .pop-header.on,
-.btmWrap.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }/*스크립트 :: 스크롤*/
+.pop-btm-wrap.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }/*스크립트 :: 스크롤*/
 /* 팝업_풀팝업 */
 .layerPopup.full { height:100dvh; }
 .layerPopup.full .pop-con-wrap { padding-top:65px; flex:1 1 auto; }

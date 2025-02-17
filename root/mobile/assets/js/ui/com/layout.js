@@ -53,7 +53,7 @@ $(document).ready(function(){
 
         return {
             headerAni: function() {
-                var headerOn = $('.fullPopupOn:visible .pop-header');
+                var headerOn = $('.fullPopupOn:visible .pop-header, .fullPopupOn:visible .pop-btm-wrap');
                 if (scrollY > 0) {
                     headerOn.addClass('on');
                 } else {
