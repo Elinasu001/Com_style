@@ -19,7 +19,7 @@ $(document).ready(function(){
             var _target = $('#' + id);
             _target.addClass('on');
             _target.find('.pop-con-wrap').scrollTop(0);
-            $('body').css({'overflow': 'hidden'});
+            $('.contentWrap').css({'overflow': 'hidden'});
             return _target;
         }
 
@@ -41,7 +41,7 @@ $(document).ready(function(){
             },
             fkSelAndPopupResetOverflow: function(){
                 if($('.layerPopup.on').length === 0 && $('.stove-option-layer.on').length === 0){
-                    $('body').css({'overflow' : ''});
+                    $('.contentWrap').css({'overflow' : ''});
                 }
             },
             closePopup : function(id){
