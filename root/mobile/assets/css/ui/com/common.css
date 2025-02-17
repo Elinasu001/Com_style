@@ -37,7 +37,7 @@ input.form-control.ipt-pd-r { padding:0 32px 0 15px; }
 .info { padding-left:24px; }
 .info li{ position: relative; margin:5px 0; line-height: 20px; font-size:var(--font14); color:var(--txt-color-6); }
 .info li::before { content:''; position: absolute; transform: translateY(-50%); top:10px; left:-24px; width:18px; height:18px;}
-.info li::before { background-color: var(--color-primary); mask-image: var(--ico-info); -webkit-mask-image:var(--ico-info);  mask-size:auto 18px; -webkit-mask-size: auto 18px; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; }
+.info li::before { background-color: var(--info-color); mask-image: var(--ico-info); -webkit-mask-image:var(--ico-info);  mask-size:auto 18px; -webkit-mask-size: auto 18px; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; }
 
 /* 텍스트 줄바꿈 */
 .txt-prewrap { white-space: pre-wrap; }

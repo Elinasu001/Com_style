@@ -29,16 +29,18 @@ body{
 body {
 
     /** 기본 색상 **/
-    --color-primary: #005FCC;
-    --color-secondary: #2E5AF4;
+    --primary: #8B4513;
+    --secondary: #143f71;
 
-    --color-semantic-1: #FF0000;
-    --color-semantic-2: #086CFD;
-    --color-semantic-3: #FD9B22;
-    --color-semantic-4: #00A2C4;
+    /* 컨텐츠 */
+    --con-primary: #005FCC;
+    --con-secondary: #143f71;
+
+    --red: #FF0000;
+    --white: #FFFFFF;
 
     /** 배경 기본 색상 **/
-    --bg-color-primary:#1447A2;
+    --bg-color-primary:#143f71;
     --bg-color-secondary:#F8F8F8;
 
     --bg-color-a: #AAAAAA;
@@ -78,10 +80,17 @@ body {
     --border-color-e:#EEEEEE;
     --border-color-f:#FFFFFF;
 
+}
+
+body {
+
     --outline: #1447A2;
-    --error: #FF0000;
+    --error: var(--red);
 
     --dim: rgba(0, 0, 0, 0.5);
+
+    /* 필수 정보 */
+    --info-color: var(--primary);
 
     /* 아이콘 색상 */
     --ipt-clear:#CCCCCC;
@@ -127,5 +136,11 @@ body {
     --tab-tit-active:#005FCC;
     --tab-border-active:#005FCC;
     --tab-bg-active:#005FCC;
+
+
+    /* 하단 버튼 */
+    --btm-btn-primary: #1C1F4A;
+    --btm-btn-secondary:#B0B0B0;
+
 
 }
