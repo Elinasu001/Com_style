@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
     /**
-     *  🚀 fkSelAndPopupResetOverflow 함수 전역 정의
+     *  ** fkSelAndPopupResetOverflow 함수 전역 정의
      *  - 팝업과 셀렉트가 모두 닫혔을 때만 `overflow: ''` 적용
     **/
 
