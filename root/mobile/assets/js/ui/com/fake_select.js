@@ -28,7 +28,7 @@ $(document).ready(function () {
         var fnName = '[data-stove="select"]',
             $this = $(element).closest(fnName),
             $select = $this.find('select'),
-            $stage = $('body');
+            $stage = $('.contentWrap');
 
         /* Class Define */
         var onClass = 'on',
