@@ -25,22 +25,28 @@ $(document).ready(function(){
         return {
             headerAni: function() {
                 if (scrollY > 0) {
-                    $('.headerOn:visible, .btmWrap:visible').addClass('on');
+                    $('.headerOn:visible').addClass('on');
                     
                 } else {
-                    $('.headerOn:visible, .btmWrap:visible').removeClass('on');
+                    $('.headerOn:visible').removeClass('on');
                 }
             },
             // 스크롤 처리
             scrolling: function () {
-                scrollY = $('.wrap .contentWrap').scrollTop();
-                this.headerAni();
+
+                scrollY = $(window).scrollTop();
+                var documentH = $(document).height();
+                var windowH = $(window).height();
+
+                if (documentH > windowH) {
+                    this.headerAni();
+                }
             }
         };
     })();
 
     //event
-    $('.wrap .contentWrap').on('scroll', function() {
+    $(window).on('scroll', function() {
         headerL.scrolling();
     });
 
