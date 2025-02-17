@@ -35,7 +35,7 @@ body { position: relative; -webkit-text-size-adjust: none; }
 /* 헤더_ on 스크립트 / 헤더까지 꽉 찬 배경 있을 경우 (transToWhite)*/
 #headerWrap.on,
 #headerWrap.transToWhite.on,
-.btnWrap.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); background-color:var(--bg-color-f); }
+.btmWrap.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); background-color:var(--bg-color-f); }
 #headerWrap.transToWhite { background-color: transparent; }
 
 /*---------------------------------------------
