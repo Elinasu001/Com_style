@@ -323,7 +323,7 @@
 }
 
 /* 은행선택 리스트 */
-.se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options { display:flex; flex-direction: row; gap:10px; flex-wrap: wrap; width:100%; }
+.se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options { display:flex; flex-direction: row; justify-content: space-between; gap:10px; flex-wrap: wrap; width:100%; }
 .se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option+button.stove-option { margin-top:0; }
 .se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option { position: relative; width:48%; padding:10px 10px 10px 40px; border:none; }
 .se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option::before { content: ""; position: absolute; top:50%; left:6px; width:20px; height:20px; transform: translateY(-50%); }
