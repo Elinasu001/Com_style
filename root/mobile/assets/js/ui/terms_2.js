@@ -5,7 +5,8 @@ $(document).ready(function () {
      */
     var TermsAgreement = (function () {
 
-        var $reqGroup, $optGroup, $elems, $submitBtn;
+        var $reqGroup, $optGroup, $elems
+        // , $submitBtn;
 
         return {
             init: function () {
@@ -24,7 +25,7 @@ $(document).ready(function () {
                     $consChks : $optGroup.find('.chkConsChild')
                 };
 
-                $submitBtn = $('#submitBtn');
+                // $submitBtn = $('#submitBtn');
 
                 this.bindEvents();
             },
@@ -37,7 +38,7 @@ $(document).ready(function () {
                     var isChecked = $(this).prop('checked');
                     $elems.$reqChks.prop('checked', isChecked);
                     self.updateChkAll();
-                    self.updateSubmitBtn();
+                    // self.updateSubmitBtn();
                 });
 
                 // 선택 동의 전체 체크
@@ -52,7 +53,7 @@ $(document).ready(function () {
                 // 개별 항목 변경 시 전체 체크박스 업데이트
                 $elems.$reqChks.on('change', function () {
                     self.updateChkAll();
-                    self.updateSubmitBtn();
+                    // self.updateSubmitBtn();
                 });
 
                 $elems.$optChks.on('change', function () {
@@ -80,9 +81,9 @@ $(document).ready(function () {
                 $elems.$consChk.prop('checked', $elems.$consChks.filter(':checked').length > 0);
             },
 
-            updateSubmitBtn: function () {
-                $submitBtn.prop('disabled', $elems.$reqChks.length !== $elems.$reqChks.filter(':checked').length);
-            }
+            // updateSubmitBtn: function () {
+            //     $submitBtn.prop('disabled', $elems.$reqChks.length !== $elems.$reqChks.filter(':checked').length);
+            // }
         };
     })();
 

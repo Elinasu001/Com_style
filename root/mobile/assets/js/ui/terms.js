@@ -16,7 +16,7 @@ $(document).ready(function(){
                 $consChk = $('#chkCons'); // 수신 동의 (부모)
                 $consChks = $('.chkConsChild'); // 수신 동의 항목 (SMS, 이메일, 광고성)
                 $allChks = $('.chkReq, .chkOpt, #chkCons, .chkConsChild'); // 전체 항목
-                $submitBtn = $('#submitBtn'); // 가입 버튼
+                // $submitBtn = $('#submitBtn'); // 가입 버튼
 
                 this.bindEvents();
             },
@@ -33,7 +33,7 @@ $(document).ready(function(){
 
                 // 전체 항목
                 $allChks.on('change', function () {
-                    self.uptSubmitBtn();
+                    // self.uptSubmitBtn();
                     self.uptAllChk();
                 });
 
@@ -53,7 +53,7 @@ $(document).ready(function(){
 
             toggleAll: function (isChecked) {
                 $allChks.prop('checked', isChecked);
-                this.uptSubmitBtn();
+                // this.uptSubmitBtn();
                 this.uptAllChk();
             },
 
@@ -79,10 +79,10 @@ $(document).ready(function(){
             },
 
             //버튼 활성화 (필수 항목)
-            uptSubmitBtn: function () {
-                var allReqChked = $reqChks.length === $reqChks.filter(':checked').length;
-                $submitBtn.prop('disabled', !allReqChked);
-            }
+            // uptSubmitBtn: function () {
+            //     var allReqChked = $reqChks.length === $reqChks.filter(':checked').length;
+            //     $submitBtn.prop('disabled', !allReqChked);
+            // }
         };
     })();
 
