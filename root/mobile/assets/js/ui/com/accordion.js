@@ -26,8 +26,8 @@ $(document).ready(function(){
     /**
      * event
      */
-    $(document).on("click", ".accordionToggle .accordion-list > .tit", function() {
-        var $currentAccordion = $(this).closest(".accordion-list");
+    $(document).on("click", ".accordionToggle .accordion-item > .tit", function() {
+        var $currentAccordion = $(this).closest(".accordion-item");
         accordionToggle.toggle($currentAccordion);
     });
 
