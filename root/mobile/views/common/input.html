@@ -27,11 +27,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="../../assets/icons/site.webmanifest" />
 
-    <link rel="stylesheet" href="../../assets/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../assets/css/lib/ui-lib.css" >
     <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
 
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
     <script type="module" src="../../assets/js/ui/ui-util.js"></script>
 </head>
 
@@ -322,6 +323,25 @@
                             <textarea type="text" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength=""></textarea>
                         </div>
 
+                        <section class="tit">
+                            RangeCustom
+                        </section>
+
+                        <div class="form-group">
+                            <label for="range1">RangeCustom</label>
+							<div class="range-pack">
+								<!-- value -->
+								<div class="value">
+									<span class="range-val" id="lower1"></span>
+									<span class="sign">~</span>
+									<span class="range-val" id="upper1"></span>
+									만원 이상
+								</div>
+								<!-- range // 하단에 range 스크립트 있음 -->
+								<div id="range1" class="se-range"></div>
+							</div>
+						</div>
+
                     </form>
                 </div>
             </div>
@@ -350,4 +370,31 @@
     <!-- E:wrap -->
 
 </body>
+
+<script>
+
+    function numberWithCommas(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    // range js
+    var doubleSlider1 = document.querySelector('#range1');
+    noUiSlider.create(doubleSlider1, {
+        behaviour: 'tap-drag',
+        start: [0, 10000],
+        step: 1000,
+        connect: true,
+        range: {
+            'min': [0],
+            'max': [10000]
+        },
+    });
+
+    doubleSlider1.noUiSlider.on('update', function (values) {
+        document.getElementById('lower1').innerHTML = numberWithCommas(Math.floor(values[0]));
+        document.getElementById('upper1').innerHTML = numberWithCommas(Math.floor(values[1]));
+    });
+</script>
+
+
 </html>
