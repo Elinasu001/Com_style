@@ -180,8 +180,74 @@
                 </div>
 
                 <section class="tit">
-                    layerPopup btmSheet_ :: openPopup 메서드
+                    layerPopup btmSheet_toggleUp :: openToggleUp 메서드
                 </section>
+
+                <div class="btn-area">
+                    <button type="button" class="btn btn-primary"onclick="openPopup('samplePopup_ver2')">btmSheet_toggleUp</button>
+                </div>
+
+                <div id="samplePopup_ver2" class="layerPopup full">
+                    <div class="pop-header popHeader">
+                        <button type="button" name="button" class="btn btn-back left"><span class="sr-only">뒤로가기</span></button>
+                        <h2 class="pop-tit">샘플 팝업</h2>
+                        <button type="button" name="button" class="btn btn-close right" onclick="closePopup('samplePopup_ver2')"><span class="sr-only">닫기</span></button>
+                    </div>
+                    <div class="pop-con-wrap">
+                        샘플 팝업 컨텐츠 영역입니다.
+                        
+                    </div>
+                    <div class="pop-btm-wrap">
+                        <div class="btm-btn-area">
+                            <button type="button" class="btn btn-secondary" onclick="openToggleUp('btmSheetPopup_toggleUp')">레이아웃</button>
+                            <button type="button" class="btn btn-primary" onclick="openToggleUp('btmSheetPopup_toggleUp')">레이아웃</button>
+                        </div>
+                    </div>
+                    <div id="btmSheetPopup_toggleUp" class="layerPopup btmSheet toggleUp">
+                        <div class="pop-header popHeader">
+                            <!-- <h2 class="pop-tit left">바텀시트</h2> -->
+                            <button type="button" name="button" class="btn btn-close right"><span class="sr-only">닫기</span></button>
+                        </div>
+                        <div class="pop-con-wrap">
+                            <section class="tit">
+                                바텀시트 컨텐츠
+                            </section>
+                            <section class="tit">
+                                바텀시트 컨텐츠
+                            </section>
+                            <section class="tit">
+                                바텀시트 컨텐츠
+                            </section>
+                            <section class="tit">
+                                바텀시트 컨텐츠
+                            </section>
+                            <section class="tit">
+                                바텀시트 컨텐츠
+                            </section>
+                            <section class="tit">
+                                바텀시트 컨텐츠
+                            </section>
+                            <section class="tit">
+                                바텀시트 컨텐츠
+                            </section>
+                            <section class="tit">
+                                바텀시트 컨텐츠
+                            </section>
+                            <section class="tit">
+                                바텀시트 컨텐츠
+                            </section>
+
+                        </div>
+                        <div class="pop-btm-wrap">
+                            <div class="btm-btn-area">
+                                <button type="button" class="btn btn-secondary">레이아웃</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
 
                 <section class="tit">
                     Test.Ver1

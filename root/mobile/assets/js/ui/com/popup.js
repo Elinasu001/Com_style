@@ -92,4 +92,24 @@ $(document).ready(function(){
     popupL.closePopupOnDim();
     window.popupL = popupL;
 
+
+    /**
+     * 바텁 토글
+    **/
+    var btmShtTL = (function() {
+        return {
+            btmShtT: function(id) {
+                var _target = $('#' + id);
+                _target.toggleClass('active');
+            }
+        };
+    })();
+    
+    $(document).ready(function() {
+        $('.layerPopup.toggleUp .btn-close').on('click', function() {
+            var popupId = $(this).closest('.layerPopup').attr('id');
+            btmShtTL.btmShtT(popupId);
+        });
+    });
+
 });
