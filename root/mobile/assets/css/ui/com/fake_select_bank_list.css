@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/*---------------------------------------------
+	fake_select_bank_lsist #커스텀 셀렉트 은행 선택 이미지
+---------------------------------------------*/
+
+body {
+    --ico-KB: url(../../../images/bank_list/logo_kb.png);
+    --ico-IBK: url(../../../images/bank_list/logo_ibk.png);
+    --ico-NH: url(../../../images/bank_list/logo_nh.png);
+    --ico-SH: url(../../../images/bank_list/logo_bank_sh.png);
+    --ico-WR: url(../../../images/bank_list/logo_woori.png);
+
+	--ico-HN: url(../../../images/bank_list/logo_hana.png);
+	--ico-KEB: url(../../../images/bank_list/logo_bank_keb.png);
+
+    --ico-CITI: url(../../../images/bank_list/logo_citi.png);
+    --ico-BNK: url(../../../images/bank_list/logo_bnk.png);
+    --ico-DG: url(../../../images/bank_list/logo_dgb.png);
+    --ico-KBANK: url(../../../images/bank_list/logo_k.png);
+    --ico-SC: url(../../../images/bank_list/logo_sc.png);
+    --ico-KAKAO: url(../../../images/bank_list/logo_kakao.png);
+}
+
+
+/* 은행선택 리스트  */
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option::before { width:24px; height: 24px; background-size: 24px; background-position: center; background-repeat: no-repeat; }
+
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="0"]::before { background-image: var(--ico-KB); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="1"]::before { background-image: var(--ico-IBK); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="2"]::before { background-image: var(--ico-NH); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="3"]::before { background-image: var(--ico-SH); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="4"]::before { background-image: var(--ico-WR); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="5"]::before { background-image: var(--ico-HN); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="6"]::before { background-image: var(--ico-KEB); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="7"]::before { background-image: var(--ico-CITI); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="8"]::before { background-image: var(--ico-BNK); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="9"]::before { background-image: var(--ico-DG); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="10"]::before { background-image: var(--ico-KBANK); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="11"]::before { background-image: var(--ico-SC); }
+.se-select[data-stove=select].bank-list.bank-ico div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[data-value="12"]::before { background-image: var(--ico-KAKAO); }

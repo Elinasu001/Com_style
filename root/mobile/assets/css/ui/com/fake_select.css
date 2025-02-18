@@ -321,3 +321,13 @@
 .se-select[data-stove=select] div.stove-option-layer {
     z-index: 110;
 }
+
+/* 은행선택 리스트 */
+.se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options { display:flex; flex-direction: row; gap:10px; flex-wrap: wrap; width:100%; }
+.se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option+button.stove-option { margin-top:0; }
+.se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option { position: relative; width:48%; padding:10px 10px 10px 40px; border:none; }
+.se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option::before { content: ""; position: absolute; top:50%; left:6px; width:20px; height:20px; transform: translateY(-50%); }
+
+.se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option.on { background-color: var(--white); border:var(--white); }
+.se-select[data-stove=select].bank-list div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option.on::after { content: ""; position: absolute; top:50%; right:10px; width:20px; height:20px; transform: translateY(-50%);  background-color: var(--active); mask-image: var(--ico-check); mask-position: center; mask-repeat: no-repeat; mask-size: auto 10px; --webkit-mask-image:var(--ico-check); --wekbit-mask-position: center; --webkit-mask-repeat:no-reepat; --webkit-mask-size:auto 10px;  }
+
