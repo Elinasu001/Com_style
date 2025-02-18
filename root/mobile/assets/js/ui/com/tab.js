@@ -57,5 +57,26 @@ $(document).ready(function(){
         Tabs.init(this);
     });
 
+    /**
+     *   TAB Swiper
+    **/
+    var tabSwiperL = (function () {
+        var pager = ['영역', '영역2', '영역3', '영역4'];
+
+        var tabSwiper = new Swiper('.tabs.tab-area.swiper', {
+            spaceBetween: 20,
+            autoHeight: true,
+            pagination: {
+                el: '.tabs ul',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<li class="tab-item ' + className + '">' + pager[index] + '</li>';
+                }
+            }
+        });
+
+        return tabSwiper;
+    })();
+
 
 });
