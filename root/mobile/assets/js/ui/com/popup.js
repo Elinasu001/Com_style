@@ -26,6 +26,7 @@ $(document).ready(function(){
         return {
             openPopup : function(id) {
                 var _target = initPopup(id);
+                
             },
             openModal: function(id, msg) {
                 var _target = initPopup(id);
