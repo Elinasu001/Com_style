@@ -9,7 +9,7 @@
 .accordion-area .accordion-list > .tit:has(.ic-arr:focus-visible) { outline:1px solid var(--outline); outline-offset: -4px; }
 .accordion-area .accordion-list > .cont { display: none; margin:20px;  }
 
-/* .accordion-area .accordion-list.on > .tit  { background-color:var(--bg-color-f); } */
+/* .accordion-area .accordion-list.on > .tit  { background-color:var(--white); } */
 .accordion-area .accordion-list.on > .tit > p { font-weight: var(--font-w-b);}
 .accordion-area .accordion-list.on > .tit > .ic-arr { transform: rotate(180deg); }
 .accordion-area .accordion-list.on > .cont { display: block; }

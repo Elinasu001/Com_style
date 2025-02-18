@@ -28,45 +28,30 @@ body{
 
 body {
 
-    /** 기본 색상 **/
-    --primary: #143f71;
-    --secondary: #BAD1EC;
-    --disabled: #f5f5f5;
-
-    /** 텍스트 기본 색상 **/
-    --txt-primary: #111111;
-    --txt-secondary: #333333;
-    --txt-tertiary: #666666;
-
-    /* 배경 기본 색상 */
-    --bg-primary: #F8F8F8;
-
-    /* 보더 기본 색상 */
-    --border-primary: #EEEEEE;
-
     --active: #005FCC;
 
     --red: #FF0000;
     --white: #FFFFFF;
-    --bg-color-f: #FFFFFF;
-    
 
+    /** 기본 색상 **/
+    --primary: #143f71;
+    --secondary: #BAD1EC;
+
+    --color-1: #111111;
+    --color-3: #333333;
+    --color-6: #666666;
+    --color-9: #999999;
+
+    --color-f5:#F5F5F5;
+    --color-c: #CCCCCC;
     --color-ab: #ABABAB;
-    --color-c:#CCCCCC;
-    --color-d:#CCCCCC;
-    --color-9:#999999;
+    --color-e: #EEEEEE;
+    --color-d: #DDDDDD;
 
-    --txt-color-3: #333333;
-    --txt-color-6: #666666; /*//*/
-    --txt-color-9: #999999; /*//*/
-    --txt-color-f: #FFFFFF;
-
-    --border-color-f:#FFFFFF;
-    --border-color-e:#EEEEEE;
-    --border-color-d:#DDDDDD;
 }
 
 body {
+    
     --outline: #1447A2;
     --error: var(--red);
 
@@ -80,8 +65,8 @@ body {
     --ipt-search:var(--color-9);
 
     /* 버튼 */
-    --btn-disabled:#B0B0B0;
-    --btn-txt-disabled: var(--txt-secondary);
+    --btn-disabled: var(--color-c);
+    --btn-txt-disabled: var(--color-3);
     --btn-primary: var(--primary);
     --btn-secondary: var(--secondary);
     /* 버튼_하단 */
@@ -89,23 +74,23 @@ body {
     --btm-btn-secondary:#DADFEA;
 
     /* 폼_인풋 */
-    --ipt-label: var(--txt-secondary);
-    --ipt-txt: var(--txt-secondary);
-    --ipt-txt-active: var(--txt-secondary);
-    --ipt-txt-inactive: var(--color-ab);
+    --ipt-label: var(--color-3);
+    --ipt-txt: var(--color-3);
     --ipt-txt-placeholder: var(--color-9);
+    --ipt-txt-active: var(--color-3);
+    --ipt-txt-inactive: var(--color-ab);
     --ipt-border: var(--color-c);
     --ipt-border-active: var(--active);
     --ipt-border-inactive:var(--color-c);
-    --ipt-bg-inactive:#F5F5F5;
+    --ipt-bg-inactive: var(--color-f5);
 
     /* 폼_라디오/체크박스 */
-    --rc-txt: var(--txt-secondary);
+    --rc-txt: var(--color-3);
     --rc-active: var(--active);
     --rc-txt-inactive: var(--color-ab);
-    --rc-border:#767676;
+    --rc-border: var(--color-c);
     --rc-border-inactive:var(--color-c);
-    --rc-bg-inactive:#F5F5F5;
+    --rc-bg-inactive: var(--color-f5);
 
     /* 폼_토글 */
     --toggle-bg: var(--color-d);
@@ -113,24 +98,21 @@ body {
     /* 폼_커스텀 셀렉트 */
     --fk-se-ative: #EEF2F9;
     --fk-se-inactive: var(--color-d);
-    --fk-se-title: var(--txt-secondary);
+    --fk-se-title: var(--color-3);
 
     /* 아코디언 */
-    --aco-tit: var(--txt-secondary);
+    --aco-tit: var(--color-3);
     --aco-border: var(--color-d);
     --aco-bg:#EEF2F9;
 
     /* 탭 */
-    /* --tab-border: var(--color-d);
-    --tab-bg:#EEF2F9;
-    --tab-tit:#555555;
-    --tab-tit-active:#005FCC;
-    --tab-border-active:#005FCC;
-    --tab-bg-active:#005FCC; */
+
 
     /* 테이블 */
-    --tbl-bg: var(--bg-primary);
-    --tbl-border: var(--border-primary);
-    --tbl-txt: var(--txt-secondary);
+    --tbl-bg: var(--color-f5);
+    --tbl-border: var(--color-e);
+    --tbl-tit: var(--color-3);
+    --tbl-txt: var(--color-6);
+    --tbl-caption: var(--color-9);
 
 }

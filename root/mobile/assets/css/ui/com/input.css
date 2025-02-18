@@ -5,7 +5,7 @@
 ---------------------------------------------*/
 .form-group > label { font-size:var(--font14); font-weight: var(--font-w-m); color:var(--ipt-label); }
 input.form-control,
-textarea { transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 5px; -moz-border-radius: 5px;-webkit-border-radius: 5px; font-size:var(--font16); font-weight: var(--font-w-r); border:1px solid var(--ipt-border); background-color: var(--bg-color-f); color:var(--ipt-txt);  }
+textarea { transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-radius: 5px; -moz-border-radius: 5px;-webkit-border-radius: 5px; font-size:var(--font16); font-weight: var(--font-w-r); border:1px solid var(--ipt-border); background-color: var(--white); color:var(--ipt-txt);  }
 input.form-control { height:46px; }
 textarea { width:100%; height:240px; resize:none; white-space:pre-line;  }
 
@@ -82,19 +82,19 @@ ul.radio-box li,
 ul.check-box li{ display:flex; column-gap:10px; }
 
 /* 라디오 */
-ul.radio-box input[type="radio"] { border:7.5px solid var(--rc-border); background: var(--bg-color-f); border-radius: 50%; }
-ul.radio-box input[type="radio"]:checked { background:var(--bg-color-f); border:7.5px solid var(--rc-active); }
+ul.radio-box input[type="radio"] { border:7.5px solid var(--rc-border); background: var(--white); border-radius: 50%; }
+ul.radio-box input[type="radio"]:checked { background:var(--white); border:7.5px solid var(--rc-active); }
 ul.radio-box input[type="radio"]:disabled { border-color: var(--rc-border-inactive); background-color: var(--rc-bg-inactive);  }
 
 /* 체크박스 */
-ul.check-box input[type="checkbox"] { border:2px solid var(--rc-border); background:var(--bg-color-f); }
+ul.check-box input[type="checkbox"] { border:2px solid var(--rc-border); background:var(--white); }
 ul.check-box input[type="checkbox"]::before {
 	content:''; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width:13px; height:10px;
 	background-color: var(--rc-border);
 	mask-image:var(--ico-check); mask-repeat:no-repeat; mask-size: auto 10px;
 	-webkit-mask-image:var(--ico-check); -webkit-mask-repeat:no-repeat; -webkit-mask-size: auto 10px;
 }
-ul.check-box input[type="checkbox"]:checked::before { background-color: var(--bg-color-f);  }
+ul.check-box input[type="checkbox"]:checked::before { background-color: var(--white);  }
 ul.check-box input[type="checkbox"]:disabled::before { background-color: var(--rc-bg-inactive); }
 
 ul.check-box input[type="checkbox"]:checked { border:1px solid var(--rc-active);  background-color: var(--rc-active); }
@@ -109,7 +109,7 @@ div.toggle-box input[type="checkbox"]:focus-visible  { outline: 1px solid var(--
 	#인풋 토글
 ---------------------------------------------*/
 div.toggle-box input[type="checkbox"] { position: relative; display:inline-block; width:40px; height: 24px; border-radius: 12px;;  background:var(--toggle-bg); transition:all 0.3s ease; }
-div.toggle-box input[type="checkbox"]:before { content:''; position:absolute; top:50%; left:3px; transform: translateY(-50%); width:18px; height:18px; border-radius: 50%; background: var(--bg-color-f); box-shadow:0px 2px 5px 0px rgba(23,4,61,0.2);  }
+div.toggle-box input[type="checkbox"]:before { content:''; position:absolute; top:50%; left:3px; transform: translateY(-50%); width:18px; height:18px; border-radius: 50%; background: var(--white); box-shadow:0px 2px 5px 0px rgba(23,4,61,0.2);  }
 
 div.toggle-box input[type="checkbox"]:checked { background: var(--rc-active); }
 div.toggle-box input[type="checkbox"]:checked::before { left:auto; right:3px; }

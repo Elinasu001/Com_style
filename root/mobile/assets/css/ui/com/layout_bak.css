@@ -23,7 +23,7 @@
 /*---------------------------------------------
     #헤더 레이아웃
 ---------------------------------------------*/
-#headerWrap { display:flex; width:100%; position: fixed; top:0; left:0; z-index:10; height:60px; background-color: var(--bg-color-f); }
+#headerWrap { display:flex; width:100%; position: fixed; top:0; left:0; z-index:10; height:60px; background-color: var(--white); }
 #headerWrap > header { position: relative; display:flex; justify-content: center; align-items: center;  width:100%; }
 #headerWrap > header > .left,
 #headerWrap > header > .right{ position: absolute;}
@@ -41,15 +41,15 @@
 #headerWrap > header .btn.btn-back { background: var(--ico-back) no-repeat 100%/40px auto; }
 /* 헤더_ on 스크립트 / 헤더까지 꽉 찬 배경 있을 경우 (transToWhite)*/
 #headerWrap.on,
-#headerWrap.transToWhite.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); background-color:var(--bg-color-f); }
+#headerWrap.transToWhite.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); background-color:var(--white); }
 #headerWrap.transToWhite { background-color: transparent; }
 
 /*---------------------------------------------
     #팝업 레이아웃 :: layerPopup > z-index:110; ;
 ---------------------------------------------*/
-.layerPopup { z-index:110; position: relative; display:none; flex-direction: column; position: fixed; top:0; left:0; background-color: var(--bg-color-f); overflow: hidden; width:100%; }
+.layerPopup { z-index:110; position: relative; display:none; flex-direction: column; position: fixed; top:0; left:0; background-color: var(--white); overflow: hidden; width:100%; }
 /* 팝업_헤더 */
-.layerPopup .pop-header { z-index: 110; width:100%; height:60px; display:flex; position: fixed; top: 0; left:0; display:flex; justify-content:center; align-items:center; overflow: hidden;  background-color: var(--bg-color-f); }
+.layerPopup .pop-header { z-index: 110; width:100%; height:60px; display:flex; position: fixed; top: 0; left:0; display:flex; justify-content:center; align-items:center; overflow: hidden;  background-color: var(--white); }
 .layerPopup .pop-header .left,
 .layerPopup .pop-header .right { position: absolute; }
 .layerPopup .pop-header .left { left:10px; }
@@ -59,7 +59,7 @@
 .layerPopup .pop-header .btn.btn-back { background: var(--ico-back) no-repeat 100%/40px auto; }
 .layerPopup .pop-header .btn.btn-close { background: var(--ico-close) no-repeat 100%/40px auto; }
 /* 팝업_콘텐츠 */
-.layerPopup .pop-con-wrap { width:auto; height:100%; padding:0 20px; overflow-y: auto; background-color: var(--bg-color-f); }
+.layerPopup .pop-con-wrap { width:auto; height:100%; padding:0 20px; overflow-y: auto; background-color: var(--white); }
 .layerPopup.on { display:flex !important; }/*스크립트 :: display:block; 방지*/
 .layerPopup .pop-header.on { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }/*스크립트 :: 스크롤*/
 /* 팝업_풀팝업 */
@@ -83,9 +83,11 @@
 .layerPopup.full.allMenu.on,
 .layerPopup.full.allMenu.on .pop-header { left:0; }
 
-
 /* tit 삭제 필요*/
-section.tit { display: flex; align-items: center; padding: 20px 0 40px; text-align: center; color: var( --txt-color-9); font-size: var( --font14); font-weight: var(--font-w-m);}
-section.tit::before { content: ""; flex: 1; border: 1px solid var(--border-color-d); margin-right: 30px;}
-section.tit::after { content: ""; flex: 1; border: 1px solid var(--border-color-d); margin-left: 30px;}
-.btn-etc { width:100%; height:60px; border-radius: 10px; background: var(--secondary); color:var(--bg-color-f); }
+section.tit { display: flex; align-items: center; padding: 20px 0 40px; text-align: center; color: var(--color-6); font-size: var( --font14); font-weight: var(--font-w-m);}
+section.tit::before { content: ""; flex: 1; border: 1px solid var(--color-c); margin-right: 30px;}
+section.tit::after { content: ""; flex: 1; border: 1px solid var(--color-c); margin-left: 30px;}
+
+/* 기타 **추후에 삭제 예정 현재 작업중 */
+#footerWrap > footer { display:flex; align-items: center; justify-content: center; background: #3D3D3D; }
+#footerWrap > footer > .inner { width:375px; height:auto; }
