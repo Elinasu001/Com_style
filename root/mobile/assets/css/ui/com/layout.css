@@ -79,7 +79,7 @@ body { position: relative; -webkit-text-size-adjust: none; }
 .layerPopup.btmSheet.toggleUp { bottom:0; border-radius: 30px 30px 0 0; box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.08); }
 .layerPopup.btmSheet.toggleUp.active::before { content: none;}
 .layerPopup.btmSheet.toggleUp .pop-header {  position: relative; height:40px; }
-.layerPopup.btmSheet.toggleUp .pop-header .btn.btn-close { width:100%; right:initial; background-color: var(--color-d); mask-image: var(--ico-close-toggle); mask-size:40px; mask-repeat:no-repeat; mask-position: center; --webkit-mask-image:var(--ico-close-toggle);  --webkit-mask-size:40px; --webkit-mask-repeat:no-repeat; --webkit-mask-positon:center; }
+.layerPopup.btmSheet.toggleUp .pop-header .btn.btn-close { width:100%; right:initial; background-color: var(--color-d); mask-image: var(--ico-close-toggle); mask-size: 40px auto; mask-repeat:no-repeat; mask-position: center; --webkit-mask-image:var(--ico-close-toggle);  --webkit-mask-size: 40px auto; --webkit-mask-repeat:no-repeat; --webkit-mask-positon:center; }
 .layerPopup.btmSheet.toggleUp.active .pop-header .btn.btn-close { transform: rotate(180deg); }
 .layerPopup.btmSheet.toggleUp .pop-con-wrap { max-height: 16px; overflow-y: hidden; transition: max-height 0.2s ease-in-out; }
 .layerPopup.btmSheet.toggleUp.active .pop-con-wrap { height:100%; max-height:370px; overflow-y: auto; }
