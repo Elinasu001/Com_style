@@ -20,7 +20,7 @@ $(document).ready(function(){
     **/
     var headerL = (function() {
 
-        var scrollY = 0; // 스크롤 위치 저장
+        var scrollY = 0;
 
         return {
             headerAni: function() {
@@ -49,7 +49,7 @@ $(document).ready(function(){
      **/
     var headerPopupL = (function() {
 
-        var scrollY = 0; // 스크롤 위치 저장
+        var scrollY = 0;
 
         return {
             headerAni: function() {
