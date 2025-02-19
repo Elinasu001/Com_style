@@ -27,6 +27,7 @@ $(document).ready(function () {
         showAnim: "fadeIn",
         dateFormat: "yy-mm-dd",
         showButtonPanel: true,
+        buttonImage: URL("var(--ico-date)"),
         beforeShow: function (input, inst) {
             setTimeout(() => {
                 let highlight = $(".ui-datepicker-calendar .ui-state-highlight");
