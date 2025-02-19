@@ -26,14 +26,43 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="../../assets/icons/site.webmanifest" />
 
-    <link rel="stylesheet" href="../../assets/css/lib/ui-lib.css" >
+    <link rel="stylesheet" href="../../assets/css/lib/ui-lib.css">
     <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
 
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
     <script type="module" src="../../assets/js/ui/ui-util.js"></script>
 </head>
+
+<script>
+   $.datepicker.setDefaults({
+          closeText: "닫기",
+          prevText: "이전달",
+          nextText: "다음달",
+          currentText: "오늘",
+          monthNames: ["1월", "2월", "3월", "4월", "5월", "6월",
+            "7월", "8월", "9월", "10월", "11월", "12월"
+          ],
+          monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월",
+            "7월", "8월", "9월", "10월", "11월", "12월"
+          ],
+          dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+          dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+          dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+          weekHeader: "주",
+          dateFormat: "yy.m.d", // 날짜형태 예)yy년 m월 d일
+          firstDay: 0,
+          isRTL: false,
+          showMonthAfterYear: true,
+          yearSuffix: "년"
+        });
+    
+        $(".datepicker").datepicker({
+          minDate: 0
+        });
+</script>
 
 <body>
     
@@ -58,8 +87,8 @@
                 </section>
 
                 <div class="form-group">
-                    <label for="email-input" class="essential">데이터피커</label>
-                    <input id="email-input" type="datepicker" name="datepicker" class="form-control" placeholder="데이터피커" readonly>
+                    <label for="datepicker" class="essential">데이터피커</label>
+                    <input id="datepicker" type="datepicker" name="datepicker" class="form-control datepicker" placeholder="데이터피커" readonly>
                 </div>
 
             </div>
