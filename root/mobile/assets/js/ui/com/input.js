@@ -1,9 +1,10 @@
 $(document).ready(function(){
     /*---------------------------------------------
-	ready, load
+	ready, load, init
     ---------------------------------------------*/
     $(document).ready(function(){
         iptFocusScrl();
+        fileUploader.init();
     });
 
     /**
@@ -26,6 +27,23 @@ $(document).ready(function(){
         commaFormatter.format(this);
     });
 
+    /**
+     * 파일 업로드
+     */
+    var fileUploader = (function () {
+        return {
+            init: function () {
+                $('.uploadInput').on('click', function () {
+                    $('#files').click();
+                });
+
+                $('#files').on('change', function () {
+                    $('.uploadInput').val(this.files[0]?.name || '');
+                    $('.uploadInput').addClass('up');
+                });
+            }
+        };
+    })();
 
     /**
      * Android 인풋 포커스 스크롤 이슈

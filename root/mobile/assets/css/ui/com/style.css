@@ -65,6 +65,7 @@ body {
     /* 아이콘 색상 */
     --ipt-clear: var(--color-c);
     --ipt-search:var(--color-9);
+    --ipt-file: var(--color-9);
 
     /* 버튼 */
     --btn-disabled: var(--color-c);

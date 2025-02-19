@@ -54,7 +54,7 @@
             <!-- S:contentWrap -->
             <div class="contentWrap">
                 <div class="contArea">
-                    <form id="myForm">
+                    <!-- <form id="myForm"> -->
                         <section class="tit">
                             Input Radio/CheckBox/Toggle
                         </section>
@@ -184,6 +184,18 @@
                             <p class="feedback">유효하지 않은 주민등록번호입니다. 주민등록번호를 올바르게 입력해 주세요.</p>
                         </div>
                         
+                        <section class="tit">
+                            UploadCustom
+                        </section>
+                        <div class="form-group">
+                            <label for="search-input">파일 업로드</label>
+                            <div class="col">
+                                <input type="text" class="form-control upload-text uploadInput" value="" placeholder="파일을 첨부하세요" readonly>
+                                <label class="upload-label">
+                                    <input class="upload" name="files" id="files" type="file" aria-label="files" />
+                                </label>
+                            </div>
+                        </div>
 
                         <section class="tit">
                             selectCustom
@@ -342,7 +354,7 @@
 							</div>
 						</div>
 
-                    </form>
+                    <!-- </form> -->
                 </div>
             </div>
             <!-- E:contentWrap -->
@@ -394,6 +406,8 @@
         document.getElementById('lower1').innerHTML = numberWithCommas(Math.floor(values[0]));
         document.getElementById('upper1').innerHTML = numberWithCommas(Math.floor(values[1]));
     });
+
+
 </script>
 
 
