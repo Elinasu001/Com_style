@@ -14,8 +14,7 @@ input.form-control::-moz-placeholder,
 input.form-control::-ms-input-placeholder,
 textarea::placeholder { color:var(--ipt-txt-placeholder); }
 
-input.form-control:disabled,
-input.form-control:read-only  { border:1px solid var(--ipt-border-inactive); background: var(--ipt-bg-inactive); color:var(--ipt-txt-inactive); }
+input.form-control:disabled { border:1px solid var(--ipt-border-inactive); background: var(--ipt-bg-inactive); color:var(--ipt-txt-inactive); }
 
 input.form-control:focus,
 textarea:focus { border-color:var(--ipt-border-active); color:var(--ipt-txt-active); }
