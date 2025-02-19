@@ -107,6 +107,7 @@ $(document).ready(function () {
                     thisValue = $select.val();
                 if (thisRel == thisValue) {
                     $(this).addClass(onClass);
+                    $(this).attr('title', '선택됨');
                 }
             });
         }, 0);
