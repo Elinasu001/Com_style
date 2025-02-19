@@ -33,13 +33,24 @@ $(document).ready(function(){
     var fileUploader = (function () {
         return {
             init: function () {
-                $('.uploadInput').on('click', function () {
-                    $('#files').click();
+                var $uploadInput = $('.uploadInput');
+                var $fileInput = $('#files');
+    
+                $uploadInput.on('click', function () {
+                    $fileInput.trigger('click');
                 });
-
-                $('#files').on('change', function () {
-                    $('.uploadInput').val(this.files[0]?.name || '');
-                    $('.uploadInput').addClass('up');
+    
+                $uploadInput.on('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        $fileInput.trigger('click');
+                    }
+                });
+    
+                // 파일명 표시
+                $fileInput.on('change', function () {
+                    var fileName = this.files.length > 0 ? this.files[0].name : '';
+                    $uploadInput.val(fileName).addClass('up');
                 });
             }
         };
