@@ -21,23 +21,62 @@ $(document).ready(function () {
         showMonthAfterYear: true,
         yearSuffix: "년"
     });
-
-    $(".datepicker").datepicker({
-        minDate: 0,
-        showOn: "focus",
+    
+    $("#datepicker").datepicker({
+        minDate:0,
+        showAnim: "fadeIn",
+        dateFormat: "yy-mm-dd",
+        showButtonPanel: true,
         beforeShow: function (input, inst) {
-            setTimeout(function () {
-                let highlighted = $(".ui-state-highlight:visible");
-                if (highlighted.length) {
-                    highlighted.attr("tabindex", "0").focus();
+            setTimeout(() => {
+                let highlight = $(".ui-datepicker-calendar .ui-state-highlight");
+                if (highlight.length) {
+                    highlight.first().focus(); // 오늘 날짜로 포커스 이동
                 } else {
-                    $(".ui-datepicker-calendar a:first").attr("tabindex", "0").focus();
+                    $(".ui-datepicker-calendar a").first().focus(); // 첫 번째 날짜로 이동
                 }
             }, 10);
+        },
+        onClose: function () {
+            $("#datepicker").focus();
         }
     });
 
+    $(document).on("keydown", ".ui-datepicker", function (e) {
+        const key = e.key;
+        const activeElement = document.activeElement;
+
+        if (key === "Escape") {
+            // ESC 키로 닫기
+            $(".ui-datepicker-close").trigger("click");
+        } else if (key === "Tab") {
+
+            const focusable = $(".ui-datepicker:visible").find("a, button, input");
+            const firstFocusable = focusable.first();
+            const lastFocusable = focusable.last();
+
+            if (e.shiftKey && activeElement === firstFocusable[0]) {
+                lastFocusable.focus();
+                e.preventDefault();
+            } else if (!e.shiftKey && activeElement === lastFocusable[0]) {
+                firstFocusable.focus();
+                e.preventDefault();
+            }
+        }
+    });
+
+    $(document).on("click", ".ui-datepicker-calendar a", function () {
+        let selectedDate = $(this).text();
+        $(".ui-datepicker-title").after(`<p class="datepicker-selected">선택한 날짜: ${selectedDate}</p>`);
+    });
+
+    $(document).on("mouseover", ".ui-datepicker-close", function () {
+        $(this).text("닫기");
+    });
+
 });
+
+
 
 
 

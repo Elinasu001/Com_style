@@ -39,7 +39,7 @@ html .ui-button.ui-state-disabled:active { border: 0px solid #c5c5c5; background
 .ui-widget-header .ui-icon { width:32px; height:32px; mask-position: center center; mask-size:36px auto; background-color: #111111; mask-image: var(--ico-back);}
 
 .ui-icon-circle-triangle-e { transform: rotate(180deg); }
-.ui-icon-circle-triangle-w { }
+/* .ui-icon-circle-triangle-w { } */
 
 .ui-state-default, .ui-widget-content .ui-state-default { padding:8px 0; }
 .ui-state-default, .ui-widget-content .ui-state-default.ui-state-active{ border-radius: 50%; border: initial; background-color: var(--active); color:var(--white); }
