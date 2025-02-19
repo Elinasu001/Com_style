@@ -99,9 +99,10 @@ $(document).ready(function(){
     **/
     var btmShtTL = (function() {
         return {
-            btmShtT: function(id) {
+            btmAti: function(id) {
                 var _target = $('#' + id);
                 _target.toggleClass('active');
+                _target.find('.pop-con-wrap').scrollTop(0);
             }
         };
     })();
@@ -109,8 +110,9 @@ $(document).ready(function(){
     $(document).ready(function() {
         $('.layerPopup.toggleUp .btn-close').on('click', function() {
             var popupId = $(this).closest('.layerPopup').attr('id');
-            btmShtTL.btmShtT(popupId);
+            btmShtTL.btmAti(popupId);
         });
+        
     });
 
 });

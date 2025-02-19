@@ -27,6 +27,9 @@ body{
 }
 
 body {
+    
+    --dim: rgba(0, 0, 0, 0.5);
+    --white-dim: rgba(255, 255, 255, 0.5);
 
     --active: #005FCC;
 
@@ -55,7 +58,6 @@ body {
     --outline: #1447A2;
     --error: var(--red);
 
-    --dim: rgba(0, 0, 0, 0.5);
 
     /* 필수 정보 */
     --info-color: var(--primary);
