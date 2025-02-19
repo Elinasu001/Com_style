@@ -43,11 +43,11 @@ html .ui-button.ui-state-disabled:active { border: 0px solid #c5c5c5; background
 
 .ui-state-default, .ui-widget-content .ui-state-default.ui-state-active{ padding:8px 0; border-radius: 50%; border: initial; background-color: var(--active); color:var(--white); }
 
-.ui-datepicker-calendar>tbody>tr>td:first-child a { color: red !important; }
-.ui-datepicker-calendar>tbody>tr>td:last-child a { color: #0099ff !important; }
+.ui-datepicker-calendar>tbody>tr>td:first-child a { color: red; }
+.ui-datepicker-calendar>tbody>tr>td:last-child a { color: #0099ff; }
 
-.ui-datepicker-calendar>thead>tr>th:first-child { color: red !important; }
-.ui-datepicker-calendar>thead>tr>th:last-child { color: #0099ff !important; }
+.ui-datepicker-calendar>thead>tr>th:first-child { color: red; }
+.ui-datepicker-calendar>thead>tr>th:last-child { color: #0099ff; }
 
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
