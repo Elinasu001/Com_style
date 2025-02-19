@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $.datepicker.setDefaults({
         closeText: "닫기",
         prevText: "이전달",
@@ -21,13 +20,14 @@ $(document).ready(function () {
         showMonthAfterYear: true,
         yearSuffix: "년"
     });
-    
+
     $("#datepicker").datepicker({
-        minDate:0,
+        minDate: 0,
         showAnim: "fadeIn",
         dateFormat: "yy-mm-dd",
         showButtonPanel: true,
-        buttonImage: URL("var(--ico-date)"),
+        buttonText: "날짜 선택",
+        buttonImageOnly: true,
         beforeShow: function (input, inst) {
             setTimeout(() => {
                 let highlight = $(".ui-datepicker-calendar .ui-state-highlight");
@@ -51,7 +51,6 @@ $(document).ready(function () {
             // ESC 키로 닫기
             $(".ui-datepicker-close").trigger("click");
         } else if (key === "Tab") {
-
             const focusable = $(".ui-datepicker:visible").find("a, button, input");
             const firstFocusable = focusable.first();
             const lastFocusable = focusable.last();
@@ -75,9 +74,9 @@ $(document).ready(function () {
         $(this).text("닫기");
     });
 
+    $("#datepicker").on("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+            $(this).datepicker("show");
+        }
+    });
 });
-
-
-
-
-
