@@ -14,7 +14,7 @@ $(document).ready(function () {
         dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
         dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
         weekHeader: "주",
-        dateFormat: "yy.m.d",
+        dateFormat: "yy.m.d", // 날짜형태 예)yy년 m월 d일
         firstDay: 0,
         isRTL: false,
         showMonthAfterYear: true,
@@ -32,22 +32,14 @@ $(document).ready(function () {
             setTimeout(() => {
                 let highlight = $(".ui-datepicker-calendar .ui-state-highlight");
                 if (highlight.length) {
-                    highlight.first().focus();
+                    highlight.first().focus(); // 오늘 날짜로 포커스 이동
                 } else {
-                    $(".ui-datepicker-calendar a").first().focus();
+                    $(".ui-datepicker-calendar a").first().focus(); // 첫 번째 날짜로 이동
                 }
-                $(".ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-close").attr("tabindex", "0");
-            }, 10);
-        },
-        onChangeMonthYear: function (year, month, inst) {
-            setTimeout(() => {
-                $(".ui-datepicker-calendar a").first().focus();
             }, 10);
         },
         onClose: function () {
-            setTimeout(() => {
-                $("#datepicker").blur();
-            }, 10);
+            $("#datepicker").focus();
         }
     });
 
@@ -56,12 +48,8 @@ $(document).ready(function () {
         const activeElement = document.activeElement;
 
         if (key === "Escape") {
+            // ESC 키로 닫기
             $(".ui-datepicker-close").trigger("click");
-        } else if (key === "Enter" && $(activeElement).is(".ui-datepicker-prev, .ui-datepicker-next")) {
-            $(activeElement).trigger("click");
-            setTimeout(() => {
-                $(".ui-datepicker-calendar a").first().focus();
-            }, 300);
         } else if (key === "Tab") {
             const focusable = $(".ui-datepicker:visible").find("a, button, input");
             const firstFocusable = focusable.first();
@@ -84,12 +72,6 @@ $(document).ready(function () {
 
     $(document).on("mouseover", ".ui-datepicker-close", function () {
         $(this).text("닫기");
-    });
-
-    $("#datepicker").on("mousedown", function () {
-        if ($(this).is(":focus")) {
-            // $(this).blur();
-        }
     });
 
     $("#datepicker").on("keydown", function (e) {
