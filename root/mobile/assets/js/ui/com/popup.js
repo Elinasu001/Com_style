@@ -52,7 +52,7 @@ $(document).ready(function(){
                 //     $('body').css({ 'overflow': '' });
                 // }
                 // 마지막 팝업이 닫힐 때만 overflow 해제
-                setTimeout(fkSelAndPopupResetOverflow, 10);
+                fkSelAndPopupResetOverflow();
                 
             },
             togglePopup: function(id, msg, menu) {
@@ -103,6 +103,13 @@ $(document).ready(function(){
                 var _target = $('#' + id);
                 _target.toggleClass('active');
                 _target.find('.pop-con-wrap').scrollTop(0);
+            },
+            initDimClose: function() {
+                $('.layerPopup.toggleUp').on('click', function(e) {
+                    if ($(this).hasClass('active') && $(e.target).is('.layerPopup.toggleUp')) {
+                        $(this).removeClass('active');
+                    }
+                });
             }
         };
     })();
@@ -114,5 +121,8 @@ $(document).ready(function(){
         });
         
     });
+
+    btmShtTL.initDimClose();
+    
 
 });
