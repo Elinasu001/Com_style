@@ -35,6 +35,7 @@ $(document).ready(function(){
             init: function () {
                 var $uploadInput = $('.uploadInput');
                 var $fileInput = $('#files');
+                var $fileLabel = $('.fileLabel');
     
                 $uploadInput.on('click', function () {
                     $fileInput.trigger('click');
@@ -50,7 +51,8 @@ $(document).ready(function(){
                 // 파일명 표시
                 $fileInput.on('change', function () {
                     var fileName = this.files.length > 0 ? this.files[0].name : '';
-                    $uploadInput.val(fileName).addClass('up');
+                    $uploadInput.val(fileName).text(fileName).addClass('up');
+                    $fileLabel.text('선택된 파일: ' + fileName);
                 });
             }
         };

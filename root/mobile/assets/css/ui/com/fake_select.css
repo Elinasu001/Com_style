@@ -9,9 +9,9 @@
 /* .se-select {
     display: inline-block;
     width: 100%;
-} */
+}
 
-/* .se-select select {
+.se-select select {
     display: inline-block;
     width: 100%;
     -webkit-appearance: none;
@@ -21,9 +21,9 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer;
-} */
+}
 
-/* .se-select select:focus {
+.se-select select:focus {
     outline: none;
 } */
 
@@ -86,7 +86,7 @@
     select - stove custom #커스텀셀렉트
 ---------------------------------------------*/
 .se-select[data-stove=select] select {
-    visibility: hidden;
+    visibility: hidden;/* 커스텀 셀렉트 사용 안 할 경우 삭제 */
 }
 
 .se-select[data-stove=select] .btn-fake-slt {

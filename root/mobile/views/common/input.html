@@ -190,9 +190,10 @@
                         <div class="form-group">
                             <label for="files">파일 업로드</label>
                             <div class="col">
-                                <input type="text" class="form-control upload-text uploadInput" value="" placeholder="파일을 첨부하세요" tabindex="0" readonly>
+                                <input class="form-control upload-text uploadInput" type="text" placeholder="파일을 첨부하세요" tabindex="0" readonly>
                                 <label class="upload-label" for="files">
-                                    <input class="upload" name="files" id="files" type="file" type="file" />
+                                    <input id="files" class="upload" name="files" type="file" />
+                                    <span class="sr-only fileLabel">파일 선택</span>
                                 </label>
                             </div>
                         </div>
@@ -277,10 +278,10 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="phn-first">셀렉트 선택</label>
+                            <label for="phn-second">셀렉트 선택</label>
                             <div class="flex-row gap5">
                                 <div class="col col-4">
-                                    <div id="phn-first" class="se-select" data-stove="select" data-uicase="slide">
+                                    <div id="phn-second" class="se-select" data-stove="select" data-uicase="slide">
                                         <div class="e-hidden-title">TITLE</div>
                                         <select required="" title="">
                                             <option value="" hidden="">010</option>
