@@ -29,11 +29,18 @@
     <link rel="stylesheet" href="../../assets/css/lib/ui-lib.css" >
     <link rel="stylesheet" href="../../assets/css/ui/ui-util.css">
 
+    <!-- 1. jQuery (반드시 최상단) -->
     <script type="text/javascript" src="../../assets/js/lib/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
+    <!-- 2. jQuery UI (jQuery 플러그인 기반이므로 jQuery 다음) -->
+    <script type="text/javascript" src="../../assets/js/lib/jquery-ui.min.js"></script>
+    <!-- 3. 기타 jQuery 관련 플러그인 (jQuery UI가 필요할 수도 있으므로 이후에 로드) -->
     <script type="text/javascript" src="../../assets/js/lib/ui_plugin.js"></script>
+    <!-- 4. Swiper 라이브러리 (Swiper는 jQuery와 무관하므로 순서 상관없음) -->
+    <script type="text/javascript" src="../../assets/js/lib/swiper-bundle.min.js"></script>
+    <!-- 5. Datepicker 관련 스크립트 (jQuery UI가 필요하므로 맨 마지막) -->
+    <script type="text/javascript" src="../../assets/js/ui/com/datepicker.js"></script>
     <script type="module" src="../../assets/js/ui/ui-util.js"></script>
-</head>
+    </head>
 
 <body>
     
