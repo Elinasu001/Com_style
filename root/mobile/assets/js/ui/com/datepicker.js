@@ -1,71 +1,84 @@
 $(document).ready(function () {
     var datepickerL = {
         init: function () {
-            $("#datepicker").datepicker({
-                minDate: 0,
-                currentText: '오늘 날짜',
-                closeText: "닫기",
-                prevText: "이전달",
-                nextText: "다음달",
-                showAnim: "slideDown",
-                showButtonPanel: true,
-                monthNames: ["1월", "2월", "3월", "4월", "5월", "6월",
-                    "7월", "8월", "9월", "10월", "11월", "12월"
-                ],
-                monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월",
-                    "7월", "8월", "9월", "10월", "11월", "12월"
-                ],
-                dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
-                dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
-                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
-                weekHeader: "주",
-                dateFormat: "yy.m.d",
-                firstDay: 0,
-                isRTL: false,
-                showMonthAfterYear: true,
-                yearSuffix: "년",
+            $(".datepicker").each(function () {
+                $(this).datepicker({
+                    minDate:0,
+                    dateFormat: "yy-mm-dd",
+                    showButtonPanel: true,
+                    beforeShow: datepickerL.beforeShowHandler,
+                    onClose: datepickerL.onCloseHandler
+                });
+            });
 
-                beforeShow: function (input, inst) {
-                    setTimeout(function () {
-                        var dpDiv = inst.dpDiv;
-                        
-                        //  오늘 날짜에 포커스 
-                        var todayBtn = dpDiv.find(".ui-state-highlight");
-                        if (todayBtn.length > 0) {
-                            todayBtn.attr("tabindex", "0").focus();
-                        } else {
-                            dpDiv.find(".ui-state-default").first().attr("tabindex", "0").focus();
-                        }
+            this.bindKeyboardNavigation();
+        },
 
-                        // Tab 키 내비게이션
-                        dpDiv.find(".ui-datepicker-buttonpane button").attr("tabindex", "0");
+        beforeShowHandler: function (input, inst) {
+            var $input = $(input);
+            setTimeout(function () {
+                let widget = $(inst.dpDiv);
+                widget.attr("role", "dialog");
+                widget.attr("aria-label", "날짜 선택 창");
 
-                        // 오늘 날짜 버튼
-                        dpDiv.find(".ui-datepicker-current").off("click").on("click", function () {
-                            var today = $.datepicker.formatDate("yy.m.d", new Date());
-                            $("#datepicker").datepicker("setDate", today).datepicker("hide");
-                        });
+                widget.find(".ui-datepicker-prev, .ui-datepicker-next")
+                    .attr("tabindex", "0")
+                    .attr("role", "button");
 
-                        // 닫기 버튼
-                        dpDiv.find(".ui-datepicker-close").off("click").on("click", function () {
-                            $("#datepicker").datepicker("hide");
-                        });
+                widget.find(".ui-datepicker-close").attr("role", "button");
+                widget.find("table").attr("role", "grid");
+                widget.find("thead").attr("role", "rowgroup");
+                widget.find("tbody").attr("role", "rowgroup");
+                widget.find("tr").attr("role", "row");
+                widget.find("td").attr("role", "gridcell");
 
-                        //  Esc 키로 닫기
-                        $(document).on("keydown", function (e) {
-                            if ($(".ui-datepicker:visible").length > 0 && e.key === "Escape") {
-                                $("#datepicker").datepicker("hide");
-                            }
-                        });
+                // 현재 선택된 날짜에 포커스
+                let selected = widget.find(".ui-state-highlight, .ui-state-active");
+                if (selected.length) {
+                    selected.attr("tabindex", "0").focus();
+                } else {
+                    widget.find("td:first a").attr("tabindex", "0").focus();
+                }
+            }, 0);
 
-                    }, 0);
-                },
+            $input.attr("aria-expanded", "true");
+        },
 
-                onClose: function () {
-                    $("#datepicker").focus();
+        onCloseHandler: function (input) {
+            $(input).attr("aria-expanded", "false");
+        },
+
+        bindKeyboardNavigation: function () {
+            $(document).on("keydown", ".ui-datepicker", function (event) {
+                let focusElement = $(document.activeElement);
+                let activeDatepicker = $(".datepicker").filter(function () {
+                    return $(this).attr("aria-expanded") === "true";
+                });
+
+                if (event.key === "Tab") {
+                    if (event.shiftKey && focusElement.hasClass("ui-datepicker-close")) {
+                        $(".ui-datepicker-prev").focus();
+                        event.preventDefault();
+                    } else if (!event.shiftKey && focusElement.hasClass("ui-datepicker-prev")) {
+                        $(".ui-datepicker-close").focus();
+                        event.preventDefault();
+                    }
+                }
+                if (event.key === "Escape") {
+                    activeDatepicker.datepicker("hide").focus();
                 }
             });
 
+            // 날짜 선택 후 포커스 이동
+            $(document).on("click", ".ui-datepicker-calendar td a", function () {
+                let activeDatepicker = $(".datepicker").filter(function () {
+                    return $(this).attr("aria-expanded") === "true";
+                });
+
+                setTimeout(function () {
+                    activeDatepicker.focus();
+                }, 0);
+            });
         }
     };
 
