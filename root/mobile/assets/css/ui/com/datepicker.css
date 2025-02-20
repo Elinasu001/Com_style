@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 #datepicker:focus>.ui-datepicker { display: block; }
 .ui-widget.ui-widget-content { border: 1px solid #eee; }
 .ui-widget-header { border: 0px solid #dddddd; background: #fff; }
@@ -36,7 +37,7 @@ html .ui-button.ui-state-disabled:active { border: 0px solid #c5c5c5; background
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position: absolute; top:50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; width:32px; height:32px; }
 .ui-datepicker .ui-datepicker-next  { right:0; }
 .ui-datepicker .ui-datepicker-next .ui-widget-header .ui-icon { transform: rotate(180deg); }
-.ui-widget-header .ui-icon { width:32px; height:32px; mask-position: center center; mask-size:36px auto; background-color: #111111; mask-image: var(--ico-back);}
+.ui-widget-header .ui-icon { width:32px; height:32px;  background-color: #111111; mask-image: var(--ico-back); mask-position: center; mask-size:36px auto; --webkit-mask-image:var(--ico-back); --webkit-mask-position:center; --webkit-mask-size:36px auto;}
 
 .ui-icon-circle-triangle-e { transform: rotate(180deg); }
 /* .ui-icon-circle-triangle-w { } */
