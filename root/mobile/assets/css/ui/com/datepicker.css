@@ -4,9 +4,7 @@
 .ui-widget.ui-widget-content { border: 1px solid #eee; }
 .ui-widget-header { border: 0px solid #dddddd; background: #fff; }
 .ui-datepicker .ui-datepicker-header { position: relative; padding: 15px 0; }
-.ui-datepicker .ui-datepicker-title {  margin: 0 0em; line-height: 16px; text-align: center; font-size: var(--font14); padding: 0px; font-weight: bold; }
-.ui-datepicker-prev,
-.ui-datepicker-next { cursor: pointer; }
+.ui-datepicker .ui-datepicker-title { text-align: center; font-size: var(--font16); }
 
 .ui-state-default,
 .ui-widget-content .ui-state-default,
@@ -34,9 +32,9 @@ html .ui-button.ui-state-disabled:active { border: 0px solid #c5c5c5; background
 
 
 .ui-datepicker-calendar>tbody>tr>td:hover { background-color: transparent; opacity: 0.6; }
-.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { top:8px; left:8px; }
 
-.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { width:32px; height:32px; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position: absolute; top:50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; width:32px; height:32px; }
+.ui-datepicker .ui-datepicker-next  { right:0; }
 .ui-datepicker .ui-datepicker-next .ui-widget-header .ui-icon { transform: rotate(180deg); }
 .ui-widget-header .ui-icon { width:32px; height:32px; mask-position: center center; mask-size:36px auto; background-color: #111111; mask-image: var(--ico-back);}
 
@@ -56,4 +54,10 @@ html .ui-button.ui-state-disabled:active { border: 0px solid #c5c5c5; background
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight { border: 0px; background: #f1f1f1; border-radius: 50%; padding: 8px 0; }
 
+
+.ui-datepicker-buttonpane { display: flex !important; /* 강제로 표시 */ justify-content: space-between; padding: 10px;background: #f8f8f8; border-top: 1px solid #ddd; }
+.ui-datepicker-buttonpane button { width: 48%; /* 버튼 크기 균등 */ padding: 8px 12px; background-color: #007bff;  color: white; border: none; border-radius: 4px; cursor: pointer; }
+.ui-datepicker-buttonpane button:hover { background-color: #0056b3; }
+.ui-datepicker-current { background-color: var(--secondary) !important; }
+.ui-datepicker-close { background-color: var(--primary) !important; color:var(--white) !important; }
 
